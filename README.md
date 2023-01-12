@@ -29,12 +29,6 @@ This website is built for people all around the world to discover what Singapore
 
 # Testing
 
-- Quiz:
-  - If correct option selected, body colour turns green and "Well Done" is shown. After all questions completed, Next button changes to restart button.
-- Feedback form:
-  - Form validation
-  - After form submitted, prompt shown to show that information received.
-
 # Technologies used
 
 - HTML
