@@ -1,11 +1,12 @@
 ## Assignment 2 (Adidas Website)
 
-This website is an Adidas e-commerce website for consumers to choose their desired items and add it to their shopping cart. 
+This website is an Adidas e-commerce website for consumers to choose their desired items and add it to their shopping cart.
 
-Adidas is a German multinational  coporation that designs and manufactures shoes, clothing and accessories. It was founded on 18 August 1949 
+Adidas is a German multinational coporation that designs and manufactures shoes, clothing and accessories. It was founded on 18 August 1949
+
 # Design Process
 
-This website is built for people all around the world to order Adidas' products online 
+This website is built for people all around the world to order Adidas' products online
 
 # User Stories:
 
@@ -14,14 +15,18 @@ This website is built for people all around the world to order Adidas' products 
 
 ## Features made
 
+## Features yet to be made
+
 - Navigation Bar
-- Embed video
-- Embed poll results
-- In-built quiz with responsive background
-- Feedback form with validation
-- Pop-up alert prompt when submit
-- Embed instagram posts
+- 3 tabs
+  - Snacks and Confectionery
+    - 12 items (4\*3 rows)
+  - Household
+  - Frozen
+- Login/Sign Up with validation
 - Sticky Scroll to top button with progress bar
+- In-built quiz with responsive background
+- Sticky bar
 
 # Wireframe Link
 
