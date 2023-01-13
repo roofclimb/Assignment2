@@ -1,10 +1,11 @@
 ## Assignment 2 (Adidas Website)
 
-This website is to promote what Singapore's media industry has to offer in terms of songs, dramas and movies produced by Singaporeans to advocate more recognition for local artists and film makers. Many people are obilivous of what Singapore has to offer as they are more drawn toward overseas productions such as american movies and korean dramas. Thus, with this website, people would be able to find good local productions to watch and will support the local media industry in the accesible form of a website. Additionally local production companies will also earn more money to produce even more incredible productions for viewers to enjoy. As Singapore is a Bilingual country with English as our first language, many Singaporeans are not really good in Chinese, be it spoken or written. So, I would like to promote Chinese local production.
+This website is an Adidas e-commerce website for consumers to choose their desired items and add it to their shopping cart. 
 
+Adidas is a German multinational  coporation that designs and manufactures shoes, clothing and accessories. It was founded on 18 August 1949 
 # Design Process
 
-This website is built for people all around the world to discover what Singapore's Chinese media industry has to offer and support local industries. Futhermore, it can also to attract tourists to come to Singapore and visit film sites and meet local celebrities.
+This website is built for people all around the world to order Adidas' products online 
 
 # User Stories:
 
