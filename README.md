@@ -1,12 +1,12 @@
 ## Assignment 2 (Adidas Website)
 
-This website is an Adidas e-commerce website for consumers to choose their desired items and add it to their shopping cart.
+This website is a Fairprice e-commerce website for consumers to choose their desired items and add it to their shopping cart. As Fairprice has many items for sale, we will only be focusing on a few products from 3 categories, snacks, household and frozen products. Users would then be able to have the products delivered to their doorstep. We will also include a quiz section, to test users after they have read what FairPrice is about so that they can gain more knowledge about FairPrice. And, in exchange, they can collect vouchers.
 
-Adidas is a German multinational coporation that designs and manufactures shoes, clothing and accessories. It was founded on 18 August 1949
+NTUC FairPrice is the largest supermarket chain in Singapore, with over 100 supermarkets island-wide.
 
 # Design Process
 
-This website is built for people all around the world to order Adidas' products online
+This website is built for people in Singapore to order products from Fairprice and to find out more about FairPrice. They would also be able to see what promotions FairPrice has which would entice them to place an order.
 
 # User Stories:
 
@@ -19,14 +19,17 @@ This website is built for people all around the world to order Adidas' products 
 
 - Navigation Bar
 - 3 tabs
-  - Snacks and Confectionery
-    - 12 items (4\*3 rows)
-  - Household
-  - Frozen
-- Login/Sign Up with validation
+  - Products
+    - Snacks and Confectionery
+      - 18 items (6\*3 rows)
+    - Household
+    - Frozen
+  - Cart
+  - Login/Sign Up
 - Sticky Scroll to top button with progress bar
 - In-built quiz with responsive background
 - Sticky bar
+- Dropdown menu
 
 # Wireframe Link
 
