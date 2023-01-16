@@ -1,6 +1,6 @@
 ## Assignment 2 (Adidas Website)
 
-This website is an Adidas e-commerce website for consumers to choose their desired items and add it to their shopping cart. 
+This website is an Fairprice website for consumers to choose their desired items and add it to their shopping cart. 
 
 Adidas is a German multinational  coporation that designs and manufactures shoes, clothing and accessories. It was founded on 18 August 1949 
 # Design Process
