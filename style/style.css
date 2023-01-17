@@ -75,7 +75,7 @@ nav.sticky ul{
   top:0;
   width: 100%;
   height:100vh;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 /* .details{
@@ -88,15 +88,15 @@ nav.sticky ul{
 
 @keyframes animate {
   0%, 100%{
-    background-image: url(/images/household.jpg);
+    background-image: url(/images/fruit.png);
   }
   25%{
-    background-image: url(/images/snacks.jpg);
+    background-image: url(/images/snacks1.jpg);
   }
   50%{
     background-image: url(/images/frozen.webp);
   }
   75%{
-    background-image: url(/images/fairprice.jpg);
+    background-image: url(/images/householdimg.webp);
   }
 }
