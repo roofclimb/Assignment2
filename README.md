@@ -21,7 +21,7 @@ This website is built for people in Singapore to order products from Fairprice a
 - 3 tabs
   - Products
     - Snacks and Confectionery
-      - 18 items (6\*3 rows)
+      - 12 items (4\*3 rows)
     - Fresh fruits
     - Frozen
   - Cart
