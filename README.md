@@ -7,6 +7,7 @@ NTUC FairPrice is the largest supermarket chain in Singapore, with over 100 supe
 # Design Process
 
 This website is built for people in Singapore to order products from Fairprice and to find out more about FairPrice. They would also be able to see what promotions FairPrice has which would entice them to place an order.
+FairPrice Online is the e-commerce portal of NTUC Fairprice Co-operative Ltd, Singapore’s largest grocery retailer. With this website, users can shop for a wide range of products, ranging from snacks to household products. Have them delivered to your door, or choose the most convenient time and place for pickup. Enjoy an effortless shopping experience with FairPrice Online, whether from your computer, tablet or mobile phone.
 
 # User Stories:
 
