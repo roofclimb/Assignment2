@@ -11,7 +11,7 @@
     height:100vh;
     background-position: center;
     background-size: cover;
-    background-image: url(/images/fairprice.jpg);
+    background-image: url(/images/home/fairprice.jpg);
 }
 
 nav{
@@ -88,16 +88,16 @@ nav.sticky ul{
 
 @keyframes animate {
   0%, 100%{
-    background-image: url(/images/fruit2.jpg);
+    background-image: url(/images/home/fruit2.jpg);
   }
   25%{
-    background-image: url(/images/snacks1.jpg);
+    background-image: url(/images/home/snacks1.jpg);
   }
   50%{
-    background-image: url(/images/frozen.webp);
+    background-image: url(/images/home/frozen.webp);
   }
   75%{
-    background-image: url(/images/householdimg.webp);
+    background-image: url(/images/home/householdimg.webp);
   }
 }
 
@@ -105,11 +105,16 @@ table{
   padding: 10px;
   width: 100%;
   font-size: 20px;
-  text-align:justify;
+  
 }
 
 td{
   padding: 10px;
+}
+
+.head{
+  font-size: 30px;
+
 }
 
 .dropbtn {
@@ -141,6 +146,6 @@ td{
   display: block;
 }
 
-/* .dropdown-content a:hover {background-color: #ddd;} */
+.dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
