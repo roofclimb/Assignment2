@@ -1,4 +1,4 @@
-## Assignment 2 (Adidas Website)
+## Assignment 2 (FairPrice)
 
 This website is a Fairprice e-commerce website for consumers to choose their desired items and add it to their shopping cart. As Fairprice has many items for sale, we will only be focusing on a few products from 3 categories, snacks, household and frozen products. Users would then be able to have the products delivered to their doorstep. We will also include a quiz section, to test users after they have read what FairPrice is about so that they can gain more knowledge about FairPrice. And, in exchange, they can collect vouchers.
 
@@ -36,6 +36,10 @@ FairPrice Online is the e-commerce portal of NTUC Fairprice Co-operative Ltd, Si
 
 - Desktop version: https://xd.adobe.com/view/2b837ed5-b199-4cb4-9ba3-2649e6ce4062-7ed0/
 - Mobile version: https://xd.adobe.com/view/0121df8f-18ee-4f66-8b6d-80d1c58b9515-5472/
+
+# Website Link
+
+- https://roofclimb.github.io/Assignment2/
 
 # Testing
 
