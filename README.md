@@ -11,8 +11,8 @@ FairPrice Online is the e-commerce portal of NTUC Fairprice Co-operative Ltd, Si
 
 # User Stories:
 
-- As a Singaporean, I want to find out what local productions has to offer in terms of media from sources such as films and music so that I can support the local industry. I would also be able to improve my command of Chinese Language.
-- As a foreigner, I am interested to find out more about Singapores culture and how different media is produced in Singapore in a more accessible way.
+- As a consumer, I would want to be able to order FairPrice products online and have it delivered to my doorstep, making it more convenient for myself and so that I would not have to spend time travelling down to a physical store and having to look around for my item. With the products in the website organised according to categories, it would be easier to find the product that I need. I would also not have to queue up to make payment at the physical store, which may take some time if there are many people in the queue.
+- Through this website, I would also be able to learn more about FairPrice and take the quiz to see how much I have learnt from the website and in turn claim vouchers which I can use when checking out.
 
 ## Features made
 

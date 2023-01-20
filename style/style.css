@@ -3,6 +3,7 @@
     padding:0;
     box-sizing: border-box;
     font-family: 'Marhey', sans-serif;
+    font-size: 20px;
 }
 
 
@@ -78,6 +79,10 @@ nav.sticky ul{
   background: rgba(0, 0, 0, 0.2);
 }
 
+.menu{
+  background-color: #FFF;
+}
+
 /* .details{
   position: absolute;
   left: 50%;
@@ -104,8 +109,6 @@ nav.sticky ul{
 table{
   padding: 10px;
   width: 100%;
-  font-size: 20px;
-  
 }
 
 td{
@@ -118,8 +121,7 @@ td{
 }
 
 .dropbtn {
-  padding: 16px;
-  font-size: 16px;
+  padding: 10px;
   border: none;
   background-color: #FFF;
 }
@@ -149,3 +151,4 @@ td{
 .dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
+

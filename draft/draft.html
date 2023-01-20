@@ -6,35 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
+
 <body>
     <header>
-        <a href="#" class="logo">Logo</a>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Cart</a></li>
-            <li><a href="#">Log In/Sign Up</a></li>
-        </ul>
+        <a href="#" class="brand"><img src="/images/home/fairpricelogo.png" alt="" style="width:200px;"></a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Cart</a>
+            <a href="#">LogIn/SignUp</a>
+        </div>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
     </header>
-    <section class="banner"></section>
+    <section class="section-main">
+        <h1>Sticky Navigation Bar</h1>
+    </section>
+    <section class="section-two">
+        <h2>Protect Rainforests</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras est ligula, consectetur et elit malesuada, euismod cursus sem. Morbi at tempor justo, sed consectetur dui. Phasellus pharetra varius fermentum. Praesent felis purus, fringilla in quam sed, consectetur dignissim lectus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras est ligula, consectetur et elit malesuada, euismod cursus sem. Morbi at tempor justo, sed consectetur dui. Phasellus pharetra varius fermentum. Praesent felis purus, fringilla in quam sed, consectetur dignissim lectus.</p>
+        <h2>Protect Nature</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras est ligula, consectetur et elit malesuada, euismod cursus sem. Morbi at tempor justo, sed consectetur dui. Phasellus pharetra varius fermentum. Praesent felis purus, fringilla in quam sed, consectetur dignissim lectus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras est ligula, consectetur et elit malesuada, euismod cursus sem. Morbi at tempor justo, sed consectetur dui. Phasellus pharetra varius fermentum. Praesent felis purus, fringilla in quam sed, consectetur dignissim lectus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras est ligula, consectetur et elit malesuada, euismod cursus sem. Morbi at tempor justo, sed consectetur dui. Phasellus pharetra varius fermentum. Praesent felis purus, fringilla in quam sed, consectetur dignissim lectus.</p>
+    </section>
+
     <script type="text/javascript">
         window.addEventListener("scroll",function(){
-            var header = document.querySelector("header")
-            header.classList.toggle("sticky", window.scrollY > 0);
-        })
+            var header=document.querySelector("header");
+            header.classList.toggle('sticky',window.scrollY>0);
+        });    
+        
+        var menu = document.querySelector('.menu');
+        var menuBtn=document.querySelector('.menu-btn');
+        var closeBtn = document.querySelector('.close-btn');
+
+        menuBtn.addEventListener("click",()=>{
+            menu.classList.add('active');
+        });
+        closeBtn.addEventListener("click",()=>{
+            menu.classList.remove('active');
+        });
     </script>
-
-<p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie aliquet dui, in interdum sapien sagittis fermentum. Praesent mattis nibh erat, ut ultricies quam interdum sit amet. Nam a dui ipsum. Mauris ipsum neque, vestibulum nec est at, sagittis suscipit purus. Morbi eget dolor non orci lobortis egestas et a turpis. Cras commodo lacinia pulvinar. Nullam mi quam, tempor vel tortor ultrices, maximus aliquam risus. Vestibulum ornare lobortis massa at venenatis. Cras molestie in ante quis finibus.</p>
-<p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie aliquet dui, in interdum sapien sagittis fermentum. Praesent mattis nibh erat, ut ultricies quam interdum sit amet. Nam a dui ipsum. Mauris ipsum neque, vestibulum nec est at, sagittis suscipit purus. Morbi eget dolor non orci lobortis egestas et a turpis. Cras commodo lacinia pulvinar. Nullam mi quam, tempor vel tortor ultrices, maximus aliquam risus. Vestibulum ornare lobortis massa at venenatis. Cras molestie in ante quis finibus.</p>
-<p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie aliquet dui, in interdum sapien sagittis fermentum. Praesent mattis nibh erat, ut ultricies quam interdum sit amet. Nam a dui ipsum. Mauris ipsum neque, vestibulum nec est at, sagittis suscipit purus. Morbi eget dolor non orci lobortis egestas et a turpis. Cras commodo lacinia pulvinar. Nullam mi quam, tempor vel tortor ultrices, maximus aliquam risus. Vestibulum ornare lobortis massa at venenatis. Cras molestie in ante quis finibus.</p>
-<p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie aliquet dui, in interdum sapien sagittis fermentum. Praesent mattis nibh erat, ut ultricies quam interdum sit amet. Nam a dui ipsum. Mauris ipsum neque, vestibulum nec est at, sagittis suscipit purus. Morbi eget dolor non orci lobortis egestas et a turpis. Cras commodo lacinia pulvinar. Nullam mi quam, tempor vel tortor ultrices, maximus aliquam risus. Vestibulum ornare lobortis massa at venenatis. Cras molestie in ante quis finibus.</p>
-<p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie aliquet dui, in interdum sapien sagittis fermentum. Praesent mattis nibh erat, ut ultricies quam interdum sit amet. Nam a dui ipsum. Mauris ipsum neque, vestibulum nec est at, sagittis suscipit purus. Morbi eget dolor non orci lobortis egestas et a turpis. Cras commodo lacinia pulvinar. Nullam mi quam, tempor vel tortor ultrices, maximus aliquam risus. Vestibulum ornare lobortis massa at venenatis. Cras molestie in ante quis finibus.</p>
-<p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie aliquet dui, in interdum sapien sagittis fermentum. Praesent mattis nibh erat, ut ultricies quam interdum sit amet. Nam a dui ipsum. Mauris ipsum neque, vestibulum nec est at, sagittis suscipit purus. Morbi eget dolor non orci lobortis egestas et a turpis. Cras commodo lacinia pulvinar. Nullam mi quam, tempor vel tortor ultrices, maximus aliquam risus. Vestibulum ornare lobortis massa at venenatis. Cras molestie in ante quis finibus.</p>
-<p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie aliquet dui, in interdum sapien sagittis fermentum. Praesent mattis nibh erat, ut ultricies quam interdum sit amet. Nam a dui ipsum. Mauris ipsum neque, vestibulum nec est at, sagittis suscipit purus. Morbi eget dolor non orci lobortis egestas et a turpis. Cras commodo lacinia pulvinar. Nullam mi quam, tempor vel tortor ultrices, maximus aliquam risus. Vestibulum ornare lobortis massa at venenatis. Cras molestie in ante quis finibus.</p>
-<p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie aliquet dui, in interdum sapien sagittis fermentum. Praesent mattis nibh erat, ut ultricies quam interdum sit amet. Nam a dui ipsum. Mauris ipsum neque, vestibulum nec est at, sagittis suscipit purus. Morbi eget dolor non orci lobortis egestas et a turpis. Cras commodo lacinia pulvinar. Nullam mi quam, tempor vel tortor ultrices, maximus aliquam risus. Vestibulum ornare lobortis massa at venenatis. Cras molestie in ante quis finibus.</p>
-<p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie aliquet dui, in interdum sapien sagittis fermentum. Praesent mattis nibh erat, ut ultricies quam interdum sit amet. Nam a dui ipsum. Mauris ipsum neque, vestibulum nec est at, sagittis suscipit purus. Morbi eget dolor non orci lobortis egestas et a turpis. Cras commodo lacinia pulvinar. Nullam mi quam, tempor vel tortor ultrices, maximus aliquam risus. Vestibulum ornare lobortis massa at venenatis. Cras molestie in ante quis finibus.</p>
-<p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie aliquet dui, in interdum sapien sagittis fermentum. Praesent mattis nibh erat, ut ultricies quam interdum sit amet. Nam a dui ipsum. Mauris ipsum neque, vestibulum nec est at, sagittis suscipit purus. Morbi eget dolor non orci lobortis egestas et a turpis. Cras commodo lacinia pulvinar. Nullam mi quam, tempor vel tortor ultrices, maximus aliquam risus. Vestibulum ornare lobortis massa at venenatis. Cras molestie in ante quis finibus.</p>
-
 </body>
-</html>
