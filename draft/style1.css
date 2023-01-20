@@ -15,8 +15,8 @@ body{
 .section-main{
     position:relative;
     width: 100%;
-    min-height: 80vh;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.6),rgba(4,9,30,0.6)),url(/images/home/NTUC-FairPrice.webp);
+    min-height: 70vh;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.6),rgba(4,9,30,0.6)),url(/images/home/householdimg.webp);
     background-position: center;
     display:flex;
     justify-content: center;
