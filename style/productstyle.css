@@ -340,11 +340,6 @@ table{
     .rating .fa{
         color: #df422d;   
     }
-    .column{
-        transition: transform 0.5s;
-    }
-
-
 
     /* *{
         background-color: black;
