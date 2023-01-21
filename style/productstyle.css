@@ -307,13 +307,32 @@ table{
   }
  
   h2 {
-    border-style: solid;
-    border-width: 4px;
-    font-size: 120%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
-    padding: 10px;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+    font-size: 180%;
     }
+    h2::after{
+        content:'';
+        background-color: #ff523b;
+        width:300px;
+        height:5px;
+        border-radius:5px;
+        position:absolute;
+        bottom:0;
+        left:50%;
+        transform: translateX(-50%);
+    }
+    h4{
+        color: #555;
+        font-weight:normal;
+    }
+    p{
+       font-size: 17px; 
+    }
+
     /* *{
         background-color: black;
     } */
