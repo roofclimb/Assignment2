@@ -288,9 +288,12 @@ table{
   }
   
   .column {
-    float: left;
-    width: 23%;
+    /* float: left; */
+    /* width: 23%; */
     padding: 10px;
+    min-width:200px;
+    flex-basis:20%;
+    margin-bottom: 50px;
   }
   
   /* Clearfix (clear floats) */
@@ -299,7 +302,8 @@ table{
     clear: both;
     display: table;
   }
-  
+
+  /* mobile version */
   @media screen and (max-width: 500px) {
     .column {
       width: 100%;
@@ -329,9 +333,18 @@ table{
         color: #555;
         font-weight:normal;
     }
-    p{
+    .column p{
        font-size: 17px; 
     }
+
+    .rating .fa{
+        color: #df422d;   
+    }
+    .column{
+        transition: transform 0.5s;
+    }
+
+
 
     /* *{
         background-color: black;
