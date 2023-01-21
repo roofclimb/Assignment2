@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/productstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="brand"><img src="/images/home/fairpricelogo.png" alt="" style="width:200px;"></a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="#">Cart</a>
+            <a href="#">LogIn/SignUp</a>
+        </div>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </header>
+    <section class="section-main">
+        <h1>Fairprice</h1>
+    </section>
+<!----Featured products ----->
+    <div class="row">
+        <h2 style="text-align: left ">Snacks and Confectionery</h2>
+        <div class="column">
+          <img src="/images/snacks/haribo.png" alt="haribo" style="width:100%">
+          <h4>$2.95</h4>
+          <h4>Haribo Gummy Candies</h4>
+          <p>160g Halal</p>
+        </div>
+        <div class="column">
+          <img src="/images/snacks/Hi-chew.png" alt="Hi-chew" style="width:100%">
+          <h4>Hi-chew</h4>
+        </div>
+        <div class="column">
+          <img src="/images/snacks/nougat.png" alt="nougat" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="/images/snacks/chinesecracker.png" alt="skittles" style="width:100%">
+          </div>
+          <div class="column">
+            <img src="/images/snacks/lays.png" alt="skittles" style="width:100%">
+          </div>
+          <div class="column">
+            <img src="/images/snacks/mentos.png" alt="skittles" style="width:100%">
+          </div>
+          <div class="column">
+            <img src="/images/snacks/monster.png" alt="skittles" style="width:100%">
+          </div>
+          <div class="column">
+            <img src="/images/snacks/potato chip.png" alt="skittles" style="width:100%">
+          </div>
+          <div class="column">
+            <img src="/images/snacks/potatocrispscracker.png" alt="skittles" style="width:100%">
+          </div>
+          <div class="column">
+            <img src="/images/snacks/Rollercoaster.png" alt="skittles" style="width:100%">
+          </div>
+          <div class="column">
+            <img src="/images/snacks/werthersorginal.png" alt="skittles" style="width:100%">
+          </div>
+      </div>
+
+
+      <div class="footer">
+        <p class="head">Follow us on:</p>
+        <div class="wrapper">
+            <a href="https://www.facebook.com/ch8sg" target="_blank" class="button1">
+                
+                    <div class="icon">
+                        <i class="fa fa-facebook"></i>
+                    </div>
+                    <span>Facebook</span>
+                    
+            </a>
+            <a href="https://www.instagram.com/fairpricesg/" target="_blank" class="button1">
+                    <div class="icon">
+                        <i class="fa fa-instagram"></i>
+                    </div>
+                    <span>Instagram</span>
+                    
+            </a>
+            <a href="https://github.com/roofclimb/Assignment1" target="_blank" class="button1">
+                    <div class="icon">
+                        <i class="fa fa-github"></i>
+                    </div>
+                    <span>Github</span>
+                    
+            </a>
+            <a href="https://www.youtube.com/@MediacorpEntertainment" target="_blank" class="button1">
+                <div class="icon">
+                    <i class="fa fa-youtube-play"></i>
+                </div>
+                <span>YouTube</span>
+            </a>
+            </div>
+        <br>
+        <br>
+    </div>
+
+    
+
+    <script type="text/javascript">
+        window.addEventListener("scroll",function(){
+            var header=document.querySelector("header");
+            header.classList.toggle('sticky',window.scrollY>0);
+        });    
+        
+        var menu = document.querySelector('.menu');
+        var menuBtn=document.querySelector('.menu-btn');
+        var closeBtn = document.querySelector('.close-btn');
+
+        menuBtn.addEventListener("click",()=>{
+            menu.classList.add('active');
+        });
+        closeBtn.addEventListener("click",()=>{
+            menu.classList.remove('active');
+        });
+    </script>
+</body>
+
+
+
+</body>
+</html>
