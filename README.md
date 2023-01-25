@@ -18,7 +18,7 @@ FairPrice Online is the e-commerce portal of NTUC Fairprice Co-operative Ltd, Si
 - 3 tabs
   - Products
     - Snacks and Confectionery
-      - 12 items (4\*3 rows)
+      - 15 items (5\*3 rows)
     - Fresh fruits
     - Frozen
   - Cart
