@@ -94,25 +94,6 @@ header .btn{
     display:none;
 }
 
-/* .section-two{
-    min-height: 100vh;
-    background: #001018;
-    padding: 20px 100px;
-}
-
-.section-two h2{
-    color: rgba(255,255,255,0.5);
-    font-size: 50px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 30px 0;
-}
-
-.section-two p{
-    color: rgba(255,255,255,0.5);
-    font-size: 18px;
-    margin:30px 0;
-} */
 
 @media (max-width: 1060px){
     header .btn{
@@ -153,13 +134,24 @@ header .btn{
         margin: 20px;
         padding: 0 15px;
     }
-}
-
-@media (max-width:630px){
     .section-main h1{
-        font-size: 50px;
-        line-height: 60px;
-    }
+      font-size: 50px;
+      line-height: 60px;
+  }
+  .row{   
+    flex-direction: column;
+  }
+  table td,tr{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:auto;
+    padding: 20px;
+  }
+  .head{
+    font-size:20px;
+  }
 }
 
 table{

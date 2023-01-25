@@ -2,8 +2,6 @@
 
 This website is a Fairprice e-commerce website for consumers to choose their desired items and add it to their shopping cart. As Fairprice has many items for sale, we will only be focusing on a few products from 3 categories, snacks, household and frozen products. Users would then be able to have the products delivered to their doorstep. We will also include a quiz section, to test users after they have read what FairPrice is about so that they can gain more knowledge about FairPrice. And, in exchange, they can collect vouchers.
 
-NTUC FairPrice is the largest supermarket chain in Singapore, with over 100 supermarkets island-wide.
-
 # Design Process
 
 This website is built for people in Singapore to order products from Fairprice and to find out more about FairPrice. They would also be able to see what promotions FairPrice has which would entice them to place an order.
@@ -16,8 +14,6 @@ FairPrice Online is the e-commerce portal of NTUC Fairprice Co-operative Ltd, Si
 
 ## Features made
 
-## Features yet to be made
-
 - Navigation Bar
 - 3 tabs
   - Products
@@ -27,6 +23,9 @@ FairPrice Online is the e-commerce portal of NTUC Fairprice Co-operative Ltd, Si
     - Frozen
   - Cart
   - Login/Sign Up
+
+## Features yet to be made
+
 - Sticky Scroll to top button with progress bar
 - In-built quiz with responsive background
 - Sticky bar
@@ -34,8 +33,7 @@ FairPrice Online is the e-commerce portal of NTUC Fairprice Co-operative Ltd, Si
 
 # Wireframe Link
 
-- Desktop version:
-- Mobile version:
+- Desktop version: https://xd.adobe.com/view/fe4c5bd3-639d-4fbc-a654-10e53850d4f7-ab1f/
 
 # Website Link
 
@@ -50,3 +48,7 @@ FairPrice Online is the e-commerce portal of NTUC Fairprice Co-operative Ltd, Si
 - JavaScript
 
 ## Credits
+
+- Referenced https://www.fairprice.com.sg/
+- https://www.google.com/url?sa=i&url=https%3A%2F%2Fhelp.fairprice.com.sg%2Fhc%2Fen-us&psig=AOvVaw2X7rt9fpe-tn_NmniJSMbe&ust=1674726306083000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMC3w-a34vwCFQAAAAAdAAAAABAN
+-
