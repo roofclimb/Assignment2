@@ -46,6 +46,9 @@ FairPrice Online is the e-commerce portal of NTUC Fairprice Co-operative Ltd, Si
 - HTML
 - CSS
 - JavaScript
+- restDB
+- API
+- JSON
 
 ## Credits
 
