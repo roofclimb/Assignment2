@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+       
 </head>
 <body>
     <header>
@@ -30,253 +31,317 @@
     <section class="section-main">
         <h1>Fairprice</h1>
     </section>
+
+    <button class="tablink" onclick="openPage('Snacks', this, 'green')" id="defaultOpen">Snacks</button>
+<button class="tablink" onclick="openPage('Fruits', this, 'blue')">Fruits</button>
+<button class="tablink" onclick="openPage('Frozen', this, 'orange')">Frozen</button>
+<button class="tablink" onclick="openPage('Household', this, 'red')">Household</button>
     <br>
-    <a href="#fruit">hello</a>
+    <!-- <a href="#fruit">hello</a> -->
+<div id="Snacks" class="tabcontent">
 <!----Featured products ----->
-<h2 style="text-align: center ">Snacks and Confectionery</h2>
-    <div class="row">
-        <div class="column">
-          <img src="/images/snacks/haribo.png" alt="haribo" height="300" >
-          <br>
-          <br>
-          <div class="details">
-            <b>$2.95</b>
-          <h4>Haribo Gummy Candies</h4>
-          <p>160g Halal</p>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-          </div>
-          <br>
-          <p><button>Add to Cart</button></p>
-        </div>
-        <div class="column">
-          <img src="/images/snacks/hi-chew1.png" height="300" alt="Hi-chew" >
-          <br>
-          <br>
-          <b>$2.83</b>
-          <h4>Hi-Chew Mini Chewy Candy - Grape & Strawberry</h4>
-          <p>100g</p>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <br>
-          <p><button>Add to Cart</button></p>
-        </div>
-        <div class="column">
-          <img src="/images/snacks/nougat.png" height="270" alt="nougat">
-          <br>
-          <br>
-          <br>
-          <b>$6.56</b>
-          <h4>Golden Boronia Nougat- Original (Soft)</h4>
-          <p>100g</p>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o" ></i>
-          </div>
-          <br>
-          <p><button>Add to Cart</button></p>
-        </div>
-        <div class="column">
-            <img src="/images/snacks/senbei.png" height="300" alt="senbei" >
+  <h2 style="text-align: center ">Snacks</h2>
+      <div class="row">
+          <div class="column">
+            <img src="/images/snacks/haribo.png" alt="haribo" height="300" >
             <br>
             <br>
-            <b>$2.05</b>
-            <h4>Wang Wang Rice Crackers -Senbei </h4>
-            <p>92g</p>
+            <div class="details">
+              <b>$2.95</b>
+            <h4>Haribo Gummy Candies</h4>
+            <p>160g Halal</p>
             <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <br>
-              <br>
-              <p><button>Add to Cart</button></p>
-          </div>
-          <div class="column">
-            <img src="/images/snacks/lays.png" height="300" alt="lays">
-            <br>
-            <br>
-            <b>$4.80</b>
-            <h4>Lay's Potato Chips - Classic </h4>
-            <p>170g</p>
-            <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <br>
-              <br>
-              <p><button>Add to Cart</button></p>
-          </div>
-          <div class="column">
-            <img src="/images/snacks/mentos.png" height="400" alt="mentos" style="width:100%">
-            <b>$1.90</b>
-            <h4>Mentos Chewy Dragees - Mint(Share-A-Bowl) </h4>
-            <p>135g</p>
-            <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <br>
-              <p><button>Add to Cart</button></p>
-          </div>
-          <div class="column">
-            <img src="/images/snacks/yummypops.png" height="400" alt="yummypops" style="width:100%">
-            <b>$5.55</b>
-            <h4>Yum Earth Organics Lollipops - Assorted </h4>
-            <p>85g</p>
-            <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <br>
-              <p><button>Add to Cart</button></p>
-          </div>
-      
-          <div class="column">
-            <img src="/images/snacks/monster.png" height="400" alt="monster" style="width:100%">
-            <b>$2.19</b>
-            <h4>Mamee Monster Chicken Flavour- Perisa Ayam Noodle Snack(8x25) </h4>
-            <p>8x200g Halal</p>
-            <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
             </div>
             <br>
-              <p><button>Add to Cart</button></p>
+            <p><button>Add to Cart</button></p>
           </div>
           <div class="column">
-            <img src="/images/snacks/potato chip.png" height="400" alt="potato chip" style="width:100%">
-            <b>$2.17</b>
-            <h4>Calbee Crispy Potato Chips - Hot & Spicy </h4>
-            <p>72g</p>
+            <img src="/images/snacks/hi-chew1.png" height="300" alt="Hi-chew" >
+            <br>
+            <br>
+            <b>$2.83</b>
+            <h4>Hi-Chew Mini Chewy Candy - Grape & Strawberry</h4>
+            <p>100g</p>
             <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <br>
+            <p><button>Add to Cart</button></p>
+          </div>
+          <div class="column">
+            <img src="/images/snacks/nougat.png" height="270" alt="nougat">
+            <br>
+            <br>
+            <br>
+            <b>$6.56</b>
+            <h4>Golden Boronia Nougat- Original (Soft)</h4>
+            <p>100g</p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o" ></i>
+            </div>
+            <br>
+            <p><button>Add to Cart</button></p>
+          </div>
+          <div class="column">
+              <img src="/images/snacks/senbei.png" height="300" alt="senbei" >
+              <br>
+              <br>
+              <b>$2.05</b>
+              <h4>Wang Wang Rice Crackers -Senbei </h4>
+              <p>92g</p>
+              <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <br>
+                <br>
+                <p><button>Add to Cart</button></p>
+            </div>
+            <div class="column">
+              <img src="/images/snacks/lays.png" height="300" alt="lays">
+              <br>
+              <br>
+              <b>$4.80</b>
+              <h4>Lay's Potato Chips - Classic </h4>
+              <p>170g</p>
+              <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <br>
+                <br>
+                <p><button>Add to Cart</button></p>
+            </div>
+            <div class="column">
+              <img src="/images/snacks/mentos.png" height="400" alt="mentos" style="width:100%">
+              <b>$1.90</b>
+              <h4>Mentos Chewy Dragees - Mint(Share-A-Bowl) </h4>
+              <p>135g</p>
+              <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <br>
+                <p><button>Add to Cart</button></p>
+            </div>
+            <div class="column">
+              <img src="/images/snacks/yummypops.png" height="400" alt="yummypops" style="width:100%">
+              <b>$5.55</b>
+              <h4>Yum Earth Organics Lollipops - Assorted </h4>
+              <p>85g</p>
+              <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <br>
+                <p><button>Add to Cart</button></p>
+            </div>
+        
+            <div class="column">
+              <img src="/images/snacks/monster.png" height="400" alt="monster" style="width:100%">
+              <b>$2.19</b>
+              <h4>Mamee Monster Chicken Flavour- Perisa Ayam Noodle Snack(8x25) </h4>
+              <p>8x200g Halal</p>
+              <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
               </div>
               <br>
-              <p><button>Add to Cart</button></p>
-          </div>
-          <div class="column">
-            <img src="/images/snacks/potatocrispscracker.png" height="400" alt="potatocrispscracker" style="width:100%">
-            <b>$2.22</b>
-            <h4>Win2 Baked Potato Crisp Crackers - Vegetable </h4>
-            <p>160g( 8 per pack) </p>
-            <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-o"></i>
-              </div>
-              <br>
-              <p><button>Add to Cart</button></p>
-          </div>
-          <div class="column">
-            <img src="/images/snacks/Rollercoaster.png" height="400"alt="Rollercoaster" style="width:100%">
-            <b>$2.98</b>
-            <h4>Jack 'n Jill Roller Coaster Potato Rings -Barbecue </h4>
-            <p>144g(8 per pack)</p>
-            <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-              </div>
-              <br>
-              <p><button>Add to Cart</button></p>
-          </div>
-          <div class="column">
-            <img src="/images/snacks/werthers.png" height="400" alt="werthers" style="width:100%">
-            <b>$3.99</b>
-            <h4>Storck Werther's Original Cream Candies - Classical </h4>
-            <p>150g</p>
-            <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-o"></i>
-              </div>
-              <p><button>Add to Cart</button></p>
-          </div>
-          <div class="column">
-            <img src="/images/snacks/skittles.png" height="400" alt="skittles" style="width:100%">
-            <b>$4.20</b>
-            <h4>Skittles Candies - Original (Fun Size Bag) </h4>
-            <p>10x15g</p>
-            <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-o"></i>
-              </div>
-              <br>
-              <p><button>Add to Cart</button></p>
-          </div>
-          <div class="column">
-            <img src="/images/snacks/Ruffles.png" height="400" alt="ruffles" style="width:100%">
-            <b>$5.30</b>
-            <h4>Ruffles Potato Chips - Cheddar & Sour Cream </h4>
-            <p>170g</p>
-            <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-o"></i>
-              </div>
-              <br>
-              <p><button>Add to Cart</button></p>
-          </div>
-          <div class="column">
-            <img src="/images/snacks/doritos.png" height="400" alt="doritos" style="width:100%">
-            <b>$5.30</b>
-            <h4>Doritos Tortilla Chips - Nacho Cheese</h4>
-            <p>190g</p>
-            <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <br>
-              <p><button>Add to Cart</button></p>
-          </div>
+                <p><button>Add to Cart</button></p>
+            </div>
+            <div class="column">
+              <img src="/images/snacks/potato chip.png" height="400" alt="potato chip" style="width:100%">
+              <b>$2.17</b>
+              <h4>Calbee Crispy Potato Chips - Hot & Spicy </h4>
+              <p>72g</p>
+              <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <br>
+                <p><button>Add to Cart</button></p>
+            </div>
+            <div class="column">
+              <img src="/images/snacks/potatocrispscracker.png" height="400" alt="potatocrispscracker" style="width:100%">
+              <b>$2.22</b>
+              <h4>Win2 Baked Potato Crisp Crackers - Vegetable </h4>
+              <p>160g( 8 per pack) </p>
+              <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-o"></i>
+                </div>
+                <br>
+                <p><button>Add to Cart</button></p>
+            </div>
+            <div class="column">
+              <img src="/images/snacks/Rollercoaster.png" height="400"alt="Rollercoaster" style="width:100%">
+              <b>$2.98</b>
+              <h4>Jack 'n Jill Roller Coaster Potato Rings -Barbecue </h4>
+              <p>144g(8 per pack)</p>
+              <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-o"></i>
+                </div>
+                <br>
+                <p><button>Add to Cart</button></p>
+            </div>
+            <div class="column">
+              <img src="/images/snacks/werthers.png" height="400" alt="werthers" style="width:100%">
+              <b>$3.99</b>
+              <h4>Storck Werther's Original Cream Candies - Classical </h4>
+              <p>150g</p>
+              <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-o"></i>
+                </div>
+                <p><button>Add to Cart</button></p>
+            </div>
+            <div class="column">
+              <img src="/images/snacks/skittles.png" height="400" alt="skittles" style="width:100%">
+              <b>$4.20</b>
+              <h4>Skittles Candies - Original (Fun Size Bag) </h4>
+              <p>10x15g</p>
+              <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-o"></i>
+                </div>
+                <br>
+                <p><button>Add to Cart</button></p>
+            </div>
+            <div class="column">
+              <img src="/images/snacks/Ruffles.png" height="400" alt="ruffles" style="width:100%">
+              <b>$5.30</b>
+              <h4>Ruffles Potato Chips - Cheddar & Sour Cream </h4>
+              <p>170g</p>
+              <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-o"></i>
+                </div>
+                <br>
+                <p><button>Add to Cart</button></p>
+            </div>
+            <div class="column">
+              <img src="/images/snacks/doritos.png" height="400" alt="doritos" style="width:100%">
+              <b>$5.30</b>
+              <h4>Doritos Tortilla Chips - Nacho Cheese</h4>
+              <p>190g</p>
+              <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <br>
+                <p><button>Add to Cart</button></p>
+            </div>
+        </div>
+        <div class="footer">
+          <table style="padding: 0;">
+              <tr>
+                  <td style="width:500px;">
+                      <p class="head">Follow us on:</p>
+                      <br>
+                      <div class="wrapper">
+                          <a href="https://www.facebook.com/ch8sg" target="_blank" class="button1">
+                              
+                                  <div class="icon">
+                                      <i class="fa fa-facebook"></i>
+                                  </div>
+                                  <span>Facebook</span>
+                                  
+                          </a>
+                          <a href="https://www.instagram.com/fairpricesg/" target="_blank" class="button1">
+                                  <div class="icon">
+                                      <i class="fa fa-instagram"></i>
+                                  </div>
+                                  <span>Instagram</span>
+                                  
+                          </a>
+                          <a href="https://github.com/roofclimb/Assignment1" target="_blank" class="button1">
+                                  <div class="icon">
+                                      <i class="fa fa-github"></i>
+                                  </div>
+                                  <span>Github</span>
+                                  
+                          </a>
+                          <a href="https://www.youtube.com/@MediacorpEntertainment" target="_blank" class="button1">
+                              <div class="icon">
+                                  <i class="fa fa-youtube-play"></i>
+                              </div>
+                              <span>YouTube</span>
+                          </a>
+                          </div>
+                      <br>
+                      <br>
+                  </td>
+                  <td style="text-align: center;">
+                      <p class="head">Download Our App</p>
+                      <br>
+                      <a href="https://play.google.com/store/apps/details?id=com.fairprice.mcomapp" target="_blank"><img src="/images/home/get-it-on-google-play-badge.png" alt="" style="width:200px;"></a>
+                      &emsp;
+                      <a href="https://apps.apple.com/sg/app/fairprice-fast-reliable/id1012365118" target="_blank"><img src="/images/home/Get-it-on-apple-store.png" alt="" style="width:200px;"></a>
+                  </td>
+                  <td>
+                      <img src="/images/home/qr.png" alt="" style="width: 200px;">
+                  </td>
+              </tr>
+              
+          </table>
+          <hr>
+              <p class="copyright">Copyright 2023 - VIP</p>
+          <br>
       </div>
+</div>
 
+<div id="Fruits" class="tabcontent">
       <h2 style="text-align: center " id="fruit">Fruits</h2>
     <div class="row">
         <div class="column">
@@ -518,7 +583,65 @@
               <p><button>Add to Cart</button></p>
           </div>
       </div>
+      <div class="footer">
+        <table style="padding: 0;">
+            <tr>
+                <td style="width:500px;">
+                    <p class="head">Follow us on:</p>
+                    <br>
+                    <div class="wrapper">
+                        <a href="https://www.facebook.com/ch8sg" target="_blank" class="button1">
+                            
+                                <div class="icon">
+                                    <i class="fa fa-facebook"></i>
+                                </div>
+                                <span>Facebook</span>
+                                
+                        </a>
+                        <a href="https://www.instagram.com/fairpricesg/" target="_blank" class="button1">
+                                <div class="icon">
+                                    <i class="fa fa-instagram"></i>
+                                </div>
+                                <span>Instagram</span>
+                                
+                        </a>
+                        <a href="https://github.com/roofclimb/Assignment1" target="_blank" class="button1">
+                                <div class="icon">
+                                    <i class="fa fa-github"></i>
+                                </div>
+                                <span>Github</span>
+                                
+                        </a>
+                        <a href="https://www.youtube.com/@MediacorpEntertainment" target="_blank" class="button1">
+                            <div class="icon">
+                                <i class="fa fa-youtube-play"></i>
+                            </div>
+                            <span>YouTube</span>
+                        </a>
+                        </div>
+                    <br>
+                    <br>
+                </td>
+                <td style="text-align: center;">
+                    <p class="head">Download Our App</p>
+                    <br>
+                    <a href="https://play.google.com/store/apps/details?id=com.fairprice.mcomapp" target="_blank"><img src="/images/home/get-it-on-google-play-badge.png" alt="" style="width:200px;"></a>
+                    &emsp;
+                    <a href="https://apps.apple.com/sg/app/fairprice-fast-reliable/id1012365118" target="_blank"><img src="/images/home/Get-it-on-apple-store.png" alt="" style="width:200px;"></a>
+                </td>
+                <td>
+                    <img src="/images/home/qr.png" alt="" style="width: 200px;">
+                </td>
+            </tr>
+            
+        </table>
+        <hr>
+            <p class="copyright">Copyright 2023 - VIP</p>
+        <br>
+    </div>
+</div>
 
+<div id="Frozen" class="tabcontent">
     <h2 style="text-align: center ">Frozen</h2>
     <div class="row">
         <div class="column">
@@ -757,6 +880,64 @@
               <p><button>Add to Cart</button></p>
           </div>
       </div>
+      <div class="footer">
+        <table style="padding: 0;">
+            <tr>
+                <td style="width:500px;">
+                    <p class="head">Follow us on:</p>
+                    <br>
+                    <div class="wrapper">
+                        <a href="https://www.facebook.com/ch8sg" target="_blank" class="button1">
+                            
+                                <div class="icon">
+                                    <i class="fa fa-facebook"></i>
+                                </div>
+                                <span>Facebook</span>
+                                
+                        </a>
+                        <a href="https://www.instagram.com/fairpricesg/" target="_blank" class="button1">
+                                <div class="icon">
+                                    <i class="fa fa-instagram"></i>
+                                </div>
+                                <span>Instagram</span>
+                                
+                        </a>
+                        <a href="https://github.com/roofclimb/Assignment1" target="_blank" class="button1">
+                                <div class="icon">
+                                    <i class="fa fa-github"></i>
+                                </div>
+                                <span>Github</span>
+                                
+                        </a>
+                        <a href="https://www.youtube.com/@MediacorpEntertainment" target="_blank" class="button1">
+                            <div class="icon">
+                                <i class="fa fa-youtube-play"></i>
+                            </div>
+                            <span>YouTube</span>
+                        </a>
+                        </div>
+                    <br>
+                    <br>
+                </td>
+                <td style="text-align: center;">
+                    <p class="head">Download Our App</p>
+                    <br>
+                    <a href="https://play.google.com/store/apps/details?id=com.fairprice.mcomapp" target="_blank"><img src="/images/home/get-it-on-google-play-badge.png" alt="" style="width:200px;"></a>
+                    &emsp;
+                    <a href="https://apps.apple.com/sg/app/fairprice-fast-reliable/id1012365118" target="_blank"><img src="/images/home/Get-it-on-apple-store.png" alt="" style="width:200px;"></a>
+                </td>
+                <td>
+                    <img src="/images/home/qr.png" alt="" style="width: 200px;">
+                </td>
+            </tr>
+            
+        </table>
+        <hr>
+            <p class="copyright">Copyright 2023 - VIP</p>
+        <br>
+    </div>
+</div>
+<div id="Household" class="tabcontent" >
       <h2 style="text-align: center ">Household</h2>
       <div class="row">
           <div class="column">
@@ -1001,7 +1182,6 @@
                 <p><button>Add to Cart</button></p>
             </div>
         </div>
-
         <div class="footer">
           <table style="padding: 0;">
               <tr>
@@ -1058,6 +1238,8 @@
               <p class="copyright">Copyright 2023 - VIP</p>
           <br>
       </div>
+</div>
+        
     <script type="text/javascript">
         window.addEventListener("scroll",function(){
             var header=document.querySelector("header");
@@ -1074,6 +1256,7 @@
         closeBtn.addEventListener("click",()=>{
             menu.classList.remove('active');
         });
-    </script>   
+    </script>
+<script src="/script.js"></script>
 </body>
 </html>
