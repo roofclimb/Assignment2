@@ -6,7 +6,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins",sans-serif;
-    font-size: 15px;
 }
 
 body{
@@ -24,6 +23,7 @@ body{
     align-items: center;
     padding: 20px 100px;
 }
+
 
 .section-main h1{
     color:rgba(255,255,255,0.8);
@@ -43,13 +43,14 @@ header{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 100px;
+    padding: 10px 100px;
     transition: 0.6s;
+    background: lightblue;
 }
 
 header.sticky{
     background: lightblue;
-    padding: 15px 100px;
+    padding: 2px 100px;
     
 }
 
@@ -74,7 +75,7 @@ header .menu{
 }
 
 header .menu a{
-    color:#fff;
+    color:black;
     font-weight: 500;
     text-decoration: none;
     margin: 0 30px;
