@@ -3,6 +3,7 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement=document.getElementById('question-container')
 const questionElement=document.getElementById('question')
 const answerButtonElement=document.getElementById('answer-buttons')
+var score=0
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -60,6 +61,7 @@ function selectAnswer(e){
     }else{
         startButton.innerText='Restart'
         startButton.classList.remove('hide')
+        score=0
     }
     
 }
@@ -68,18 +70,17 @@ function setStatusClass(element,correct){
     clearStatusClass(element)
     
     if (correct){
-        
         element.classList.add('correct');
-       
     }else{
         element.classList.add('wrong');
         
     }
 
     if(document.body.classList.contains('correct')){
-        document.getElementById('text').innerHTML="Well Done!";
+        score+=1;
+        document.getElementById('text').innerHTML=score+"/25";
     }else{
-        document.getElementById('text').innerHTML="Try Again";
+        document.getElementById('text').innerHTML=score+"/25";
     }
 
 }

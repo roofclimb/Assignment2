@@ -1,8 +1,8 @@
 *, *::before,*::after{
     box-sizing: border-box;
-    font-family: 'Marhey', cursive;
-    font-size: 25px;
+    font-size: 20px;
 }
+
 
 :root{
     --hue-neutral:200;
@@ -20,6 +20,7 @@ body{
     justify-content: center;
     align-items:center;
     background-color:hsl(var(--hue),100%,20%);
+    
 }
 
 body.correct{
@@ -37,6 +38,11 @@ body.wrong{
     padding:10px;
     box-shadow: 0 0 10px 2px;
     align-items: center;
+    
+}
+
+.questions{
+    font-size: 25px;
 }
 
 .btn-grid{

@@ -15,41 +15,36 @@
     <link rel="stylesheet" href="/style/quiz.css">
 </head>
 <body>
-    <header>
-        <a href="index.html" class="brand"><img src="/images/home/fairpricelogo.png" alt="" style="width:200px;"></a>
-        <div class="menu">
-            <div class="btn">
-                <i class="fas fa-times close-btn"></i>
-            </div>
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="cart.html">Cart</a>
-            <a href="login.html">LogIn/SignUp</a>
-        </div>
-        <div class="btn">
-            <i class="fas fa-bars menu-btn"></i>
-        </div>
-    </header>
+    <div w3-include-html="header.html"></div>
     <!-- <section class="section-main">
         <h1>Fairprice</h1>
     </section> -->
     <br>
-    <h1 id="text">There are 4 mcq questions. Click start to begin.</h1>
-    <div class="container">
-        <div id = "question-container" class="hide">
-            <div id="question">Question</div>
-            <div id="answer-buttons" class="btn-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
-            </div>
-        </div>
-        <div class="controls">
-            <button id="start-btn" class="start-btn btn">Start</button>
-            <button id="next-btn" class="next-btn btn hide">Next</button>
-        </div>
-    </div>
+    <table>
+        <tr>
+            <td><h1 id="text">There are 4 mcq questions. Click start to begin.</h1></td>
+        </tr>
+        <tr>
+            <td class="questions">
+                <div class="container">
+                <div id = "question-container" class="hide">
+                    <div id="question">Question</div>
+                    <div id="answer-buttons" class="btn-grid">
+                        <button class="btn">Answer 1</button>
+                        <button class="btn">Answer 2</button>
+                        <button class="btn">Answer 3</button>
+                        <button class="btn">Answer 4</button>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button id="start-btn" class="start-btn btn">Start</button>
+                    <button id="next-btn" class="next-btn btn hide">Next</button>
+                </div>
+            </div></td>
+        </tr>
+    </table>
+    
+    
                 
             
     <!----JavaScript for toggle menu---->
@@ -62,5 +57,10 @@
             navLinks.style.left="-200px";
         }
     </script>  
+     <script src="/javascript/include.js"></script>
+     <script>
+         includeHTML();
+     </script>
+ 
     
 </body>
