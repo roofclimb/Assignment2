@@ -83,6 +83,7 @@ header .menu a{
     border-radius: 20px;
     transition: 0.3s;
     transition-property: color, background;
+    font-size:25px;
 }
 
 header .menu a:hover{
@@ -295,7 +296,33 @@ table{
     color: #ff0000;
   }
 
+  html{
+    scroll-behavior: smooth;
+}
+#progress{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height:70px;
+    width:70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
 
+#progress-value{
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color:#001a2e;
+}
 
 @media(max-width: 700px){
   .wrapper{
