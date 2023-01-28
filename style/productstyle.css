@@ -45,7 +45,7 @@
     text-align: center;
     }
     .column img{
-      height:300px;
+      height:auto;
     }
   }
  
@@ -81,7 +81,7 @@
         color: #df422d;   
     }
 /* Add to  cart button */
-    button {
+    .column button {
       border: none;
       outline: 0;
       padding: 12px;
@@ -89,12 +89,12 @@
       background-color: #000;
       text-align: center;
       cursor: pointer;
-      width: 70%;
+      width: 80%;
       font-size: 18px;
       border-radius: 8px;
     }
     
-    button:hover {
+    .column button:hover {
       opacity: 0.7;
     }
 
