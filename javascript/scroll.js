@@ -23,3 +23,7 @@ let calcScrollValue=()=>{
 
 window.onscroll=calcScrollValue;
 window.onload=calcScrollValue;
+
+const d=new Date();
+let day = d.getDate();
+document.getElementById("demo").innerHTML=d;

@@ -146,6 +146,10 @@ margin:20px 0;
 text-align: center;
 }
 
+.youtube{
+  width:100%;
+   height:235px;
+}
 
 
 @media (max-width: 750px){
@@ -210,6 +214,15 @@ text-align: center;
   .image{
     width: 100%;
   }
+
+  .section-main{
+    height:50vh;
+  }
+  .youtube{
+    width:100%;
+    height:300px;
+  }
+  
 }
 
 table{

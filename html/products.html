@@ -14,8 +14,24 @@
        
 </head>
 <body>
-    <div w3-include-html="header.html"></div>
-    
+  <div id="progress">
+    <span id="progress-value"><i class="fa fa-arrow-up"></i></span>
+</div>
+  <header>
+    <a href="index.html" class="brand"><img src="/images/home/fairpricelogo.png" alt="" class="logo"></a>
+    <div class="menu">
+        <div class="btn">
+            <i class="fas fa-times close-btn"></i>
+        </div>
+        <a href="/index.html"><i class="fa-sharp fa-solid fa-house"></i></a>
+        <a href="/html/products.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="/html/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="/html/login.html"><i class="fa-solid fa-user"></i></a>
+    </div>
+    <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+    </div>
+</header>
     <br><br><br>
     <section class="section-main" id="products">
         <h1>Products</h1>
@@ -1105,31 +1121,16 @@
                 <p><button>Add to Cart</button></p>
             </div>
         </div>
-        <div w3-include-html="footer.html"></div>
 </div>
-        
-    <script type="text/javascript">
-        window.addEventListener("scroll",function(){
-            var header=document.querySelector("header");
-            header.classList.toggle('sticky',window.scrollY>0);
-        });    
-        
-        var menu = document.querySelector('.menu');
-        var menuBtn=document.querySelector('.menu-btn');
-        var closeBtn = document.querySelector('.close-btn');
-
-        menuBtn.addEventListener("click",()=>{
-            menu.classList.add('active');
-        });
-        closeBtn.addEventListener("click",()=>{
-            menu.classList.remove('active');
-        });
-    </script>
-<script src="/javascript/script.js"></script>
+      
+<script src="/javascript/products.js"></script>
+<div w3-include-html="html/footer.html"></div>
 <script src="/javascript/include.js"></script>
-<script>
-    includeHTML();
-</script>
+<script src="/javascript/scroll.js"></script>
+<script src="/javascript/header.js"></script>
+    <script>
+        includeHTML();
+    </script>
 
 </body>
 </html>
