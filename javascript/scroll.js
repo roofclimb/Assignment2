@@ -23,7 +23,9 @@ let calcScrollValue=()=>{
 
 window.onscroll=calcScrollValue;
 window.onload=calcScrollValue;
-
+const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 const d=new Date();
 let day = d.getDate();
-document.getElementById("demo").innerHTML=d;
+let m=month[d.getMonth()];
+let year = d.getFullYear();
+document.getElementById("demo").innerHTML=day+" "+m+" "+year;
