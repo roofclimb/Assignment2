@@ -49,7 +49,7 @@
                         <div class="form" id="add-contact">
                             <form id="LoginForm" class="form" id="add-contact-form">
                                 <div class="form-group">
-                                    <input type="text" id="name" class="form-control" placeholder="Username" required>
+                                    <input type="text" id="name" class="form-control" placeholder="Username" style="width: 100%;" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="password" id="password" class="form-control" placeholder="Password" required>
@@ -72,8 +72,9 @@
                                     <input type="password" id="confirm-password" class="form-control" placeholder="Confirm Password" required>
                                 </div>
                                 <input type="submit" value="Register" class="btn btn-primary" id="contact-submit">
-                                </form>
+                                <p id="nomatch"></p>
                             </form>
+                                
                         </div>
                         
                     </div>
@@ -90,10 +91,11 @@
     <div w3-include-html="footer.html"></div>
 <script src="javascript/include.js"></script>
 <script src="javascript/header.js"></script>
+
     <script>
         includeHTML();
     </script>
-    
+    <script src="javascript/account.js"></script>
 </body>
 </html>
 

@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
 .main{
     position:relative;
     width: 100%;
@@ -35,9 +44,7 @@
     display: inline-block;
 }
 
-.form-btn{
-    display: inline-block;
-}
+
 
 .form-container form{
     max-width: 300px;
@@ -92,17 +99,34 @@ form a{
     font-size: 12px;
 }
 
-#Indicator{
-    width:100px;
-    border: none;
-    background: #ff253b;
-    height: 3px;
-    margin-top: 8px;
-    transform: translateX(100px);
-    transition: transform 1s;
-}
+
 
 .form-control{
     align-items: center;
     width: 100%;
+}
+
+
+
+.form-btn{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#Indicator{
+    width:200px;
+    border: none;
+    background: #ff253b;
+    height: 3px;
+    margin-top: 8px;
+    transform: translateX(940px);
+    transition: transform 1s;
+}
+
+.form-btn table{
+    width:100%;
+    padding:10px;
 }
