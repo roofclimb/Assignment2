@@ -78,85 +78,14 @@
     </div>
 </div>
 
+    <div w3-include-html="footer.html"></div>
 
-
-
-
-    <div class="footer">
-        <table style="padding: 0;">
-            <tr>
-                <td style="width:500px;">
-                    <p class="head">Follow us on:</p>
-                    <br>
-                    <div class="wrapper">
-                        <a href="https://www.facebook.com/ch8sg" target="_blank" class="button1">
-                            
-                                <div class="icon">
-                                    <i class="fa fa-facebook"></i>
-                                </div>
-                                <span>Facebook</span>
-                                
-                        </a>
-                        <a href="https://www.instagram.com/fairpricesg/" target="_blank" class="button1">
-                                <div class="icon">
-                                    <i class="fa fa-instagram"></i>
-                                </div>
-                                <span>Instagram</span>
-                                
-                        </a>
-                        <a href="https://github.com/roofclimb/Assignment2" target="_blank" class="button1">
-                                <div class="icon">
-                                    <i class="fa fa-github"></i>
-                                </div>
-                                <span>Github</span>
-                                
-                        </a>
-                        <a href="https://www.youtube.com/@MediacorpEntertainment" target="_blank" class="button1">
-                            <div class="icon">
-                                <i class="fa fa-youtube-play"></i>
-                            </div>
-                            <span>YouTube</span>
-                        </a>
-                        </div>
-                    <br>
-                    <br>
-                </td>
-                <td style="text-align: center;">
-                    <p class="head">Download Our App</p>
-                    <br>
-                    <a href="https://play.google.com/store/apps/details?id=com.fairprice.mcomapp" target="_blank"><img src="/images/home/get-it-on-google-play-badge.png" alt="" style="width:200px;"></a>
-                    &emsp;
-                    <a href="https://apps.apple.com/sg/app/fairprice-fast-reliable/id1012365118" target="_blank"><img src="/images/home/Get-it-on-apple-store.png" alt="" style="width:200px;"></a>
-                </td>
-                <td>
-                    <img src="/images/home/qr.png" alt="" style="width: 200px;">
-                </td>
-            </tr>
-            
-        </table>
-        <hr>
-            <p class="copyright">Copyright 2023 - VIP</p>
-        <br>
-    </div>
-
-    
-
-    <script type="text/javascript">
-        window.addEventListener("scroll",function(){
-            var header=document.querySelector("header");
-            header.classList.toggle('sticky',window.scrollY>0);
-        });    
         
-        var menu = document.querySelector('.menu');
-        var menuBtn=document.querySelector('.menu-btn');
-        var closeBtn = document.querySelector('.close-btn');
-
-        menuBtn.addEventListener("click",()=>{
-            menu.classList.add('active');
-        });
-        closeBtn.addEventListener("click",()=>{
-            menu.classList.remove('active');
-        });
+    <script src="/javascript/include.js"></script>
+    <script src="/javascript/scroll.js"></script>
+    <script src="/javascript/header.js"></script>
+    <script>
+        includeHTML();
     </script>
 
 </body>
