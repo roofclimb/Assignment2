@@ -281,10 +281,12 @@ $(document).ready(function () {
                 console.log('correct email');
                 if (loginPassword==correctPassword){
                     document.getElementById('wrong').innerHTML="Log In successful.";
+                    break;
                 }
                 else{
                     console.log(correctPassword);
                     document.getElementById('wrong').innerHTML="Wrong password entered.";
+                    break;
                 }
             }
             else{
