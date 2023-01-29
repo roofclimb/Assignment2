@@ -278,10 +278,12 @@ $(document).ready(function () {
             console.log(response[i].email);
             if (loginEmail==response[i].email){
                 let correctPassword = response[i].password;
+                console.log('correct email');
                 if (loginPassword==correctPassword){
                     document.getElementById('wrong').innerHTML="Log In successful.";
                 }
                 else{
+                    console.log(correctPassword);
                     document.getElementById('wrong').innerHTML="Wrong password entered.";
                 }
             }
