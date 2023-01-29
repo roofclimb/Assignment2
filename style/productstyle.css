@@ -23,17 +23,26 @@
     clear: both;
     display: table;
   }
-  .section-main{
-    position:relative;
-    width: 100%;
-    min-height: 60vh;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.2),rgba(4,9,30,0.2)),url(/images/home/products.jpg);
-    background-position: center;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 100px;
+  .main{
+  min-height: 70vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.4),rgba(4,9,30,0.4)),url(/images/home/products.jpg);
+  background-position:center;
+  background-size:cover;
+  position:relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   }
+
+  .main h1{
+    color:rgba(255,255,255,0.8);
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height:80px;
+}
 
   /* mobile version */
   @media (max-width: 1000px) {
