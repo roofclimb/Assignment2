@@ -48,7 +48,7 @@ $(document).ready(function () {
               //clear our form using the form id and triggering it's reset feature
               $("#add-contact-form").trigger("reset");
             }
-        
+            
 
         }
         
@@ -65,7 +65,7 @@ $(document).ready(function () {
             getContacts();
         });
         
-  
+        document.getElementById('nomatch').innerHTML="Registration successful";
       //[STEP 3]: get form values when user clicks on send
       //Adapted from restdb api
       
