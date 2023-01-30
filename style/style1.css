@@ -15,7 +15,8 @@ body{
 .section-main{
   min-height: 70vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.4),rgba(4,9,30,0.4)),url(/images/home/wallpaper.jpg);
+  /* background-image: linear-gradient(rgba(4, 9, 30, 0.4),rgba(4,9,30,0.4)),url(/images/home/wallpaper.jpg); */
+  background: url(/images/home/wallpaper.jpg);
   background-position:center;
   background-size:cover;
   position:relative;
