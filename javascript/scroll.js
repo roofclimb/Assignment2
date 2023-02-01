@@ -30,17 +30,17 @@ let m=month[d.getMonth()];
 let year = d.getFullYear();
 document.getElementById("demo").innerHTML=day+" "+m+" "+year;
 
-let user = document.querySelector('.user');
+/* let user = document.querySelector('.user');
 let register1 = document.querySelector('.user.register');
 
 document.querySelector('#user-icon').onclick = () =>{
     user.classList.toggle('active');
     register1.classList.toggle('active');
 }
-/* document.querySelector('#register').onclick = () =>{
+document.querySelector('#register').onclick = () =>{
     user.classList.toggle('active');
     register1.classList.toggle('active');
-} */
+} 
 document.querySelector('#login').onclick = () =>{
     user.classList.toggle('active');
     register1.classList.toggle('active');
@@ -48,4 +48,11 @@ document.querySelector('#login').onclick = () =>{
 
 document.querySelector('#user-icon').onclick = () =>{
     user.classList.toggle('active');
+} */
+console.log(sessionStorage.getItem("name"))
+if (sessionStorage.getItem("name")==null){
+    document.getElementById("welcome").innerHTML="Welcome Guest";
+}
+else{
+    document.getElementById("welcome").innerHTML=sessionStorage.getItem("name");
 }

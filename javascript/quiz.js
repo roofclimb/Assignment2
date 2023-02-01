@@ -56,12 +56,63 @@ function selectAnswer(e){
     Array.from(answerButtonElement.children).forEach(button => {
         setStatusClass(button,button.dataset.correct)
     })
+    if(document.body.classList.contains('correct')){
+        score+=1;
+        document.getElementById('text').innerHTML=score+"/5";
+    }else{
+        document.getElementById('text').innerHTML=score+"/5";
+    }
+
     if (shuffledQuestions.length>currentQuestionIndex+1){
         nextButton.classList.remove('hide')
-    }else{
+    }
+    else{
+        //check if user has logged in
+        if (sessionStorage.getItem("id")!=null){
+            console.log(sessionStorage.getItem("id"));
+            let userscore=0;
+            let id = sessionStorage.getItem("id");//use sessionstorage to retrieve login guest id
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": `https://interactivedev-e51d.restdb.io/rest/ntuc/${id}`,
+                "method": "GET",
+                "headers": {
+                "content-type": "application/json",
+                "x-apikey": "63b648b9969f06502871aa3d",
+                "cache-control": "no-cache"
+                }
+            }
+            
+            $.ajax(settings).done(function (response) {
+                console.log("Original score: "+response.loyalty);
+                userscore=response.loyalty;
+                let loyalty = score+userscore;//add score to existing loyalty points of user
+                console.log("Total score: "+loyalty);
+                var jsondata = { "loyalty":loyalty};
+                var settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": `https://interactivedev-e51d.restdb.io/rest/ntuc/${id}`,//update based on the ID
+                    "method": "PUT",
+                    "headers": {
+                    "content-type": "application/json",
+                    "x-apikey": "63b648b9969f06502871aa3d",
+                    "cache-control": "no-cache"
+                    },
+                    "processData": false,
+                    "data": JSON.stringify(jsondata)
+                }
+                $.ajax(settings).done(function () {
+                    console.log("Game score: "+score);
+                    console.log("Final score: "+loyalty);
+                    score=0
+                });
+            });
+        }
         startButton.innerText='Restart'
         startButton.classList.remove('hide')
-        score=0
+        
     }
     
 }
@@ -75,14 +126,6 @@ function setStatusClass(element,correct){
         element.classList.add('wrong');
         
     }
-
-    if(document.body.classList.contains('correct')){
-        score+=1;
-        document.getElementById('text').innerHTML=score+"/25";
-    }else{
-        document.getElementById('text').innerHTML=score+"/25";
-    }
-
 }
 
 function clearStatusClass(element){
