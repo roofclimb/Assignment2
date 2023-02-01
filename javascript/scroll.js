@@ -29,3 +29,23 @@ let day = d.getDate();
 let m=month[d.getMonth()];
 let year = d.getFullYear();
 document.getElementById("demo").innerHTML=day+" "+m+" "+year;
+
+let user = document.querySelector('.user');
+let register1 = document.querySelector('.user.register');
+
+document.querySelector('#user-icon').onclick = () =>{
+    user.classList.toggle('active');
+    register1.classList.toggle('active');
+}
+/* document.querySelector('#register').onclick = () =>{
+    user.classList.toggle('active');
+    register1.classList.toggle('active');
+} */
+document.querySelector('#login').onclick = () =>{
+    user.classList.toggle('active');
+    register1.classList.toggle('active');
+}
+
+document.querySelector('#user-icon').onclick = () =>{
+    user.classList.toggle('active');
+}

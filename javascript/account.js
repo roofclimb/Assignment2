@@ -48,7 +48,7 @@ $(document).ready(function () {
             //clear our form using the form id and triggering it's reset feature
             $("#add-contact-form").trigger("reset");
           }
-      
+          
 
       }
       
@@ -65,7 +65,7 @@ $(document).ready(function () {
           getContacts();
       });
       
-
+      document.getElementById('nomatch').innerHTML="Registration successful";
     //[STEP 3]: get form values when user clicks on send
     //Adapted from restdb api
     
@@ -245,4 +245,104 @@ $(document).ready(function () {
       getContacts();
     });
   }//end updateform function
+
+
+
+ $("#login-submit").on("click", function (e)  {
+  e.preventDefault();
+
+  let loginEmail = $("#check-email").val();
+  let loginPassword = $("#check-password").val();
+  
+
+  let settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://interactivedev-e51d.restdb.io/rest/ntuc",
+      "method": "GET", //[cher] we will use GET to retrieve info
+      "headers": {
+        "content-type": "application/json",
+        "x-apikey": APIKEY,
+        "cache-control": "no-cache"
+      },
+    }
+
+    //[STEP 8]: Make our AJAX calls
+    //Once we get the response, we modify our table content by creating the content internally. We run a loop to continously add on data
+    //RESTDb/NoSql always adds in a unique id for each data, we tap on it to have our data and place it into our links 
+    $.ajax(settings).done(function (response) {
+      
+      let content = "";
+      const limit=10;
+      for (var i = 0; i < response.length && i < limit; i++) {
+          console.log(response[i].email);
+          if (loginEmail==response[i].email){
+              let correctPassword = response[i].password;
+              console.log('correct email');
+              if (loginPassword==correctPassword){
+                  document.getElementById('wrong').innerHTML="Log In successful.";
+                  break;
+              }
+              else{
+                  console.log(correctPassword);
+                  document.getElementById('wrong').innerHTML="Wrong password entered.";
+                  break;
+              }
+          }
+          else{
+              document.getElementById('wrong').innerHTML="Account does not exist";
+          }
+      }
+      
+
+    });
+/* 
+  //update our update form values
+  let contactName = $(this).data("name");
+  let contactEmail = $(this).data("email");
+  let contactPassword = $(this).data("password");
+  let contactId = $(this).data("id");
+  console.log($(this).data("password"));
+
+  //[STEP 11]: Load in our data from the selected row and add it to our update contact form 
+  $("#update-contact-name").val(contactName);
+  $("#update-contact-email").val(contactEmail);
+  $("#update-contact-password").val(contactPassword);
+  $("#update-contact-id").val(contactId);
+  $("#update-contact-container").show();
+  console.log(contactId);
+});//end contact-list listener for update function
+
+//[STEP 12]: Here we load in our contact form data
+//Update form listener
+$("#update-contact-submit").on("click", function (e) {
+  e.preventDefault();
+  //retrieve all my update form values
+  let contactName = $("#update-contact-name").val();
+  let contactEmail = $("#update-contact-email").val();
+  let contactPassword = $("#update-contact-msg").val();
+  let contactId = $("#update-contact-id").val();
+
+  console.log($("#update-contact-msg").val());
+  console.log(contactMsg);
+
+  //[STEP 12a]: We call our update form function which makes an AJAX call to our RESTDB to update the selected information
+  updateForm(contactId, contactName, contactEmail, contactPassword); */
+});
 })
+var LoginForm = document.getElementById("LoginForm")
+var RegForm = document.getElementById("RegForm")
+var Indicator=document.getElementById("Indicator")
+
+function register(){
+  /* RegForm.style.transform="translateX(0px)";
+  LoginForm.style.transform="translateX(0px)"; */
+  Indicator.style.transform="translateX(940px)";
+}
+
+
+function login(){
+  /* RegForm.style.transform="translateX(300px)";
+  LoginForm.style.transform="translateX(300px)"; */
+  Indicator.style.transform="translateX(200px)";
+}
