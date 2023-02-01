@@ -15,7 +15,7 @@ body{
 .section-main{
   min-height: 70vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.4),rgba(4,9,30,0.4)),url(/images/home/wallpaper.jpg);
+  background-image: linear-gradient(rgba(4, 9, 30, 0.4),rgba(4,9,30,0.4)),url(images/home/wallpaper.jpg);
   background-position:center;
   background-size:cover;
   position:relative;
@@ -24,7 +24,6 @@ body{
   text-align: center;
   display: flex;
 }
-
 
 .section-main h1{
     color:rgba(255,255,255,0.8);
