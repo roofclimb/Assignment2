@@ -41,6 +41,15 @@ FairPrice Online is the e-commerce portal of NTUC Fairprice Co-operative Ltd, Si
 
 # Testing
 
+- Quiz:
+  - If correct option selected, body colour turns green and "Well Done" is shown. After all questions completed, Next button changes to restart button.
+  - If user is logged in, after questions completed, quiz score would be added to user's loyalty points.
+- Login form:
+  - Form validation
+  - After login successful, prompt shown to show user's information and loyalty points.
+- Registration form:
+  - Form validation
+
 # Technologies used
 
 - HTML
