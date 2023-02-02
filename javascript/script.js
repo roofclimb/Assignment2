@@ -287,9 +287,11 @@ $(document).ready(function () {
                 console.log('correct email');
                 if (loginPassword==correctPassword){
                     document.getElementById('wrong').innerHTML="Log In successful.";
-                    alert("Welcome "+response[i].name+". You have "+response[i].loyalty+" points. Happy shopping.");
                     sessionStorage.setItem("name",response[i].name);
                     sessionStorage.setItem("id",response[i]._id);
+                    if (confirm("Welcome "+response[i].name+". \nYou have "+response[i].loyalty+" points. \nHappy shopping.\nRedirecting to home page.")){
+                        setTimeout(document.location.href = '/index.html', 5000);
+                    }
                     break;
                 }
                 else{
@@ -355,4 +357,37 @@ function login(){
     LoginForm.style.transform="translateX(300px)";
     Indicator.style.transform="translateX(0px)";
 }
+
+if (sessionStorage.getItem("name")!=null){
+  document.getElementById("data").innerHTML="Name: "+sessionStorage.getItem("name");
+}
+
+if (sessionStorage.getItem("id")!=null){
+  console.log(sessionStorage.getItem("id"));
+  let id = sessionStorage.getItem("id");//use sessionstorage to retrieve login guest id
+  var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": `https://interactivedev-e51d.restdb.io/rest/ntuc/${id}`,
+      "method": "GET",
+      "headers": {
+      "content-type": "application/json",
+      "x-apikey": "63b648b9969f06502871aa3d",
+      "cache-control": "no-cache"
+      }
+  }
   
+  $.ajax(settings).done(function (response) {
+      document.getElementById("data").innerHTML="Name: "+response.name;
+      document.getElementById("points").innerHTML="Loyalty points: "+response.loyalty;
+      userscore=response.loyalty;
+  });
+}
+
+function logout(){
+  if (confirm("Thank you "+sessionStorage.getItem("name")+" You have successfully logged out.")){
+    setTimeout(document.location.href = '/index.html', 5000);
+    sessionStorage.clear();
+  }
+  
+};

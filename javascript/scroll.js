@@ -49,10 +49,5 @@ document.querySelector('#login').onclick = () =>{
 document.querySelector('#user-icon').onclick = () =>{
     user.classList.toggle('active');
 } */
-console.log(sessionStorage.getItem("name"))
-if (sessionStorage.getItem("name")==null){
-    document.getElementById("welcome").innerHTML="Welcome Guest";
-}
-else{
-    document.getElementById("welcome").innerHTML=sessionStorage.getItem("name");
-}
+
+
