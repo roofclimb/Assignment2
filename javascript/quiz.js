@@ -31,7 +31,7 @@ function showQuestion(question){
     question.answers.forEach(answer => {
         const button=document.createElement('button')
         button.innerText=answer.text
-        button.classList.add('btn')
+        button.classList.add('btn1')
         if (answer.correct){
             button.dataset.correct = answer.correct 
         }
@@ -107,6 +107,7 @@ function selectAnswer(e){
                     console.log("Game score: "+score);
                     console.log("Final score: "+loyalty);
                     score=0
+                    alert("Congratulations "+response.name+"\nLoyalty points credited: "+score+"\nUpdated Loyalty Points: "+loyalty)
                 });
             });
         }

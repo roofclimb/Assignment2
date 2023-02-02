@@ -287,7 +287,7 @@ $(document).ready(function () {
                 console.log('correct email');
                 if (loginPassword==correctPassword){
                     document.getElementById('wrong').innerHTML="Log In successful.";
-                    alert("Welcome "+response[i].name+". Happy shoppping.");
+                    alert("Welcome "+response[i].name+". You have "+response[i].loyalty+" points. Happy shopping.");
                     sessionStorage.setItem("name",response[i].name);
                     sessionStorage.setItem("id",response[i]._id);
                     break;
