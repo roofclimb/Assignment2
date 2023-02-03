@@ -20,10 +20,10 @@ if (document.readyState =="loading"){
 //making function
 function ready(){
     //Remove items from cart 
-    var removeCartButtons = document.getElementsByClassName('cart-remove');
-    console.log( removeCartButtons);
-    for (var i = 0; i <  removeCartButtons.length; i++){
-        var button =  removeCartButtons[i];
+    var reomveCartButtons = document.getElementsByClassName('cart-remove');
+    console.log( reomveCartButtons);
+    for (var i = 0; i <  reomveCartButtons.length; i++){
+        var button =  reomveCartButtons[i];
         button.addEventListener('click', removeCartItem);
     }
     //quantity Changes
