@@ -6,7 +6,7 @@ const answerButtonElement=document.getElementById('answer-buttons')
 var score=0
 
 let shuffledQuestions, currentQuestionIndex
-let qnno=0;
+let qnno=1;
 
 startButton.addEventListener('click',startGame)
 nextButton.addEventListener('click',()=>{
@@ -30,7 +30,7 @@ function setNextQuestion(){
 }
 
 function showQuestion(question,currentQuestionIndex){
-    questionElement.innerText=question.question
+    questionElement.innerText=qnno+") "+question.question
     question.answers.forEach(answer => {
         const button=document.createElement('button')
         button.innerText=answer.text
@@ -77,6 +77,37 @@ function selectAnswer(e){
         //check if user has logged in
         if (sessionStorage.getItem("id")!=null){
             console.log(sessionStorage.getItem("id"));
+            let currentloyalty=sessionStorage.getItem("loyalty")
+            console.log("Original score: "+currentloyalty);
+            console.log(score)
+            console.log(currentloyalty)
+            let loyalty = score+parseInt(currentloyalty)
+            console.log("Total score: "+loyalty);
+            var jsondata = { "loyalty":loyalty};
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": `https://interactivedev-e51d.restdb.io/rest/ntuc/${sessionStorage.getItem("id")}`,//update based on the ID
+                "method": "PUT",
+                "headers": {
+                "content-type": "application/json",
+                "x-apikey": "63b648b9969f06502871aa3d",
+                "cache-control": "no-cache"
+                },
+                "processData": false,
+                "data": JSON.stringify(jsondata)
+            }
+            $.ajax(settings).done(function () {
+                console.log("Game score: "+score);
+                console.log("Final score: "+loyalty);
+                sessionStorage.removeItem("loyalty");
+                sessionStorage.setItem("loyalty",loyalty);
+                alert("Congratulations "+sessionStorage.getItem("name")+"\nLoyalty points credited: "+score+"\nUpdated Loyalty Points: "+loyalty)
+                score=0
+            });
+        }
+        /* if (sessionStorage.getItem("id")!=null){
+            console.log(sessionStorage.getItem("id"));
             let userscore=0;
             let id = sessionStorage.getItem("id");//use sessionstorage to retrieve login guest id
             var settings = {
@@ -117,7 +148,7 @@ function selectAnswer(e){
                     score=0
                 });
             });
-        }
+        } */
         startButton.innerText='Restart'
         startButton.classList.remove('hide')
         
@@ -144,7 +175,7 @@ function clearStatusClass(element){
 
 const questions=[
     {
-        question: qnno+') Which singer is from Singapore?',
+        question: 'Which singer is from Singapore?',
         answers:[
             {text:'JJ Lin',correct:true},
             {text:'Jay Chou',correct:false},
@@ -153,7 +184,7 @@ const questions=[
         ]
     },
     {
-        question: qnno+') Which celebrity is not from Singapore?',
+        question: 'Which celebrity is not from Singapore?',
         answers:[
             {text:'Rebecca Lim',correct:false},
             {text:'Zoe Tay',correct:false},
@@ -162,7 +193,7 @@ const questions=[
         ]
     },
     {
-        question:qnno+') Which show was not produced in Singapore?',
+        question:'Which show was not produced in Singapore?',
         answers:[
             {text:'A Quest to Heal',correct:false},
             {text: 'With Love, Becks',correct:false},
@@ -171,7 +202,7 @@ const questions=[
         ]
     },
     {
-        question:qnno+') Which director is from Singapore?',
+        question:'Which director is from Singapore?',
         answers:[
             {text:'Steven Spielberg',correct:false},
             {text: 'John Ford',correct:false},
@@ -180,7 +211,7 @@ const questions=[
         ]
     },
     {
-        question:qnno+') Which movie was not produced in Singapore?',
+        question:'Which movie was not produced in Singapore?',
         answers:[
             {text:'Ah Boys to Men',correct:false},
             {text: 'Long long time ago',correct:false},
