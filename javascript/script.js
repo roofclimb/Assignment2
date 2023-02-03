@@ -289,6 +289,7 @@ $(document).ready(function () {
                     document.getElementById('wrong').innerHTML="Log In successful.";
                     sessionStorage.setItem("name",response[i].name);
                     sessionStorage.setItem("id",response[i]._id);
+                    sessionStorage.setItem("loyalty",response[i].loyalty);
                     if (confirm("Welcome "+response[i].name+". \nYou have "+response[i].loyalty+" points. \nHappy shopping.\nRedirecting to home page.")){
                         setTimeout(document.location.href = '/index.html', 5000);
                     }
@@ -360,29 +361,9 @@ function login(){
 
 if (sessionStorage.getItem("name")!=null){
   document.getElementById("data").innerHTML="Name: "+sessionStorage.getItem("name");
+  document.getElementById("points").innerHTML="Loyalty points: "+sessionStorage.getItem("loyalty");
 }
 
-if (sessionStorage.getItem("id")!=null){
-  console.log(sessionStorage.getItem("id"));
-  let id = sessionStorage.getItem("id");//use sessionstorage to retrieve login guest id
-  var settings = {
-      "async": true,
-      "crossDomain": true,
-      "url": `https://interactivedev-e51d.restdb.io/rest/ntuc/${id}`,
-      "method": "GET",
-      "headers": {
-      "content-type": "application/json",
-      "x-apikey": "63b648b9969f06502871aa3d",
-      "cache-control": "no-cache"
-      }
-  }
-  
-  $.ajax(settings).done(function (response) {
-      document.getElementById("data").innerHTML="Name: "+response.name;
-      document.getElementById("points").innerHTML="Loyalty points: "+response.loyalty;
-      userscore=response.loyalty;
-  });
-}
 
 function logout(){
   if (confirm("Thank you "+sessionStorage.getItem("name")+" You have successfully logged out.")){
