@@ -6,10 +6,12 @@ const answerButtonElement=document.getElementById('answer-buttons')
 var score=0
 
 let shuffledQuestions, currentQuestionIndex
+let qnno=0;
 
 startButton.addEventListener('click',startGame)
 nextButton.addEventListener('click',()=>{
     currentQuestionIndex++
+    qnno++
     setNextQuestion()
 })
 
@@ -23,10 +25,11 @@ function startGame(){
 
 function setNextQuestion(){
     resetState()
-    showQuestion(shuffledQuestions[currentQuestionIndex])
+    showQuestion(shuffledQuestions[currentQuestionIndex],currentQuestionIndex)
+    console.log(qnno)
 }
 
-function showQuestion(question){
+function showQuestion(question,currentQuestionIndex){
     questionElement.innerText=question.question
     question.answers.forEach(answer => {
         const button=document.createElement('button')
@@ -37,7 +40,11 @@ function showQuestion(question){
         }
         button.addEventListener('click',selectAnswer)
         answerButtonElement.appendChild(button)
+        
+        
     });
+    currentQuestionIndex=currentQuestionIndex
+    console.log(currentQuestionIndex)
 }
 
 function resetState(){
@@ -137,7 +144,7 @@ function clearStatusClass(element){
 
 const questions=[
     {
-        question:'Which singer is from Singapore?',
+        question: qnno+') Which singer is from Singapore?',
         answers:[
             {text:'JJ Lin',correct:true},
             {text:'Jay Chou',correct:false},
@@ -146,7 +153,7 @@ const questions=[
         ]
     },
     {
-        question:'Which celebrity is not from Singapore?',
+        question: qnno+') Which celebrity is not from Singapore?',
         answers:[
             {text:'Rebecca Lim',correct:false},
             {text:'Zoe Tay',correct:false},
@@ -155,7 +162,7 @@ const questions=[
         ]
     },
     {
-        question:'Which show was not produced in Singapore?',
+        question:qnno+') Which show was not produced in Singapore?',
         answers:[
             {text:'A Quest to Heal',correct:false},
             {text: 'With Love, Becks',correct:false},
@@ -164,7 +171,7 @@ const questions=[
         ]
     },
     {
-        question:'Which director is from Singapore?',
+        question:qnno+') Which director is from Singapore?',
         answers:[
             {text:'Steven Spielberg',correct:false},
             {text: 'John Ford',correct:false},
@@ -173,7 +180,7 @@ const questions=[
         ]
     },
     {
-        question:'Which movie was not produced in Singapore?',
+        question:qnno+') Which movie was not produced in Singapore?',
         answers:[
             {text:'Ah Boys to Men',correct:false},
             {text: 'Long long time ago',correct:false},
