@@ -176,7 +176,7 @@ text-align: center;
         top: 0;
         right: -100%;
         padding: 80px 50px;
-        transition: 0.5s;
+        /* transition: 0.5s; */
         transition-property: right;
     }
 
