@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Quiz</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="javascript/quiz.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,23 +36,23 @@
     <br>
     <table>
         <tr>
-            <td><h1 id="text">There are 4 mcq questions. Click start to begin.</h1></td>
+            <td><h1 id="text">There are 4 mcq questions. Each correct answer is 1 point. Click start to begin.</h1></td>
         </tr>
         <tr>
             <td class="questions">
                 <div class="container">
                 <div id = "question-container" class="hide">
-                    <div id="question">Question</div>
+                    <span id="qnno"></span>)<div id="question">Question</div>
                     <div id="answer-buttons" class="btn-grid">
-                        <button class="btn">Answer 1</button>
-                        <button class="btn">Answer 2</button>
-                        <button class="btn">Answer 3</button>
-                        <button class="btn">Answer 4</button>
+                        <button class="btn1">Answer 1</button>
+                        <button class="btn1">Answer 2</button>
+                        <button class="btn1">Answer 3</button>
+                        <button class="btn1">Answer 4</button>
                     </div>
                 </div>
                 <div class="controls">
-                    <button id="start-btn" class="start-btn btn">Start</button>
-                    <button id="next-btn" class="next-btn btn hide">Next</button>
+                    <button id="start-btn" class="start-btn btn1">Start</button>
+                    <button id="next-btn" class="next-btn btn1 hide">Next</button>
                 </div>
             </div></td>
         </tr>
@@ -61,7 +62,7 @@
                 
             
     <!----JavaScript for toggle menu---->
-    <script>
+    <!-- <script>
         var navLinks=document.getElementById("navLinks");
         function showMenu(){
             navLinks.style.left="0";
@@ -73,7 +74,12 @@
      <script src="javascript/include.js"></script>
      <script>
          includeHTML();
-     </script>
+     </script> -->
+    <script src="javascript/scroll.js"></script>
+    <script src="javascript/header.js"></script>
+    <script>
+        includeHTML();
+    </script>
  
     
 </body>

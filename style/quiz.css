@@ -52,7 +52,7 @@ body.wrong{
     margin:20px 0;
 }
 
-.btn{
+.btn1{
     --hue:var(--hue-neutral);
     background-color: hsl(var(--hue),100%,50%);
     border:3px solid hsl(var(--hue),100%,30%);
@@ -62,16 +62,16 @@ body.wrong{
     outline:none;
 }
 
-.btn:hover{
+.btn1:hover{
     border-color: black;
 }
 
-.btn.correct{
+.btn1.correct{
     --hue:var(--hue-correct);
     color: black;
 }
 
-.btn.wrong{
+.btn1.wrong{
     --hue:var(--hue-wrong);
 }
 

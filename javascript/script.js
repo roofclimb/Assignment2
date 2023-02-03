@@ -19,62 +19,67 @@ $(document).ready(function () {
       let contactPassword = $("#contact-password").val();
       let confirmPassword = $("#confirm-password").val();
       let loyalty=0;
-
-      if(contactPassword==confirmPassword){
-        let jsondata = {
-            "name": contactName,
-            "email": contactEmail,
-            "password": contactPassword,
-            "loyalty": loyalty
-          };
-      
-          //[STEP 4]: Create our AJAX settings. Take note of API key
-          let settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": "https://interactivedev-e51d.restdb.io/rest/ntuc",
-            "method": "POST", //[cher] we will use post to send info
-            "headers": {
-              "content-type": "application/json",
-              "x-apikey": APIKEY,
-              "cache-control": "no-cache"
-            },
-            "processData": false,
-            "data": JSON.stringify(jsondata),
-            "beforeSend": function(){
-              //@TODO use loading bar instead
-              //disable our button or show loading bar
-              $("#contact-submit").prop( "disabled", true);
-              //clear our form using the form id and triggering it's reset feature
-              $("#add-contact-form").trigger("reset");
-            }
-            
-
-        }
-        
-      //[STEP 5]: Send our ajax request over to the DB and print response of the RESTDB storage to console.
-        $.ajax(settings).done(function (response) {
-            console.log(response);
-            
-            $("#contact-submit").prop( "disabled", false);
-            
-            //@TODO update frontend UI 
-            $("#add-update-msg").show().fadeOut(3000);
-    
-            //update our table 
-            getContacts();
-        });
-        
-        document.getElementById('nomatch').innerHTML="Registration successful";
-      //[STEP 3]: get form values when user clicks on send
-      //Adapted from restdb api
-      
+      if(contactName==""||contactEmail==""||contactPassword==""){
+        document.getElementById('nomatch').innerHTML="Please fill up all fields";
       }
       else{
-        console.log("Password");
-        console.log(document.getElementById('nomatch'));
-        document.getElementById('nomatch').innerHTML="Passwords do not match";
-    }
+        if(contactPassword==confirmPassword){
+          let jsondata = {
+              "name": contactName,
+              "email": contactEmail,
+              "password": contactPassword,
+              "loyalty": loyalty
+            };
+        
+            //[STEP 4]: Create our AJAX settings. Take note of API key
+            let settings = {
+              "async": true,
+              "crossDomain": true,
+              "url": "https://interactivedev-e51d.restdb.io/rest/ntuc",
+              "method": "POST", //[cher] we will use post to send info
+              "headers": {
+                "content-type": "application/json",
+                "x-apikey": APIKEY,
+                "cache-control": "no-cache"
+              },
+              "processData": false,
+              "data": JSON.stringify(jsondata),
+              "beforeSend": function(){
+                //@TODO use loading bar instead
+                //disable our button or show loading bar
+                $("#contact-submit").prop( "disabled", true);
+                //clear our form using the form id and triggering it's reset feature
+                $("#add-contact-form").trigger("reset");
+              }
+              
+  
+          }
+          
+        //[STEP 5]: Send our ajax request over to the DB and print response of the RESTDB storage to console.
+          $.ajax(settings).done(function (response) {
+              console.log(response);
+              
+              $("#contact-submit").prop( "disabled", false);
+              
+              //@TODO update frontend UI 
+              $("#add-update-msg").show().fadeOut(3000);
+      
+              //update our table 
+              getContacts();
+          });
+          
+          document.getElementById('nomatch').innerHTML="Registration successful";
+        //[STEP 3]: get form values when user clicks on send
+        //Adapted from restdb api
+        
+        }
+        else{
+          console.log("Password");
+          console.log(document.getElementById('nomatch'));
+          document.getElementById('nomatch').innerHTML="Passwords do not match";
+      }
+      }
+
   
     });//end click 
   
@@ -123,9 +128,9 @@ $(document).ready(function () {
           //we want to add on previous content at the same time
           content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
           <td>${response[i].email}</td>
-          <td>${response[i].password}</td>
+          <td>${response[i].loyalty}</td>
           <td><a href='#' class='delete' data-id='${response[i]._id}'>Del</a></td><td>
-          <a href='#update-contact-container' class='update' data-id='${response[i]._id}' data-msg='${response[i].password}' data-name='${response[i].name}' data-email='${response[i].email}'>Update</a></td></tr>`;
+          <a href='#update-contact-container' class='update' data-id='${response[i]._id}' data-msg='${response[i].loyalty}' data-name='${response[i].name}' data-email='${response[i].email}'>Update</a></td></tr>`;
           console.log(response[i]._id)
         }
   
@@ -166,16 +171,17 @@ $(document).ready(function () {
     $("#update-contact-submit").on("click", function (e) {
       e.preventDefault();
       //retrieve all my update form values
-      let contactName = $("#update-contact-name").val();
+      /* let contactName = $("#update-contact-name").val();
       let contactEmail = $("#update-contact-email").val();
       let contactPassword = $("#update-contact-msg").val();
       let contactId = $("#update-contact-id").val();
   
       console.log($("#update-contact-msg").val());
-      console.log(contactMsg);
-  
+      console.log(contactMsg); */
+      let loyalty = loyalty+5;
+      let contactId = "63d6759aaa86075000023450";
       //[STEP 12a]: We call our update form function which makes an AJAX call to our RESTDB to update the selected information
-      updateForm(contactId, contactName, contactEmail, contactPassword);
+      updateForm(contactId, loyalty);
     });//end updatecontactform listener
     
     $("#contact-list").on("click", ".delete", function (e) {
@@ -189,10 +195,10 @@ $(document).ready(function () {
 
     //[STEP 13]: function that makes an AJAX call and process it 
     //UPDATE Based on the ID chosen
-    function updateForm(id, contactName, contactEmail, contactPassword) {
+    function updateForm(id, loyalty) {
       //@TODO create validation methods for id etc. 
       console.log(id);
-      var jsondata = { "name": contactName, "email": contactEmail, "password": contactPassword };
+      var jsondata = { "loyalty":loyalty};
       var settings = {
         "async": true,
         "crossDomain": true,
@@ -281,6 +287,11 @@ $(document).ready(function () {
                 console.log('correct email');
                 if (loginPassword==correctPassword){
                     document.getElementById('wrong').innerHTML="Log In successful.";
+                    sessionStorage.setItem("name",response[i].name);
+                    sessionStorage.setItem("id",response[i]._id);
+                    if (confirm("Welcome "+response[i].name+". \nYou have "+response[i].loyalty+" points. \nHappy shopping.\nRedirecting to home page.")){
+                        setTimeout(document.location.href = '/index.html', 5000);
+                    }
                     break;
                 }
                 else{
@@ -335,15 +346,48 @@ var RegForm = document.getElementById("RegForm")
 var Indicator=document.getElementById("Indicator")
 
 function register(){
-    /* RegForm.style.transform="translateX(0px)";
-    LoginForm.style.transform="translateX(0px)"; */
-    Indicator.style.transform="translateX(940px)";
+    RegForm.style.transform="translateX(0px)";
+    LoginForm.style.transform="translateX(0px)";
+    Indicator.style.transform="translateX(100px)";
 }
 
 
 function login(){
-    /* RegForm.style.transform="translateX(300px)";
-    LoginForm.style.transform="translateX(300px)"; */
-    Indicator.style.transform="translateX(200px)";
+    RegForm.style.transform="translateX(300px)";
+    LoginForm.style.transform="translateX(300px)";
+    Indicator.style.transform="translateX(0px)";
 }
+
+if (sessionStorage.getItem("name")!=null){
+  document.getElementById("data").innerHTML="Name: "+sessionStorage.getItem("name");
+}
+
+if (sessionStorage.getItem("id")!=null){
+  console.log(sessionStorage.getItem("id"));
+  let id = sessionStorage.getItem("id");//use sessionstorage to retrieve login guest id
+  var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": `https://interactivedev-e51d.restdb.io/rest/ntuc/${id}`,
+      "method": "GET",
+      "headers": {
+      "content-type": "application/json",
+      "x-apikey": "63b648b9969f06502871aa3d",
+      "cache-control": "no-cache"
+      }
+  }
   
+  $.ajax(settings).done(function (response) {
+      document.getElementById("data").innerHTML="Name: "+response.name;
+      document.getElementById("points").innerHTML="Loyalty points: "+response.loyalty;
+      userscore=response.loyalty;
+  });
+}
+
+function logout(){
+  if (confirm("Thank you "+sessionStorage.getItem("name")+" You have successfully logged out.")){
+    setTimeout(document.location.href = '/index.html', 5000);
+    sessionStorage.clear();
+  }
+  
+};

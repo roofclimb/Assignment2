@@ -13,15 +13,25 @@ body{
 }
 
 .section-main{
-  min-height: 70vh;
+  min-height: 80vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.4),rgba(4,9,30,0.4)),url(images/home/wallpaper.jpg);
+  background: rgba(4, 9, 30, 0.4);
   background-position:center;
   background-size:cover;
   position:relative;
   align-items: center;
   justify-content: center;
   text-align: center;
+  display: flex;
+}
+
+.section-main img{
+  position: absolute;
+  z-index: -5;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
   display: flex;
 }
 
@@ -152,7 +162,7 @@ text-align: center;
 }
 
 
-@media (max-width: 750px){
+@media (max-width: 850px){
     header .btn{
         display: block;
     }
@@ -196,7 +206,7 @@ text-align: center;
         padding: 0 15px;
     }
     .section-main h1{
-      font-size: 50px;
+      font-size: 40px;
       line-height: 60px;
   }
   
@@ -216,7 +226,11 @@ text-align: center;
   }
 
   .section-main{
-    height:50vh;
+    min-height:40vh;
+  }
+  .section-main img{
+    height:100%;
+    background-size: cover;
   }
   .youtube{
     width:100%;
@@ -356,6 +370,11 @@ table{
   transition: 1s;
 
 }
+
+span{
+  font-size: 20px;
+}
+
 
 
 @media(max-width: 700px){

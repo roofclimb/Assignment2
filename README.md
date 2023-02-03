@@ -1,4 +1,4 @@
-## Assignment 2 (FairPrice)
+## Assignment 2 (FairPrice) (Victoria and Priyanka)
 
 This website is a Fairprice e-commerce website for consumers to choose their desired items and add it to their shopping cart. As Fairprice has many items for sale, we will only be focusing on a few products from 3 categories, snacks, household and frozen products. Users would then be able to have the products delivered to their doorstep. We will also include a quiz section, to test users after they have read what FairPrice is about so that they can gain more knowledge about FairPrice. And, in exchange, they can collect vouchers.
 
@@ -31,15 +31,24 @@ FairPrice Online is the e-commerce portal of NTUC Fairprice Co-operative Ltd, Si
 - Sticky bar
 - Dropdown menu
 
-# Wireframe Link
-
-- Desktop version: https://xd.adobe.com/view/fe4c5bd3-639d-4fbc-a654-10e53850d4f7-ab1f/
-
 # Website Link
 
 - https://roofclimb.github.io/Assignment2/
 
+# Wireframe Link
+
+- Desktop version: https://xd.adobe.com/view/fe4c5bd3-639d-4fbc-a654-10e53850d4f7-ab1f/
+
 # Testing
+
+- Quiz:
+  - If correct option selected, body colour turns green and "Well Done" is shown. After all questions completed, Next button changes to restart button.
+  - If user is logged in, after questions completed, quiz score would be added to user's loyalty points.
+- Login form:
+  - Form validation
+  - After login successful, prompt shown to show user's information and loyalty points.
+- Registration form:
+  - Form validation
 
 # Technologies used
 
@@ -54,4 +63,3 @@ FairPrice Online is the e-commerce portal of NTUC Fairprice Co-operative Ltd, Si
 
 - Referenced https://www.fairprice.com.sg/
 - https://www.google.com/url?sa=i&url=https%3A%2F%2Fhelp.fairprice.com.sg%2Fhc%2Fen-us&psig=AOvVaw2X7rt9fpe-tn_NmniJSMbe&ust=1674726306083000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMC3w-a34vwCFQAAAAAdAAAAABAN
--
