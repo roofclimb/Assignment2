@@ -175,48 +175,48 @@ function clearStatusClass(element){
 
 const questions=[
     {
-        question: 'Which singer is from Singapore?',
+        question: 'What does NTUC stand for?',
         answers:[
-            {text:'JJ Lin',correct:true},
-            {text:'Jay Chou',correct:false},
-            {text:'Eric Chou',correct:false},
-            {text:'Mayday',correct:false},
+            {text:'National Trades Union Congress',correct:true},
+            {text:'National Training Under Centre',correct:false},
+            {text:'Nominated Transport Upside Central',correct:false},
+            {text:'Navigation Time Under Control',correct:false},
         ]
     },
     {
-        question: 'Which celebrity is not from Singapore?',
+        question: 'When did FairPrice merge with SEC?',
         answers:[
-            {text:'Rebecca Lim',correct:false},
-            {text:'Zoe Tay',correct:false},
-            {text:'Liu Ling Ling',correct:false},
-            {text:'Donnie Yen',correct:true},
+            {text:'May 1985',correct:false},
+            {text:'March 1983',correct:false},
+            {text:'May 1983',correct:true},
+            {text:'March 1990',correct:false},
         ]
     },
     {
-        question:'Which show was not produced in Singapore?',
+        question:'Which products cannot be found in our website?',
         answers:[
-            {text:'A Quest to Heal',correct:false},
-            {text: 'With Love, Becks',correct:false},
-            {text: 'Healing Heros',correct:false},
-            {text: 'Ip Man',correct:true}
+            {text:'Detergent',correct:false},
+            {text: 'Durian',correct:false},
+            {text: 'Carpet',correct:false},
+            {text: 'Wine',correct:true}
         ]
     },
     {
-        question:'Which director is from Singapore?',
+        question:'How big is FairPrice largest branch?',
         answers:[
-            {text:'Steven Spielberg',correct:false},
-            {text: 'John Ford',correct:false},
-            {text: 'Chen Kaige',correct:false},
-            {text: 'Jack Neo',correct:true}
+            {text:'10,000 meter square',correct:false},
+            {text: '5,000 meter square',correct:false},
+            {text: '7,180 meter square',correct:false},
+            {text: '7,150 meter square',correct:true}
         ]
     },
     {
-        question:'Which movie was not produced in Singapore?',
+        question:'Where is the largest FairPrice branch?',
         answers:[
-            {text:'Ah Boys to Men',correct:false},
-            {text: 'Long long time ago',correct:false},
-            {text: 'Ilo ilo',correct:false},
-            {text: 'Crazy Rich Asians',correct:true}
+            {text:'Toa Payoh Hub',correct:false},
+            {text: 'Vivocity',correct:false},
+            {text: 'Orchard',correct:false},
+            {text: 'Ang Mo Kio Hub',correct:true}
         ]
     }
 ]
