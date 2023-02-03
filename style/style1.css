@@ -136,9 +136,10 @@ header .btn{
 }
 
 .footer{
-  padding: 20px;
+  padding: 10px;
   width:100%;
   background: white;
+  font-size: 20px;
 }
 
 .footer table{
@@ -361,9 +362,8 @@ span{
       margin: 20px;
       padding: 0 15px;
   }
-  .section-main h1{
+  .section-main .textbox h1{
     font-size: 40px;
-    line-height: 60px;
 }
 
 table td,tr{
@@ -403,8 +403,11 @@ table td,tr{
 .row{   
   flex-direction: column;
 }
-html{
+/* html{
   width: fit-content;
-}
+} */
+/* header,footer{
+  width: ;
+} */
 
 }
