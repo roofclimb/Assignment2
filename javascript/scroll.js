@@ -23,12 +23,7 @@ let calcScrollValue=()=>{
 
 window.onscroll=calcScrollValue;
 window.onload=calcScrollValue;
-const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-const d=new Date();
-let day = d.getDate();
-let m=month[d.getMonth()];
-let year = d.getFullYear();
-document.getElementById("demo").innerHTML=day+" "+m+" "+year;
+
 
 /* let user = document.querySelector('.user');
 let register1 = document.querySelector('.user.register');
@@ -49,5 +44,15 @@ document.querySelector('#login').onclick = () =>{
 document.querySelector('#user-icon').onclick = () =>{
     user.classList.toggle('active');
 } */
+
+console.log(sessionStorage.getItem("name"))
+if (sessionStorage.getItem("name")==null){
+    document.getElementById("username").innerHTML="Guest";
+    document.getElementById("logout").href="/login.html"; 
+}
+else{
+    document.getElementById("username").innerHTML=sessionStorage.getItem("name");
+    document.getElementById("logout").href="/logout.html"; 
+}
 
 
