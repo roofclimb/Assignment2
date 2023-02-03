@@ -163,6 +163,17 @@ body, html {
   padding: 100px 20px;
   height: 100%;
 }
+/* zoom in effect*/
+
+.product-box{
+  position: relative;
+}
+.product-box:hover{
+  padding:5px;
+  border:1px solid black;
+  transform: 0.4s;
+  border-right: 5px;
+}
 
 /* .hide{
   display: none;
