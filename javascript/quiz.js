@@ -106,8 +106,8 @@ function selectAnswer(e){
                 $.ajax(settings).done(function () {
                     console.log("Game score: "+score);
                     console.log("Final score: "+loyalty);
-                    score=0
                     alert("Congratulations "+response.name+"\nLoyalty points credited: "+score+"\nUpdated Loyalty Points: "+loyalty)
+                    score=0
                 });
             });
         }
