@@ -144,16 +144,29 @@ body, html {
   height: 100%;
 }
 /* zoom in effect*/
-
-.product-box{
+/* .product-box{
   position: relative;
 }
+
 .product-box:hover{
+  padding:10px;
+  border:1px solid black;
+  transform: 1s;
+} */
+
+/* .product-img{
+  position: relative;
+} */
+/* .product-img:hover{
   padding:5px;
   border:1px solid black;
   transform: 0.4s;
   border-right: 5px;
-}
+  width:100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+  transition: 1s;
+} */
 
 /* .hide{
   display: none;

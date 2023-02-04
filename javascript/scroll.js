@@ -46,13 +46,24 @@ document.querySelector('#user-icon').onclick = () =>{
 } */
 
 console.log(sessionStorage.getItem("name"))
-if (sessionStorage.getItem("name")==null){
+/* if (sessionStorage.getItem("name")==null){
     document.getElementById("username").innerHTML="Guest";
     document.getElementById("logout").href="/login.html"; 
 }
 else{
     document.getElementById("username").innerHTML=sessionStorage.getItem("name");
     document.getElementById("logout").href="/logout.html"; 
-}
+} */
 
+
+if (sessionStorage.getItem("name")!=null){
+    document.getElementById("username").innerHTML=sessionStorage.getItem("name");
+    document.getElementById("logout").href="logout.html"; 
+}else if(localStorage.getItem("name")!=null){
+    document.getElementById("username").innerHTML=localStorage.getItem("name");
+    document.getElementById("logout").href="logout.html"; 
+}else{
+    document.getElementById("username").innerHTML="Guest";
+    document.getElementById("logout").href="login.html"; 
+}
 

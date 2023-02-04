@@ -65,10 +65,10 @@ function addCartClicked(event){
     updatetotal();
 }
 function addProductToCart(title,price,productImg){
-    var cartShopBox = document.createElement('div');
-    //cartShopBox.classList.add('product-box')
-    var cartItems = document.getElementsByClassName('cart-box')[0];
-    var cartItemsNames = cartItems.getElementsByClassName('cart-product-title');
+    var cartShopBox = document.createElement('div')
+    cartShopBox.classList.add('product-box')
+    var cartItems = document.getElementsByClassName('cart-box')[0]
+    var cartItemsNames = cartItems.getElementsByClassName('cart-product-title')
     for (var i = 0; i < cartItemsNames.length; i++){
         // if(cartItemsNames[i].innerText == title){
         alert("You have already added this item to cart");
@@ -88,6 +88,20 @@ cartShopBox.innerHTML=cartBoxContent
 cartItem.append(cartShopBox)
 cartShopBox.getElementsByClassName("cart-remove")[0].addEventListener ('click',removeCartItem);
 cartShopBox.getElementsByClassName("cart-quantity")[0].addEventListener ('change',quantityChanged); 
+
+var cartBoxContent =`<img src="images/snacks/haribo.png" alt="haribo" height="200"  class="cart-img">
+                    <div class="detail-box">
+                        <div class="cart-product-title">Haribo</div>
+                        <div class="cart-price">$2.85</div>
+                        <input type="number" value="1" class="cart-quantity">
+                    </div>
+                    <!-- Remove Cart -->
+                    <i class='bx bxs-trash-alt cart-remove'></i>`;
+cartShopBox.innerHTML=cartBoxContent
+cartItem.append(cartShopBox)
+cartShopBox.getElementsByClassName("cart-remove")[0].addEventListener ('click',removeCartItem);
+cartShopBox.getElementsByClassName("cart-quantity")[0].addEventListener ('change',quantityChanged);
+
 
 //update Total 
 function updatetotal(){
