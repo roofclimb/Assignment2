@@ -17,16 +17,17 @@ let options = {
     "Pomegranate",
     "Watermelon",
   ],
-  animals: ["Hedgehog", "Rhinoceros", "Squirrel", "Panther", "Walrus", "Zebra"],
-  countries: [
-    "India",
-    "Hungary",
-    "Kyrgyzstan",
-    "Switzerland",
-    "Zimbabwe",
-    "Dominica",
+  household: ["Detergent", "Carpet", "Cabinet", "Kitchen wipes", "Shopping Trolley", "Ironing Board"],
+  snacks: [
+    "Skittles",
+    "Doritos",
+    "Mentos",
+    "Nougat",
+    "Haribo",
+    "Mamee",
   ],
 };
+
 
 //count
 let winCount = 0;
