@@ -58,12 +58,12 @@ else{
 
 if (sessionStorage.getItem("name")!=null){
     document.getElementById("username").innerHTML=sessionStorage.getItem("name");
-    document.getElementById("logout").href="/logout.html"; 
+    document.getElementById("logout").href="logout.html"; 
 }else if(localStorage.getItem("name")!=null){
     document.getElementById("username").innerHTML=localStorage.getItem("name");
-    document.getElementById("logout").href="/logout.html"; 
+    document.getElementById("logout").href="logout.html"; 
 }else{
     document.getElementById("username").innerHTML="Guest";
-    document.getElementById("logout").href="/login.html"; 
+    document.getElementById("logout").href="login.html"; 
 }
 
