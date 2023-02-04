@@ -105,7 +105,38 @@ function selectAnswer(e){
                 alert("Congratulations "+sessionStorage.getItem("name")+"\nLoyalty points credited: "+score+"\nUpdated Loyalty Points: "+loyalty)
                 score=0
             });
-        }
+          }else if(localStorage.getItem("id")!=null){
+            console.log(localStorage.getItem("id"));
+            let currentloyalty=localStorage.getItem("loyalty")
+            console.log("Original score: "+currentloyalty);
+            console.log(score)
+            console.log(currentloyalty)
+            let loyalty = score+parseInt(currentloyalty)
+            console.log("Total score: "+loyalty);
+            var jsondata = { "loyalty":loyalty};
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": `https://interactivedev-e51d.restdb.io/rest/ntuc/${localStorage.getItem("id")}`,//update based on the ID
+                "method": "PUT",
+                "headers": {
+                "content-type": "application/json",
+                "x-apikey": "63b648b9969f06502871aa3d",
+                "cache-control": "no-cache"
+                },
+                "processData": false,
+                "data": JSON.stringify(jsondata)
+            }
+            $.ajax(settings).done(function () {
+                console.log("Game score: "+score);
+                console.log("Final score: "+loyalty);
+                localStorage.removeItem("loyalty");
+                localStorage.setItem("loyalty",loyalty);
+                alert("Congratulations "+localStorage.getItem("name")+"\nLoyalty points credited: "+score+"\nUpdated Loyalty Points: "+loyalty)
+                score=0
+            });
+          }
+        
         /* if (sessionStorage.getItem("id")!=null){
             console.log(sessionStorage.getItem("id"));
             let userscore=0;

@@ -19,8 +19,15 @@ $(document).ready(function () {
       let contactPassword = $("#contact-password").val();
       let confirmPassword = $("#confirm-password").val();
       let loyalty=0;
+      console.log(contactEmail.search("@"))
       if(contactName==""||contactEmail==""||contactPassword==""){
         document.getElementById('nomatch').innerHTML="Please fill up all fields";
+      }
+      else if(contactEmail.search("@")==-1){
+        document.getElementById('nomatch').innerHTML="Email must contain @";
+      }
+      else if (contactEmail.search(".com")==-1){
+        document.getElementById('nomatch').innerHTML="Email must contain .com";
       }
       else{
         if(contactPassword==confirmPassword){
@@ -256,7 +263,8 @@ $(document).ready(function () {
 
    $("#login-submit").on("click", function (e)  {
     e.preventDefault();
-
+    const checkbox=document.getElementById("check")
+    console.log(checkbox.checked)
     let loginEmail = $("#check-email").val();
     let loginPassword = $("#check-password").val();
     
@@ -287,9 +295,16 @@ $(document).ready(function () {
                 console.log('correct email');
                 if (loginPassword==correctPassword){
                     document.getElementById('wrong').innerHTML="Log In successful.";
-                    sessionStorage.setItem("name",response[i].name);
-                    sessionStorage.setItem("id",response[i]._id);
-                    sessionStorage.setItem("loyalty",response[i].loyalty);
+                    if(checkbox.checked){//remember me
+                      localStorage.setItem("name",response[i].name);
+                      localStorage.setItem("id",response[i]._id);
+                      localStorage.setItem("loyalty",response[i].loyalty);
+                    }else{
+                      sessionStorage.setItem("name",response[i].name);
+                      sessionStorage.setItem("id",response[i]._id);
+                      sessionStorage.setItem("loyalty",response[i].loyalty);
+                    }
+                    
                     if (confirm("Welcome "+response[i].name+". \nYou have "+response[i].loyalty+" points. \nHappy shopping.\nRedirecting to home page.")){
                         setTimeout(document.location.href = '/index.html', 5000);
                     }
@@ -308,6 +323,8 @@ $(document).ready(function () {
         
   
       });
+
+  
 /* 
     //update our update form values
     let contactName = $(this).data("name");
@@ -342,6 +359,9 @@ $(document).ready(function () {
     updateForm(contactId, contactName, contactEmail, contactPassword); */
   });
 })
+
+
+
 var LoginForm = document.getElementById("LoginForm")
 var RegForm = document.getElementById("RegForm")
 var Indicator=document.getElementById("Indicator")
@@ -362,13 +382,25 @@ function login(){
 if (sessionStorage.getItem("name")!=null){
   document.getElementById("data").innerHTML="Name: "+sessionStorage.getItem("name");
   document.getElementById("points").innerHTML="Loyalty points: "+sessionStorage.getItem("loyalty");
+}else if(localStorage.getItem("name")!=null){
+  console.log(localStorage.getItem("name"));
+  document.getElementById("data").innerHTML="Name: "+localStorage.getItem("name");
+  document.getElementById("points").innerHTML="Loyalty points: "+localStorage.getItem("loyalty");
 }
 
 
 function logout(){
-  if (confirm("Thank you "+sessionStorage.getItem("name")+" You have successfully logged out.")){
-    setTimeout(document.location.href = '/index.html', 5000);
-    sessionStorage.clear();
+  if (sessionStorage.getItem("name")!=null){
+    if (confirm("Thank you "+sessionStorage.getItem("name")+" You have successfully logged out.")){
+      setTimeout(document.location.href = '/index.html', 5000);
+      sessionStorage.clear();
+    }
+  }else if(localStorage.getItem("name")!=null){
+    if (confirm("Thank you "+localStorage.getItem("name")+" You have successfully logged out.")){
+      setTimeout(document.location.href = '/index.html', 5000);
+      localStorage.clear();
+    }
   }
+  
   
 };
