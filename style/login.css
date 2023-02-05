@@ -35,7 +35,7 @@
     display: inline-block;
 }
 
-.form-btn{
+.form-button{
     display: inline-block;
 }
 
@@ -57,23 +57,24 @@ form input {
 }
 
 
-form .btn,.logout-btn{
+form .button,.logout-button{
     width: 100%;
     border:none;
     cursor:pointer;
+    padding: 0;
     margin: 10px 0;
     display: inline-block;
     background: #ff253b;
     color:#fff;
     border-radius: 30px;
-    font-size: 17px;
+    font-size: 15px;
 }
 
-form .btn:hover,.logout-btn:hover{
+form .button:hover,.logout-button:hover{
     background: #02171d;
 }
 
-form .btn:focus,.logout-btn:focus{
+form .button:focus,.logout-button:focus{
     outline:none;
 }
 
