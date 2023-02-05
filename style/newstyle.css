@@ -20,7 +20,31 @@
     --bg-color:#fff;
 }
 
-::-webkit-scrollbar{
+#progress{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height:70px;
+    width:70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#progress-value{
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color:#001a2e;
+}
+/* ::-webkit-scrollbar{
     width:0.5rem;
     background: var(--light-green-color);
 }
@@ -29,7 +53,7 @@
     width:0.5rem;
     background: var(--green-color);
     border-radius: 5rem;
-}
+} */
 
 section{
     padding: 4rem 0 1.5rem;
@@ -65,11 +89,23 @@ header{
 }
 
 .profile span{
-    font-size: 13px;
+    /* font-size: 13px;
+    font-weight: 500; */
+    font-size:1rem;
     font-weight: 500;
+    color:var(--text-color);
+    padding: 0.5rem 1rem;
+}
+
+.profile i{
+    color:black;
 }
 
 .logo{
+    width:150px;
+  }
+
+/* .logo{
     display: flex;
     align-items: center;
     font-size: 1.1rem;
@@ -77,7 +113,7 @@ header{
     color:var(--text-color);
     column-gap: 0.5rem;
 }
-
+ */
 .logo .bx{
     font-size: 24px;
     color:var(--orange-color);
@@ -177,7 +213,7 @@ header{
 }
 
 .swiper-button-next{
-    background: url(right\ arrow.png);
+    background: url(/images/home/rightarrow.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
@@ -190,7 +226,7 @@ header{
 
 
 .swiper-button-prev{
-    background: url(left\ arrow.png);
+    background: url(/images/home/leftarrow.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
@@ -650,6 +686,9 @@ table img{
         font-size: 1.2rem;
     }
     .footer-box img{
+        width:100px;
+    }
+    .logo{
         width:100px;
     }
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FairPrice</title>
+    <link rel="icon" type="image/x-icon" href="images/home/icon.png">
     <link rel="stylesheet" href="style/newstyle.css">
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -12,27 +13,31 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 <body>
+    <div id="progress">
+        <span id="progress-value"><i class="fa fa-arrow-up"></i></span>
+    </div>
     <header>
-        <a href="#" class="logo"><i class='bx bxs-basket'></i>Fairprice</a>
+        <a href="" class="logo"><img src="images/home/fairpricelogo.png" alt=""></a>
+        <!-- <a href="#" class="logo"><i class='bx bxs-basket'></i>Fairprice</a> -->
         <div class="bx bx-menu" id="menu-icon"></div>
 
         <ul class="navbar">
             <li><a href="#home" class="home-active">Home</a></li>
             <li><a href="#categories">Categories</a></li>
             <li><a href="products1.html">Products</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#about">Cart</a></li>
             <li><a href="#customers">Customers</a></li>
         </ul>
-        <div class="profile">
-            <i class="fa-solid fa-user"></i>
-            <span>Name</span>
-            <i class='bx bx-caret-down'></i>
+        <div class="profile" >
+            <a href="login.html" id="logout"><i class="fa-solid fa-user"></i>
+                <span id="username">Guest</span></a>
         </div>
     </header>
     <section class="home swiper" id="home">
         <div class="swiper-wrapper">
             <div class="swiper-slide container">
                 <div class="home-text">
+                    <p id="demo"></p>
                     <span>We are delicacy</span>
                     <h1>Choose delicacy <br> the best healthy <br>chicken salad</h1>
                     <a href="#" class="btn">Shop Now<i class='bx bx-right-arrow-alt' ></i></a>
@@ -244,8 +249,8 @@
         </div>
         <div class="footer-box">
             <br><br>
-            <a href="https://apps.apple.com/sg/app/fairprice-fast-reliable/id1012365118"><img src="/images/home/Get-it-on-apple-store.png" alt=""></a>
-            <a href="https://play.google.com/store/apps/details?id=com.fairprice.mcomapp"><img src="/images/home/get-it-on-google-play-badge.png" alt=""></a>
+            <a href="https://apps.apple.com/sg/app/fairprice-fast-reliable/id1012365118"><img src="images/home/Get-it-on-apple-store.png" alt=""></a>
+            <a href="https://play.google.com/store/apps/details?id=com.fairprice.mcomapp"><img src="images/home/get-it-on-google-play-badge.png" alt=""></a>
         </div>
        
     </section>
@@ -255,5 +260,22 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="javascript/main.js"></script>
     <script src="javascript/main1.js"></script>
+    <script src="javascript/scroll.js"></script>
+    <script>
+        const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        const d=new Date();
+        let day = d.getDate();
+        let m=month[d.getMonth()];
+        let year = d.getFullYear();
+        document.getElementById("demo").innerHTML=day+" "+m+" "+year;
+        
+    </script>
+    <script src="javascript/sessionstorage.js"></script>
+    <script src="javascript/include.js"></script>
+    <script src="javascript/scroll.js"></script>
+    <script src="javascript/header.js"></script>
+    <script>
+        includeHTML();
+    </script>
 </body>
 </html>
