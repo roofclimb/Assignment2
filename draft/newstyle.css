@@ -19,6 +19,18 @@
     --text-color:#1a2428;
     --bg-color:#fff;
 }
+
+::-webkit-scrollbar{
+    width:0.5rem;
+    background: var(--light-green-color);
+}
+
+::-webkit-scrollbar-thumb{
+    width:0.5rem;
+    background: var(--green-color);
+    border-radius: 5rem;
+}
+
 section{
     padding: 4rem 0 1.5rem;
 }
@@ -211,7 +223,7 @@ header{
 }
 
 .categories-container{
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(auto-fit,minmax(180px,auto));
     gap:1rem;
     margin-top: 2rem;
@@ -378,4 +390,335 @@ header{
 
 .about-text p{
     margin: 0.5rem 0 1rem;
+}
+.customers{
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.customers h2{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.customers-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+   /*  align-items: center; */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.customers-container .box{
+    padding: 20px;
+    box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
+    border-radius: 0.5rem;
+    border-bottom: 7px solid var(--green-color);
+}
+
+.customers-container .box:hover{
+    transform: translateY(10px);
+    transition: 0.2s all linear;
+}
+
+.customers-container .box .bx{
+    font-size: 24px;
+    color:var(--green-color);
+}
+
+.customers-container .box .stars .bx{
+    font-size: 1rem;
+    color:var(--light-orange-color);
+}
+
+.customers-container .box p{
+    font-size: 0.938rem;
+}
+
+.review-profile{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    column-gap: 0.5rem;
+}
+
+.review-profile img{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    object-fit:cover;
+    object-position: center;
+}
+
+.review-profile h3{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.footer{
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+    gap:1.5rem;
+    margin-top: 2rem;
+    background: #fef4ea;
+    border-radius: 0.5rem;
+    padding:20px;
+}
+
+.footer-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box p{
+    font-size: 0.938rem;
+    margin:0.5rem, 0 1rem;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.social .bx{
+    padding:10px;
+    background: var(--bg-color);
+    color:var(--green-color);
+    border-radius: 5rem;
+    font-size: 20px;
+}
+
+.social .bx:hover{
+    background: var(--green-color);
+    color:var(--bg-color);
+    transition: 0.2s all linear;
+}
+
+.footer-box h2{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer-box a{
+    color:#868a92;
+    margin-bottom: 1rem;
+}
+
+.footer-box a:hover{
+    color:var(--light-orange-color);
+}
+
+.footer-box img{
+    width:70%;
+}
+
+.copyright{
+    text-align: center;
+    padding: 20px;
+}
+
+table{
+    padding: 10px;
+    width: 100%;
+  }
+  
+td{
+    padding: 10px;
+    font-size: 15px;
+}
+
+table img{
+        width:500px;
+}
+
+@media(max-width:1080px){
+    header{
+        padding:18px 60px;
+    }
+    .home-text{
+        padding: 0 100px;
+    }
+
+    .container img{
+        right:100px;
+    }
+}
+
+@media(max-width:991px){
+    header{
+        padding:18px 4%;
+    }
+
+    section{
+        padding: 50px 4%;
+    }
+    .home-text h1{
+        font-size: 2rem;
+    }
+    .home-text{
+        padding:0 5%;
+    }
+    .swiper-button-next,
+    .swiper-button-prev{
+        margin:0;
+    }
+}
+
+@media(max-width:852px){
+    header{
+        padding:12px 4%;
+    }
+    #menu-icon{
+        display:initial;
+    }
+    .navbar{
+        position: absolute;
+        top:-570px;
+        left:0;
+        right:0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        box-shadow: 4px 4px 0 4px rgba(14 55 54 / 15%);
+        transition: 0.2s all linear;
+        text-align: left;
+    }
+    .navbar a{
+        padding: 1rem;
+        margin:1rem;
+        display: block;
+    }
+    .navbar a:hover,
+    .navbar .home-active{
+        border-radius: 0.5rem;
+        color:var(--bg-color);
+    }
+    .navbar.active{
+        top:100%;
+    }
+    .home-text h1{
+        font-size: 1.7rem;
+    }
+
+    .container img{
+        width:300px;
+    }
+    .btn{
+        padding:0.6rem 1.2rem
+    }
+    .products-container{
+        grid-template-columns: repeat(auto-fit,minmax(244px,auto));
+    }
+}
+
+@media(max-width:712px){
+    .container img{
+        right:20px;
+    }
+    .heading h1{
+        font-size: 1.2rem;
+    }
+    .about{
+        grid-template-columns: repeat(auto-fit,minmax(20rem,auto));
+    }
+    .about img{
+        order: 2;
+    }
+    .about-text{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn {
+        max-width: 164px;
+    }
+    .customers h2{
+        font-size: 1.2rem;
+    }
+    .footer-box img{
+        width:100px;
+    }
+}
+
+@media(max-width:642px){
+    .container img{
+        right:0;
+        width:370px;
+    }
+}
+
+@media(max-width:546px){
+    .container img{
+        right: 50px;
+        width:370px;
+        height:400px;
+        object-fit:contain;
+    }
+}
+
+@media(max-width:450px){
+    .logo{
+        font-size: 1rem;
+    }
+
+    .profile .fa-user{
+        width:30px;
+        height:30px;
+    }
+
+    .profile span{
+        font-size: 10px;
+    }
+
+    .home-text{
+        position: absolute;
+        top: 100px;
+    }
+    .container img{
+        right:85px;
+        width:250px;
+    }
+    .home-text span{
+        font-size: 0.8rem;
+    }
+
+    .home-text h1{
+        font-size: 1.4rem;
+    }
+
+    .heading{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .heading .btn{
+        margin-top: 1rem;
+    }
+
+    .categories-container{
+        gap:1.5rem;
+    }
+    .footer-box a img{
+        width:50%;
+    }
+    table td,tr{
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:auto;
+        padding: 20px;
+      }
+    table img{
+            width: 100%;
+            order:2;
+    }
 }
