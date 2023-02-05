@@ -72,10 +72,10 @@ function addCartClicked(event){
     var button = event.target;
     var shopProducts = button.parentElement;
     var hi=shopProducts.parentElement;
-    var hello=hi.parentElement;
-    var title = hello.getElementsByClassName("product-title")[0].innerText;
-    var price = hello.getElementsByClassName("price")[0].innerText;//
-    var productImg = hello.getElementsByClassName("product-img")[0].src;//
+    console.log(hi);
+    var title = hi.getElementsByClassName("product-title")[0].innerText;
+    var price = hi.getElementsByClassName("price")[0].innerText;//
+    var productImg = hi.getElementsByClassName("product-img")[0].src;//
     console.log(title,price,productImg);
     addProductToCart(title,price,productImg);
     updatetotal();
@@ -85,12 +85,14 @@ function addProductToCart(title,price,productImg){
     cartShopBox.classList.add('cart-box')
     var cartItems = document.getElementsByClassName('cart-content')[0]
     var cartItemsNames = cartItems.getElementsByClassName('cart-box')
+    var cartItemsdetails = cartItems.getElementsByClassName('detail-box')
+    console.log(cartItemsdetails[0]);
     //cart-product-title
     /* console.log(cartItemsNames[0].getElementsByClassName('cart-product-title')[0].innerText); */
     for (var i = 0; i < cartItemsNames.length; i++){
-        console.log(cartItemsNames[i].getElementsByClassName('cart-product-title')[0].innerText);
+        console.log(cartItemsdetails[i].getElementsByClassName('cart-product-title')[0].innerText);
         console.log(title);
-        if(cartItemsNames[i].getElementsByClassName('cart-product-title')[0].innerText == title){
+        if(cartItemsdetails[i].getElementsByClassName('cart-product-title')[0].innerText == title){
             alert("You have already added this item to cart");
             return;
         }
