@@ -5,8 +5,326 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="/style/cart.css">
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
 </head>
 <body>
-    
+    <header>
+        <a href="#" class="logo"><i class='bx bxs-basket'></i>Fairprice</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#home" class="home-active">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#products">Products</a></li>
+            <li id="cart-icon">Cart</li>
+            <li><a href="#customers">Customers</a></li>
+        </ul>
+        <div class="profile">
+            <i class="fa-solid fa-user"></i>
+            <span>Name</span>
+            <i class='bx bx-caret-down'></i>
+        </div>
+    </header>
+    <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+    <!-- content -->
+        <div class="cart-content">
+
+        </div>          
+        <!-- Total  -->
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+        </div>
+        <!-- Buy button -->
+        <button type="button" class="btn-buy">Buy Now</button>
+        <!-- cart close -->
+        <i class='bx bx-x' id ="close-cart"></i>
+  
+  </div>
+  <div id="Snacks" class="tabcontent products">
+    <!----Featured products ----->
+    <br><br><br><br>
+      <h2 style="text-align:center;">Snacks</h2>
+      <div class="product-box">
+        <div class="products-container">
+            <div class="box">
+            <img src="/images/snacks/haribo.png" class ="product-img"alt="haribo" height="300">
+            <span>Fruits</span>
+                <h2 class="product-title">Haribo Gummy Candies</h2>
+                <p>160g Halal</p>
+                <b class="price">$2.95</b>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="addcart">
+                    <i class='bx bx-cart-alt' ></i>
+                </div>
+                <i class='bx bx-heart' ></i>
+                <span class="discount">-25%</span>
+            </div>
+            <div class="box">
+                <img src="/images/snacks/hi-chew1.png" class ="product-img" height="300" alt="Hi-chew">
+                <span>Fruits</span>
+                    <h2 class="product-title">Hi-Chew Mini Chewy Candy</h2>
+                    <p>100g</p>
+                    <b class="price">$2.83</b>
+                    <div class="addcart">
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                    <i class='bx bx-heart' ></i>
+                    <span class="discount">-25%</span>
+            </div>
+            <div class="box">
+                <img src="/images/snacks/nougat.png" class ="product-img" height="275" alt="Hi-chew">
+                <span>Fruits</span>
+                    <h2 class="product-title">Golden Boronia Nougat- Original (Soft)</h2>
+                    <p>100g</p>
+                    <b class="price">$6.56</b>
+                    <div class="addcart">
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                    <i class='bx bx-heart' ></i>
+                    <span class="discount">-25%</span>
+            </div>
+            <div class="box">
+                <img src="/images/snacks/senbei.png" class ="product-img" height="300" alt="senbei">
+                <span>Fruits</span>
+                    <h2 class="product-title">Wang Wang Rice Crackers -Senbei</h2>
+                    <p>92g</p>
+                    <b class="price">$2.05</b>
+                    <div class="addcart">
+                        <i class='bx bx-cart-alt'></i>
+                    </div>
+                    <i class='bx bx-heart'></i>
+                    <span class="discount">-15%</span>
+            </div>
+        </div>
+      </div>
+            
+              
+             <!--  <div class="column">
+                  <img src="images/snacks/senbei.png" class ="product-img" height="300" alt="senbei" >
+                  <br>
+                  <div class="details">
+                    <b  class="price" >$2.05</b>
+                  <h4>Wang Wang Rice Crackers -Senbei </h4>
+                  <p>92g</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                  </div>
+                    <br>
+                    <p><button>Add to Cart</button></p>
+                </div>
+                <div class="column">
+                  <img src="images/snacks/lays.png" class ="product-img" height="300" alt="lays">
+                  <div class="details">
+                    <b  class="price">$4.80</b>
+                    <h4>Lay's Potato Chips - Classic </h4>
+                    <p>170g</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                  </div>
+                    <br>
+                    <p><button>Add to Cart</button></p>
+                </div>
+                <div class="column">
+                  <img src="images/snacks/mentos.png" height="300" alt="mentos">
+                  <div class="details">
+                    <b  class="price">$1.90</b>
+                  <h4>Mentos Chewy Dragees - Mint(Share-A-Bowl) </h4>
+                  <p>135g</p>
+                  <div class="rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                  </div>
+                    <br>
+                    <p><button>Add to Cart</button></p>
+                </div>
+                <div class="column">
+                  <img src="images/snacks/yummypops.png" height="300" alt="yummypops">
+                  <div class="details">
+                    <b  class="price">$5.55</b>
+                    <h4>Yum Earth Organics Lollipops - Assorted </h4>
+                    <p>85g</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                  </div>
+                  
+                    <br>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            
+                <div class="column">
+                  <img src="images/snacks/monster.png" height="300" alt="monster">
+                  <div class="details">
+                    <b class="price">$2.19</b>
+                    <h4>Mamee Monster Chicken Flavour- Perisa Ayam Noodle Snack(8x25) </h4>
+                    <p>8x200g Halal</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                  </div>
+                  <br>
+                    <p><button>Add to Cart</button></p>
+                </div>
+                <div class="column">
+                  <img src="images/snacks/potato chip.png" height="300" alt="potato chip"style="width:100%">
+                  <div class="details">
+                    <b>$2.17</b>
+                  <h4>Calbee Crispy Potato Chips - Hot & Spicy </h4>
+                  <p>72g</p>
+                  <div class="rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                  </div>
+                    <br>
+                    <p><button>Add to Cart</button></p>
+                </div>
+                <div class="column">
+                  <img src="images/snacks/potatocrispscracker.png" height="276" alt="potatocrispscracker" style="width:100%">
+                  <br><br>
+                  <div class="details">
+                    <b>$2.22</b>
+                    <h4>Win2 Baked Potato Crisp Crackers - Vegetable </h4>
+                    <p>160g( 8 per pack) </p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                      </div>
+                  </div>
+                    <br>
+                    <p><button>Add to Cart</button></p>
+                </div>
+                <div class="column">
+                  <img src="images/snacks/Rollercoaster.png" height="300" alt="Rollercoaster" style="width:100%">
+                  <div class="details">
+                      <b>$2.98</b>
+                    <h4>Jack 'n Jill Roller Coaster Potato Rings -Barbecue </h4>
+                    <p>144g(8 per pack)</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>
+                  </div>
+                    <br>
+                    <p><button>Add to Cart</button></p>
+                </div>
+                <div class="column">
+                  <img src="images/snacks/werthers.png" height="300" alt="werthers" style="width:100%">
+                  <div class="details">
+                      <b>$3.99</b>
+                    <h4>Storck Werther's Original Cream Candies - Classical </h4>
+                    <p>150g</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                      </div>
+                    </div>
+                  <br>
+                    <p><button>Add to Cart</button></p>
+                </div>
+                <div class="column">
+                  <img src="images/snacks/skittles.png" height="300" alt="skittles" style="width:100%">
+                  <div class="details">
+                    <b>$4.20</b>
+                  <h4>Skittles Candies - Original (Fun Size Bag) </h4>
+                  <p>10x15g</p>
+                  <div class="rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-half-o"></i>
+                    </div>
+                  </div>
+                    <br>
+                    <p><button>Add to Cart</button></p>
+                </div>
+                <div class="column">
+                  <img src="images/snacks/Ruffles.png" height="300" alt="ruffles" style="width:100%">
+                  <div class="details">
+                    <b>$5.30</b>
+                  <h4>Ruffles Potato Chips - Cheddar & Sour Cream </h4>
+                  <p>170g</p>
+                  <div class="rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-half-o"></i>
+                    </div>
+                  </div>
+                  
+                    <br>
+                    <p><button>Add to Cart</button></p>
+                </div>
+                <div class="column">
+                  <img src="images/snacks/doritos.png" height="300" alt="doritos">
+                  <div class="details">
+                    <b>$5.30</b>
+                    <h4>Doritos Tortilla Chips - Nacho Cheese</h4>
+                    <p>190g</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                  </div>
+                  
+                    <br>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+            <div w3-include-html="footer.html"></div>
+    </div> -->
+    <script src="cart.js"></script>
 </body>
 </html>
