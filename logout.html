@@ -8,6 +8,8 @@
     <link rel="icon" type="image/x-icon" href="images/home/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="style/style1.css">
     <link rel="stylesheet" href="style/login.css">
     <link rel="stylesheet" href="style/newstyle.css">
@@ -21,21 +23,19 @@
         <a href="" class="logo"><img src="images/home/fairpricelogo.png" alt=""></a>
         <div class="bx bx-menu" id="menu-icon"></div>
         <ul class="navbar">
-            <li><a href="index.html" class="home-active">Home</a></li>
-            <li><a href="game.html">Games</a></li>
-            <li><a href="products1.html">Products</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#customers">Customers</a></li>
+            <li><a href="index.html" class="home-active"><i class="fa-sharp fa-solid fa-house"></i><span>&nbsp;Home</span></a></li>
+            <li><a href="products1.html"><i class="fa-solid fa-magnifying-glass"></i><span>&nbsp;Products</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i><span>&nbsp;Cart</span></a></li>
+            <li><a href="game.html"><i class="fa-solid fa-gamepad"></i><span>&nbsp;Games</span></a></li>
         </ul>
         <div class="profile">
-            <a href="#" id="logout"><i class="fa-solid fa-user"></i>
-                <span id="username">Guest</span></a>
+            <a href="login.html" id="logout"><i class="fa-solid fa-user"></i><span id="username">Guest</span></a>
         </div>
     </header>
-    <div class="section-main" style="min-height: 100vh;">
+    <div class="section-main">
         <div class="textbox">
             <img src="images/home/login.jpeg" alt="">
-            <div class="form-container">
+            <div class="log-out form-container">
                 <span>Log Out</span>
                 <div class="box">
                     <p id="data">Name: </p>

@@ -31,6 +31,7 @@
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    z-index: 999;
 }
 
 #progress-value{
@@ -44,6 +45,80 @@
     font-size: 35px;
     color:#001a2e;
 }
+
+.button{
+    display:inline-block;
+    text-decoration:none;
+    color:#fff;
+    border:1px solid #fff;
+    padding:12px 34px;
+    font-size: 20px;
+    background:transparent;
+    position:relative;
+    cursor:pointer;
+    border-radius: 12px;
+  }
+  
+  .button:hover{
+    border: 1px solid #f44336;
+    background:#f44336;
+    transition: 1s;
+  
+  }
+  
+  span{
+    font-size: 20px;
+  }
+  
+  .checkbox{
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+  }
+  
+  input[type="checkbox"]{
+    appearance: none;
+    -webkit-animation: none;
+    height:20px;
+    width:20px;
+    background-color: #d5d5d5;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+  }
+  
+  
+  label{
+    color:#4c4c4c;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  input[type="checkbox"]:after{
+    font-weight: 400;
+    content: "\2714";
+    font-size: 15px;
+    color:white;
+    display: none;
+  }
+  
+  input[type="checkbox"]:hover{
+    background-color: #a5a5a5;
+  }
+  
+  input[type="checkbox"]:checked{
+    background-color: #5bcd3e;
+  }
+  
+  input[type="checkbox"]:checked:after{
+    display: block;
+  }
 /* ::-webkit-scrollbar{
     width:0.5rem;
     background: var(--light-green-color);
@@ -81,25 +156,19 @@ header{
     transition: 0.5s;
 }
 
-.profile{
+/* .profile{
     display: flex;
     align-items: center;
-    column-gap: 0.5rem;
     cursor: pointer;
-}
+} */
 
-.profile span{
-    /* font-size: 13px;
-    font-weight: 500; */
+/* .profile span{
+    font-size: 13px;
+    font-weight: 500;
     font-size:1rem;
     font-weight: 500;
-    color:var(--text-color);
-    padding: 0.5rem 1rem;
-}
+} */
 
-.profile i{
-    color:black;
-}
 
 .logo{
     width:150px;
@@ -124,15 +193,25 @@ header{
     column-gap: 0.5rem;
 }
 
-.navbar a{
+header a{
     font-size:1rem;
     font-weight: 500;
     color:var(--text-color);
     padding: 0.5rem 1rem;
 }
 
+.profile a span{
+    padding: 0.2rem 0.4rem;
+}
+
+header i{
+    font-size:1rem;
+}
+
 .navbar a:hover,
-.navbar .home-active{
+.navbar .home-active,
+.profile a:hover
+{
     background: var(--green-color);
     border-radius: 5rem;
     color:var(--bg-color);
@@ -198,7 +277,7 @@ header{
     max-width: 160px;
 }
 
-.btn .bx{
+.btn .bx,a .btn .bx{
     padding:4px;
     background: var(--bg-color);
     color:var(--text-color);
@@ -291,7 +370,7 @@ header{
     margin-bottom: 1rem;
 }
 
-.categories-container .box .bx{
+.categories-container .box a .bx{
     padding:10px;
     background: var(--green-color);
     color:var(--bg-color);
@@ -299,15 +378,16 @@ header{
     margin-top: 2rem;
     position: absolute;
     bottom: -8%;
+    left: 40%;
     display: none;
 }
 
-.categories-container .box .bx:hover{
+.categories-container .box a .bx:hover{
     background: var(--light-orange-color);
     transition: 0.2s all linear;
 }
 
-.categories-container .box:hover .bx{
+.categories-container .box:hover a .bx{
     display: block;
     transition: 0.2s all linear;
 }
@@ -579,6 +659,50 @@ table img{
         width:500px;
 }
 
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+  }
+  
+  .tablink:hover {
+    background-color: #777;
+  }
+  
+  
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+  }
+
+  .title {
+    text-align: center;
+    margin: 0 auto 20px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+    font-size: 40px;
+    }
+    .title::after{
+        content:'';
+        background-color: #ff523b;
+        width:300px;
+        height:5px;
+        border-radius:5px;
+        position:absolute;
+        bottom:0;
+        left:50%;
+        transform: translateX(-50%);
+    }
+
 @media(max-width:1080px){
     header{
         padding:18px 60px;
@@ -691,6 +815,9 @@ table img{
     .logo{
         width:100px;
     }
+    .section-main{
+        max-height: 70vh;
+    }
 }
 
 @media(max-width:642px){
@@ -719,9 +846,10 @@ table img{
         height:30px;
     }
 
-    .profile span{
-        font-size: 10px;
+    .profile span,header a span,header i{
+        font-size: 15px;
     }
+
 
     .home-text{
         position: absolute;

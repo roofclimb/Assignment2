@@ -102,7 +102,7 @@ header .menu a:hover{
 }
 
 
-header .btn1{
+header .btn{
     color:#fff;
     font-size: 20px;
     cursor: pointer;
@@ -368,7 +368,7 @@ input[type="checkbox"]:checked:after{
  } */
 
  @media (max-width: 750px){
-  header .btn1{
+  header .btn{
       display: block;
   }
 
@@ -397,7 +397,7 @@ input[type="checkbox"]:checked:after{
       right:0;
   }
 
-  header .menu .close-btn1{
+  header .menu .close-btn{
       position: absolute;
       top: 0;
       left: 0;

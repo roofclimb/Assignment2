@@ -91,7 +91,7 @@ add-cart:hover {
     row-gap:5px;
 }
 .cart-product-title{
-    font: size 5px;/* ;
+    font-size: 15px;/* ;
     text-transform:uppercase; */
 }
 .cart-price{

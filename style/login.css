@@ -9,6 +9,28 @@
     align-items: center;
     padding: 20px 100px;
   }
+  .section-main{
+    min-height: 90vh;
+    width: 100%;
+    background: rgba(4, 9, 30, 0.4);
+    background-position:center;
+    background-size:cover;
+    position:relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+  
+  .section-main img{
+    position: absolute;
+    z-index: -5;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    display: flex;
+  }
 
 .account-page{
     padding:50px 0;
@@ -17,7 +39,7 @@
 .form-container{
     background: #fff;
     width:300px;
-    height:400px;
+    height:450px;
     position: relative;
     text-align: center;
     padding: 20px 0;
@@ -43,7 +65,7 @@
     max-width: 300px;
     padding: 0 20px;
     position: absolute;
-    top:100px;
+    top:80px;
     transition: transform 1s;
     width: 100%;
 }
@@ -112,3 +134,72 @@ form a{
     text-align: left;
     width: 100%;
 }
+
+#registerlottie{
+    width: 80px; 
+    height: 80px;
+    position: relative;
+    left:90px;
+    /* display: none; */
+}
+
+#loginlottie{
+    width: 200px; 
+    height: 200px;
+    position: absolute;
+    top:180px;
+    left:50px;
+}
+
+.hide{
+    display:none;
+}
+
+.log-out.form-container{
+    width:250px;
+    height:250px;
+  }
+  
+
+@media(max-width:800px){
+    .section-main{
+        min-height:50vh;
+      }
+      .form-container{
+        width:250px;
+        height:390px;
+      }
+      .log-out.form-container{
+        width:200px;
+        height:250px;
+      }
+      .form-button span{
+        font-size: 15px;
+      }
+
+      .checkbox label{
+        font-size: 17px;
+      }
+
+      #registerlottie{
+        width: 50px;
+        height: 50px;
+        left:75px;
+    }
+    #loginlottie{
+        width: 200px; 
+        height: 200px;
+        position: absolute;
+        top:150px;
+        left:50px;
+    }
+      .form-container form{
+        top: 70px;
+      }
+      .log-out.form-container .box{
+        top: 65px;
+      }
+      /* .form-container{
+        padding:15px;
+      } */
+}  

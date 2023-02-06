@@ -75,7 +75,9 @@ $(document).ready(function () {
               getContacts();
           });
           
-          document.getElementById('nomatch').innerHTML="Registration successful";
+          document.getElementById('nomatch').innerHTML="Registration successful\nProceed to log in";
+          let hide=document.getElementById('registerlottie');
+          hide.classList.remove('hide');
         //[STEP 3]: get form values when user clicks on send
         //Adapted from restdb api
         
@@ -262,6 +264,8 @@ $(document).ready(function () {
 
 
    $("#login-submit").on("click", function (e)  {
+    let hide=document.getElementById('loginlottie');
+    hide.classList.remove('hide');
     e.preventDefault();
     const checkbox=document.getElementById("check")
     console.log(checkbox.checked)
@@ -295,6 +299,7 @@ $(document).ready(function () {
                 console.log('correct email');
                 if (loginPassword==correctPassword){
                     document.getElementById('wrong').innerHTML="Log In successful.";
+                    
                     if(checkbox.checked){//remember me
                       localStorage.setItem("name",response[i].name);
                       localStorage.setItem("id",response[i]._id);
@@ -312,11 +317,13 @@ $(document).ready(function () {
                 }
                 else{
                     console.log(correctPassword);
+                    hide.classList.add('hide');
                     document.getElementById('wrong').innerHTML="Wrong password entered.";
                     break;
                 }
             }
             else{
+                hide.classList.add('hide');
                 document.getElementById('wrong').innerHTML="Account does not exist";
             }
         }
