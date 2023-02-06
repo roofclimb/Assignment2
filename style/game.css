@@ -1,0 +1,176 @@
+
+/* header{
+    width:100vw;
+    height: 100vh;
+    /* background-image: url('/images/games/homepage.jpg'); */
+    /* background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+} */
+/* .header-content{
+    margin-bottom:150px;
+    color:whitesmoke;
+    text-align:center;
+}
+.header-content h2{
+    font-size: 4vmin;
+} */
+.line{
+    width: 150px;
+    height: 4px;
+    background: #fc036b;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+/* .header-content h1{
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+} */
+
+/* login button  */
+.ctn{
+    padding: 8px 15px;
+    background: #fc036b;
+    border-radius: 30px;
+    color:whitesmoke;
+}
+body, html {
+    overflow-x: hidden;
+}
+
+/* game */
+section{
+    width: 80%;
+    margin: 80px auto;
+}
+.title{
+    text-align: center;
+    font-size : 4vmin;
+    color:#49497e;
+}
+.row1{
+    display:flex;
+    align-items:center;
+    width: 100%;
+    justify-content:space-between;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+}
+.row1 img{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+.row1 .col{
+    display:flex;
+    flex-direction: column;
+    align-items: center;  
+}
+.games .row1{
+    margin-top: 50px;
+}
+h4{
+    font-size: 3vmin;
+    color: #484872;
+    margin: 20px auto;
+    text-align: center;
+}
+p{
+    color: #484872;
+    padding:0px 40px;
+}
+.games .ctn{
+    margin-top: 30px;
+}
+.rewards{
+    background-image: url('/images/games/background.png');
+    width: 100%;
+    height: 100vh;
+    background-position:center ;
+    background-size: cover;
+    display: flex;
+    background-repeat: no-repeat;
+    align-items: center;
+}
+
+.rewards-content{
+    width:60%;
+    padding: 50px;
+    color:black;
+    display:flex;
+    align-items: center ;
+    flex-direction: column;
+}
+.reward-content h1{
+    font-size:7vmin;
+}
+.rewards-content p{
+    color:black;
+}
+.rewards-content .line{
+    margin-bottom:50px;
+}
+.rewards-content .ctn{
+    margin-top:40px ;
+}
+/* flappy image */
+.row1 .col .flappy{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.lottie{
+    position: absolute;
+    right: 300px;
+    top:25px;
+    width: 300px;
+    height: 300px;
+
+}
+.lottie1{
+    position: absolute;
+    left: 300px;
+    top:25px;
+    width: 300px;
+    height: 300px;
+}
+@media only screen and (max-width:850px){
+    .row1{
+        flex-direction: column;
+    }
+    .row1 .col {
+        margin:20px auto;
+    }
+    .col img{
+        max-width: 90%;
+    }
+    .title h1{
+        font-size: 7vmin; 
+    }
+    .reward-content{
+        width: 100%;
+    }
+    .footer{
+        padding: 10px;
+    }
+    .lottie{
+        width: 150px;
+        height: 150px;
+        right:0px;
+        top:20px;
+    
+    }
+    .lottie1{
+        width: 150px;
+        height: 150px;
+        left: 0px;
+        top:140px;
+    }
+}
