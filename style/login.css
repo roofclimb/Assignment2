@@ -83,7 +83,7 @@ form .button,.logout-button{
     width: 100%;
     border:none;
     cursor:pointer;
-    padding: 0;
+    padding: 2px 1px;
     margin: 10px 0;
     display: inline-block;
     background: #ff253b;
@@ -118,7 +118,7 @@ form a{
     background: #ff253b;
     height: 3px;
     margin-top: 8px;
-    transform: translateX(100px);
+    transform: translateX(105px);
     transition: transform 1s;
 }
 
@@ -159,7 +159,38 @@ form a{
     width:250px;
     height:250px;
   }
+
+.bx{
+  position: relative;
   
+}
+
+.eye{
+  position: absolute;
+  right:-5px;
+  top:65px;
+}
+
+.password{
+  position: absolute;
+  right:-5px;
+  top:115px;
+}
+
+.confirm{
+  position: absolute;
+  right:-5px;
+  top:165px;
+}
+
+.hide{
+  display: none;
+}
+
+label{
+  align-items: left;
+}
+
 
 @media(max-width:800px){
     .section-main{

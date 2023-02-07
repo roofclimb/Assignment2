@@ -410,4 +410,53 @@ function logout(){
   }
   
   
-};
+}
+
+
+function myFunction(){
+  var x=document.getElementById("check-password");
+  var y=document.getElementById("hide1");
+  var z=document.getElementById("hide2");
+  if(x.type=='password'){
+      x.type="text";
+      y.classList.add("hide");
+      z.classList.remove("hide");
+  }
+  else{
+      x.type="password";
+      y.classList.remove("hide");
+      z.classList.add("hide");
+  }
+}
+
+function myFunction1(){
+  var x=document.getElementById("contact-password");
+  var y=document.getElementById("hide3");
+  var z=document.getElementById("hide4");
+  if(x.type=='password'){
+      x.type="text";
+      y.classList.add("hide");
+      z.classList.remove("hide");
+  }
+  else{
+      x.type="password";
+      y.classList.remove("hide");
+      z.classList.add("hide");
+  }
+}
+
+function myFunction2(){
+  var x=document.getElementById("confirm-password");
+  var y=document.getElementById("hide5");
+  var z=document.getElementById("hide6");
+  if(x.type=='password'){
+      x.type="text";
+      y.classList.add("hide");
+      z.classList.remove("hide");
+  }
+  else{
+      x.type="password";
+      y.classList.remove("hide");
+      z.classList.add("hide");
+  }
+}
