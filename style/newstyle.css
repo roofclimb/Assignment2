@@ -702,7 +702,20 @@ table img{
         left:50%;
         transform: translateX(-50%);
     }
-
+    .fa.fa-square{
+        color:red;
+        position: relative;
+        top:-15px;
+        left:-65px;
+    }
+    #cartno{
+        color:white;
+        font-size: 12px;
+        position: absolute;
+        top:22px;
+        right:702px;
+        z-index: 5;
+    }
 @media(max-width:1080px){
     header{
         padding:18px 60px;
@@ -837,13 +850,29 @@ table img{
 }
 
 @media(max-width:450px){
+    #cartno{
+        color:white;
+        font-size: 12px;
+        position: absolute;
+        top:185px;
+        left:28px;
+    }
     .logo{
         font-size: 1rem;
+    }
+    .tablink{
+        font-size: 15px;
+        padding: 8px;
+    }
+    .profile{
+        position: relative;
+        top: 5px;
     }
 
     .profile .fa-user{
         width:30px;
         height:30px;
+        padding: 0rem 0.4rem;
     }
 
     .profile span,header a span,header i{
