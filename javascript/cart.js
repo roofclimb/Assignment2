@@ -38,9 +38,9 @@ function ready(){
         var button = addCart[i];
         button.addEventListener('click', addCartClicked);
     }
-    document
+    /* document
         .getElementsByClassName('btn-buy')[0]
-        .addEventListener('click',buyButtonClicked);
+        .addEventListener('click',buyButtonClicked); */
 }
 
 function buyButtonClicked(){
