@@ -1232,11 +1232,11 @@
       <div class="form-container animate">
         <form>
               <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+              <input type="text" id="fname" name="firstname" placeholder="Elluru Victoria">
               <label for="email"><i class="fa fa-envelope"></i> Email</label>
               <input type="text" id="email" name="email" placeholder="john@example.com">
               <label for="adr"><i class="fa-solid fa-address-card"></i> Address</label>
-              <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+              <input type="text" id="adr" name="address" placeholder="535 Clementi Rd, Singapore 599489">
               <label><i class="fa-solid fa-credit-card"></i> Payment By</label>
               <div class="icon-container">
                 <label for="visa" class="radio">
@@ -1250,7 +1250,7 @@
                 </label>
               </div>
               <label for="adr"><i class="fa-solid fa-truck"></i> Delivery Date <span id="today"></span></label>
-              <input type="date" id="delivery" name="date" value="2023-02-8">
+              <input type="date" id="delivery" name="date">
               
               <!-- <i class="fa-brands fa-cc-visa" style="color:navy;"></i>
               <i class="fa-brands fa-cc-mastercard" style="color:red;"></i>
@@ -1261,11 +1261,11 @@
         <table>
           <tr>
             <td>Subtotal</td>
-            <td><strong>$0</strong></td>
+            <td><strong><span id="subtotal">$0</span></strong></td>
           </tr>
           <tr>
             <td>Delivery Fee</td>
-            <td><strong>$5</strong></td>
+            <td><strong><span id="deliverycharge">$5</span></strong></td>
           </tr>
           <tr>
             <td colspan="2">
@@ -1283,10 +1283,10 @@
           </tr>
           <tr>
             <td>Total</td>
-            <td><strong>$0</strong></td>
+            <td><strong><span id="total">$0</span></strong></td>
           </tr>
           <tr>
-            <td><button onclick="myFunction()">Try it</button></td>
+            <td colspan="2"><button onclick="myFunction()" class="btn-checkout">Checkout</button></td>
           </tr>
         </table>
       </div>
@@ -1295,52 +1295,6 @@
     <script src="javascript/main1.js"></script>
     <script src="javascript/products.js"></script>
     
-<script>
-    // Get the modal
-    var modal = document.getElementById('id01');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
-    var balance=document.getElementById("demo1");
-    output.innerHTML = slider.value;
-
-    slider.oninput = function() {
-      output.innerHTML = this.value;
-    }
-    var x=document.getElementsByName("payment");
-    function myFunction(){
-      for(var i = 0; i < x.length; i++){
-         if(x[i].checked)
-        {
-          console.log(x[i].value);
-        }
-      }
-    }
-    const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-    var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth() + 1; //January is 0!
-    var yyyy = today.getFullYear();
-    let m=month[today.getMonth()];
-    
-    if (dd < 10) {
-      dd = '0' + dd;
-    }
-
-    if (mm < 10) {
-      mm = '0' + mm;
-    } 
-        
-    today = yyyy + '-' + mm + '-' + dd;
-    document.getElementById("delivery").setAttribute("min", today);
-    document.getElementById("today").innerHTML="Today's date is "+dd+" "+m+" "+yyyy;
-</script>
 
 </body>
 </html>

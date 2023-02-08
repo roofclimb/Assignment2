@@ -1,6 +1,9 @@
 
 .line{
-    width: 150px;
+    position: relative;
+    bottom:15px;
+    right:20px;
+    width: 200px;
     height: 4px;
     background: #fc036b;
     margin: 10px auto;
