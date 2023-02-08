@@ -1,22 +1,4 @@
 
-/* header{
-    width:100vw;
-    height: 100vh;
-    /* background-image: url('/images/games/homepage.jpg'); */
-    /* background-position: bottom;
-    background-size: cover;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-} */
-/* .header-content{
-    margin-bottom:150px;
-    color:whitesmoke;
-    text-align:center;
-}
-.header-content h2{
-    font-size: 4vmin;
-} */
 .line{
     width: 150px;
     height: 4px;
@@ -101,12 +83,18 @@ p{
     align-items: center ;
     flex-direction: column;
 }
-.reward-content h1{
-    font-size:7vmin;
+.rewards-content h1{
+    font-size:25px;
+    text-align: center;
+    right: 300px
 }
 .rewards-content p{
     color:black;
+    font-size: 30px;
+    text-align: center;
+    right: 200px;;
 }
+
 .rewards-content .line{
     margin-bottom:50px;
 }
@@ -123,7 +111,7 @@ p{
 .lottie{
     position: absolute;
     right: 250px;
-    top:55px;
+    top:890px;
     width: 300px;
     height: 300px;
 
@@ -131,7 +119,7 @@ p{
 .lottie1{
     position: absolute;
     left: 250px;
-    top:55px;
+    top:890px;
     width: 300px;
     height: 300px;
 }
@@ -158,13 +146,13 @@ p{
         width: 150px;
         height: 150px;
         right:0px;
-        top:20px;
+        top:1050px;
     
     }
     .lottie1{
         width: 150px;
         height: 150px;
         left: 0px;
-        top:140px;
+        top:1150px;
     }
 }
