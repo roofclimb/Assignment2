@@ -716,6 +716,9 @@ table img{
         right:702px;
         z-index: 5;
     }
+    #space{
+        padding:43px;
+    }
 @media(max-width:1080px){
     header{
         padding:18px 60px;
@@ -850,12 +853,21 @@ table img{
 }
 
 @media(max-width:450px){
+    #space{
+        padding:30px;
+    }
     #cartno{
         color:white;
         font-size: 12px;
         position: absolute;
         top:185px;
-        left:28px;
+        left:39px;
+    }
+    .fa.fa-square{
+        color:red;
+        position: absolute;
+        top:185px;
+        left:35px;
     }
     .logo{
         font-size: 1rem;
