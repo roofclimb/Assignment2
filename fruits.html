@@ -1,348 +1,1299 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="style/cart.css">
-    <link rel="stylesheet" href="style/newstyle.css">
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    
-</head>
-<body>
-    <header>
-        <a href="#" class="logo"><i class='bx bxs-basket'></i>Fairprice</a>
-        <div class="bx bx-menu" id="menu-icon"></div>
-
-        <ul class="navbar">
-            <li><a href="index.html" class="home-active">Home</a></li>
-            <li><a href="game.html">Games</a></li>
-            <li><a href="products1.html">Products</a></li>
-            <li><a href="#" id="cart-icon"> Cart</a></li>
-            <li><a href="#customers">Customers</a></li>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Products</title>  
+      <link rel="icon" type="image/x-icon" href="images/home/icon.png">
+      <link rel="stylesheet" href="style/normalize.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+      <link rel="stylesheet" href="style/cart.css">
+      <link rel="stylesheet" href="style/newstyle.css">
+      <link rel="stylesheet" href="style/login1.css">
+      <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+      
+  </head>
+  <body>
+    <br><br><br><br><br>
+    <!-- 
+    <img src="images/home/product_wallpaper.jpg" alt=""> -->
+    <button class="tablink" onclick="openPage('Snacks', this, 'green')">Snacks</button>
+      <button class="tablink" onclick="openPage('Fruits', this, 'blue')" id="defaultOpen">Fruits</button>
+      <button class="tablink" onclick="openPage('Frozen', this, 'orange')" >Frozen</button>
+      <button class="tablink" onclick="openPage('Household', this, 'red')" >Household</button>
+      <header>
+          <a href="" class="logo"><img src="images/home/fairpricelogo.png" alt=""></a>
+          <div class="bx bx-menu" id="menu-icon"></div>
+          <ul class="navbar">
+            <li><a href="index.html" class="home-active"><i class="fa-sharp fa-solid fa-house"></i><span>&nbsp;Home</span></a></li>
+            <li><a href="products1.html"><i class="fa-solid fa-magnifying-glass"></i><span>&nbsp;Products</span></a></li>
+            <li><a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><span>&nbsp;Cart</span>
+              <p id="cartno">0</p><i class="fa fa-square"></i></a></li>
+            <li><a href="game.html"><i class="fa-solid fa-gamepad"></i><span>&nbsp;Games</span></a></li>
         </ul>
         <div class="profile">
-            <i class="fa-solid fa-user"></i>
-            <span>Name</span>
-            <i class='bx bx-caret-down'></i>
+            <a href="login.html" id="logout"><i class="fa-solid fa-user"></i><span id="username">Guest</span></a>
         </div>
-    </header>
-    <div class="cart">
-        <h2 class="cart-title">Your Cart</h2>
-    <!-- content -->
-        <div class="cart-content">
-
-        </div>          
-        <!-- Total  -->
-        <div class="total">
-            <div class="total-title">Total</div>
-            <div class="total-price">$0</div>
-        </div>
-        <!-- Buy button -->
-        <button type="button" class="btn-buy">Buy Now</button>
-        <!-- cart close -->
-        <i class='bx bx-x' id ="close-cart"></i>
+      </header>
+      <div class="cart">
+          <h2 class="cart-title">Your Cart</h2>
+      <!-- content -->
+          <div class="cart-content">
   
-  </div>
-  <div id="Snacks" class="tabcontent products">
-    <!----Featured products ----->
-    <br><br><br><br>
-      <h2 style="text-align:center;">Fruits</h2>
-      <div class="product-box">
-        <div class="products-container">
-            <div class="box">
-            <img src="images/fruits/banana.jpg" class ="product-img"alt="" height="300">
-            <span>Fruits</span>
-                <h2 class="product-title">Sumifru Sweet Mountain Bananas</h2>
-                <p>820g</p>
-                <b class="price">$3.95</b>
-                <div class="stars">
-                  <i class='bx bxs-star' ></i>
-                  <i class='bx bxs-star' ></i>
-                  <i class='bx bxs-star' ></i>
-                  <i class='bx bxs-star' ></i>
-                  <i class='bx bxs-star-half' ></i>
-                  </div>
-                <div class="addcart">
-                    <i class='bx bx-cart-alt' ></i>
+          </div>          
+          <!-- Total  -->
+          <div class="total">
+              <div class="total-title">Total</div>
+              <div class="total-price">$0</div>
+          </div>
+          <!-- Buy button -->
+          <button type="button" class="btn-buy" onclick="document.getElementById('id01').style.display='block'">Buy Now</button>
+          <!-- cart close -->
+          <i class='bx bx-x' id ="close-cart"></i>
+    
+    </div>
+    <div id="Snacks" class="tabcontent products">
+      <!----Featured products ----->
+        <h2 style="text-align:center;" class="title">Snacks</h2>
+        <div class="product-box">
+          <div class="products-container">
+              <div class="box">
+              <img src="images/snacks/haribo.png" class ="product-img"alt="" height="300">
+              <span>Snacks</span>
+                  <h2 class="product-title">Haribo Gummy Candies</h2>
+                  <p>160g Halal</p>
+                  <b class="price">$2.95</b>
+                  <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star-half' ></i>
                 </div>
-                <i class='bx bx-heart' ></i>
-                <span class="discount">-25%</span>
-            </div>
-            <div class="box">
-                <img src="images/fruits/blueberries.png" class ="product-img" height="300" alt="">
-                <span>Fruits</span>
-                    <h2 class="product-title">Fresh Blueberries</h2>
-                    <p>125g</p>
-                    <b class="price">$3.90</b>
-                    <div class="stars">
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star-half' ></i>
-                      </div>
-                    <div class="addcart">
-                        <i class='bx bx-cart-alt' ></i>
-                    </div>
-                    <i class='bx bx-heart' ></i>
-                    <span class="discount">-10%</span>
-            </div>
-            <div class="box">
-                <img src="images/fruits/dragon fruit1.jpg.png" class ="product-img" height="275" alt="">
-                <span>Fruits</span>
-                    <h2 class="product-title">Orgo Fresh Premium Sweetish Dragon Fruit</h2>
-                    <p>320g</p>
-                    <b class="price">$2.59</b>
-                    <div class="stars">
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star-half' ></i>
-                      </div>
-                    <div class="addcart">
-                        <i class='bx bx-cart-alt' ></i>
-                    </div>
-                    <i class='bx bx-heart' ></i>
-                    <span class="discount">-5%</span>
-            </div>
-            <div class="box">
-                <img src="images/fruits/durian1.png" class ="product-img" height="300" alt="">
-                <span>Fruits</span>
-                    <h2 class="product-title">SLH Premium Black Gold Mao Shan Wang Durian</h2>
-                    <p>400g</p>
-                    <b class="price">$49.45</b>
-                    <div class="stars">
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star-half' ></i>
-                      </div>
-                    <div class="addcart">
-                        <i class='bx bx-cart-alt'></i>
-                    </div>
-                    <i class='bx bx-heart'></i>
-                    <span class="discount">-15%</span>
-            </div>
-            <div class="box">
-              <img src="images/fruits/grapes.jpg" class ="product-img" height="300" alt="">
-              <span>Fruits</span>
-                  <h2 class="product-title">Global Seasons Green Seedless Grape 500GM</h2>
-                  <p>500g</p>
-                  <b class="price">$5.55</b>
                   <div class="addcart">
-                    <div class="stars">
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star-half' ></i>
-                    </div>
-                      <i class='bx bx-cart-alt'></i>
+                      <i class='bx bx-cart-alt' ></i>
                   </div>
-                  <i class='bx bx-heart'></i>
-                  <span class="discount">-10%</span>
+                  <i class='bx bx-heart' ></i>
+                  <span class="discount">-25%</span>
               </div>
               <div class="box">
-                <img src="images/fruits/guava.webp" class ="product-img" height="300" alt="">
-                <span>Fruits</span>
-                    <h2 class="product-title">Pasar Malaysia Seedless Guava</h2>
-                    <p>600g</p>
-                    <b class="price">$2.95</b>
-                    <div class="stars">
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star-half' ></i>
+                  <img src="images/snacks/hi-chew1.png" class ="product-img" height="300" alt="">
+                  <span>Snacks</span>
+                      <h2 class="product-title">Hi-Chew Mini Chewy Candy</h2>
+                      <p>100g</p>
+                      <b class="price">$2.83</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
                     </div>
-                    <div class="addcart">
-                        <i class='bx bx-cart-alt'></i>
-                    </div>
-                    <i class='bx bx-heart'></i>
-                    <span class="discount">-5%</span>
-              </div>
-              <div class="box">
-                <img src="images/fruits/lemon.jpg" class ="product-img" height="300" alt="">
-                <span>Fruits</span>
-                    <h2 class="product-title">Orgo Fresh Large Yellow Lemon </h2>
-                    <p>300g</p>
-                    <b class="price">$2.19</b>
-                    <div class="stars">
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star-half' ></i>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt' ></i>
                       </div>
-                    <div class="addcart">
-                        <i class='bx bx-cart-alt'></i>
-                    </div>
-                    <i class='bx bx-heart'></i>
-                    <span class="discount">-15%</span>
+                      <i class='bx bx-heart' ></i>
+                      <span class="discount">-25%</span>
               </div>
               <div class="box">
-                <img src="images/fruits/mango.jpg" class ="product-img" height="300" alt="">
-                <span>Fruits</span>
-                    <h2 class="product-title">Australia R2E2 Mango</h2>
-                    <p>150g</p>
-                    <b class="price">$3.95</b>
-                    <div class="stars">
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star-half' ></i>
+                  <img src="images/snacks/nougat.png" class ="product-img" height="275" alt="">
+                  <span>Snacks</span>
+                      <h2 class="product-title">Golden Boronia Nougat- Original (Soft)</h2>
+                      <p>100g</p>
+                      <b class="price">$6.56</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt' ></i>
                       </div>
+                      <i class='bx bx-heart' ></i>
+                      <span class="discount">-25%</span>
+              </div>
+              <div class="box">
+                  <img src="images/snacks/senbei.png" class ="product-img" height="300" alt="">
+                  <span>Snacks</span>
+                      <h2 class="product-title">Wang Wang Rice Crackers -Senbei</h2>
+                      <p>92g</p>
+                      <b class="price">$2.05</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-15%</span>
+              </div>
+              <div class="box">
+                <img src="images/snacks/lays.png" class ="product-img" height="300" alt="">
+                <span>Snacks</span>
+                    <h2 class="product-title">Lay's Potato Chips - Classic</h2>
+                    <p>170g</p>
+                    <b class="price">$4.80</b>
                     <div class="addcart">
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
                         <i class='bx bx-cart-alt'></i>
                     </div>
                     <i class='bx bx-heart'></i>
                     <span class="discount">-15%</span>
+                </div>
+                <div class="box">
+                  <img src="images/snacks/mentos.png" class ="product-img" height="300" alt="">
+                  <span>Snacks</span>
+                      <h2 class="product-title">Mentos Chewy Dragees - Mint(Share-A-Bowl)</h2>
+                      <p>135g</p>
+                      <b class="price">$1.90</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-5%</span>
+                </div>
+                <div class="box">
+                  <img src="images/snacks/yummypops.png" class ="product-img" height="300" alt="">
+                  <span>Snacks</span>
+                      <h2 class="product-title">Yum Earth Organics Lollipops - Assorted </h2>
+                      <p>85g</p>
+                      <b class="price">$5.55</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-5%</span>
+                </div>
+                <div class="box">
+                  <img src="images/snacks/monster.png" class ="product-img" height="300" alt="">
+                  <span>Snacks</span>
+                      <h2 class="product-title">Mamee Monster Chicken Flavour</h2>
+                      <p>8x200g Halal</p>
+                      <b class="price">$2.19</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-15%</span>
+                </div>
+                <div class="box">
+                  <img src="images/snacks/potato chip.png" class ="product-img" height="300" alt="">
+                  <span>Snacks</span>
+                      <h2 class="product-title">Calbee Crispy Potato Chips - Hot & Spicy</h2>
+                      <p>72g</p>
+                      <b class="price">$2.17</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-10%</span>
+                </div>
+                <div class="box">
+                  <img src="images/snacks/potatocrispscracker.png" class ="product-img" height="300" alt="">
+                  <span>Snacks</span>
+                      <h2 class="product-title">Win2 Baked Potato Crisp Crackers</h2>
+                      <p>160g( 8 per pack)</p>
+                      <b class="price">$2.22</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-5%</span>
+                </div>
+                <div class="box">
+                  <img src="images/snacks/Rollercoaster.png" class ="product-img" height="300" alt="">
+                  <span>Snacks</span>
+                      <h2 class="product-title">Jack 'n Jill Roller Coaster Potato Rings </h2>
+                      <p>144g(8 per pack)</p>
+                      <b class="price">$2.98</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-10%</span>
+                </div>
+                <div class="box">
+                  <img src="images/snacks/werthers.png" class ="product-img" height="300" alt="">
+                  <span>Snacks</span>
+                      <h2 class="product-title">Storck Werther's Original Cream Candies </h2>
+                      <p>150g</p>
+                      <b class="price">$3.99</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-10%</span>
+                </div>
+                <div class="box">
+                  <img src="images/snacks/skittles.png" class ="product-img" height="300" alt="">
+                  <span>Snacks</span>
+                      <h2 class="product-title">Skittles Candies - Original </h2>
+                      <p>10x15g</p>
+                      <b class="price">$4.20</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-15%</span>
+                </div>
+                <div class="box">
+                  <img src="images/snacks/Ruffles.png" class ="product-img" height="300" alt="">
+                  <span>Snacks</span>
+                      <h2 class="product-title">Ruffles Potato Chips</h2>
+                      <p>170g</p>
+                      <b class="price">$5.30</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-10%</span>
+                </div>
+                <div class="box">
+                  <img src="images/snacks/doritos.png" class ="product-img" height="300" alt="">
+                  <span>Snacks</span>
+                      <h2 class="product-title">Doritos Tortilla Chips </h2>
+                      <p>190g</p>
+                      <b class="price">$5.30</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-10%</span>
+                </div>
+          </div>
+        </div>
+        <br>
+        <br>       
+    </div>
+    <div id="Fruits" class="tabcontent products">
+      <!----Featured products ----->
+        <h2 style="text-align:center;" class="title">Fruits</h2>
+        <div class="product-box">
+          <div class="products-container">
+              <div class="box">
+              <img src="images/fruits/banana.jpg" class ="product-img"alt="" height="300">
+              <span>Fruits</span>
+                  <h2 class="product-title">Sumifru Sweet Mountain Bananas</h2>
+                  <p>820g</p>
+                  <b class="price">$3.95</b>
+                  <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star-half' ></i>
+                    </div>
+                  <div class="addcart">
+                      <i class='bx bx-cart-alt' ></i>
+                  </div>
+                  <i class='bx bx-heart' ></i>
+                  <span class="discount">-25%</span>
               </div>
               <div class="box">
-                <img src="images/fruits/oranges1.png" class ="product-img" height="300" alt="">
-                <span>Fruits</span>
-                    <h2 class="product-title">SLH South Africa Orange</h2>
-                    <p>5pc $0.80/pc</p>
-                    <b class="price">$3.98</b>
-                    <div class="stars">
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star-half' ></i>
-                    </div>
-                    <div class="addcart">
-                        <i class='bx bx-cart-alt'></i>
-                    </div>
-                    <i class='bx bx-heart'></i>
-                    <span class="discount">-15%</span>
+                  <img src="images/fruits/blueberries.png" class ="product-img" height="300" alt="">
+                  <span>Fruits</span>
+                      <h2 class="product-title">Fresh Blueberries</h2>
+                      <p>125g</p>
+                      <b class="price">$3.90</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt' ></i>
+                      </div>
+                      <i class='bx bx-heart' ></i>
+                      <span class="discount">-10%</span>
               </div>
               <div class="box">
-                <img src="images/fruits/pear1.png" class ="product-img" height="300" alt="">
-                <span>Fruits</span>
-                    <h2 class="product-title">YayaPapaya Pear Packham</h2>
-                    <p>4pc $0.88/pc</p>
-                    <b class="price">$3.50</b>
-                    <div class="stars">
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star-half' ></i>
-                    </div>
-                    <div class="addcart">
-                        <i class='bx bx-cart-alt'></i>
-                    </div>
-                    <i class='bx bx-heart'></i>
-                    <span class="discount">-5%</span>
+                  <img src="images/fruits/dragon fruit1.jpg.png" class ="product-img" height="275" alt="">
+                  <span>Fruits</span>
+                      <h2 class="product-title">Orgo Fresh Premium Sweetish Dragon Fruit</h2>
+                      <p>320g</p>
+                      <b class="price">$2.59</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt' ></i>
+                      </div>
+                      <i class='bx bx-heart' ></i>
+                      <span class="discount">-5%</span>
               </div>
               <div class="box">
-                <img src="images/fruits/pineapple.jpg" class ="product-img" height="300" alt="">
+                  <img src="images/fruits/durian1.png" class ="product-img" height="300" alt="">
+                  <span>Fruits</span>
+                      <h2 class="product-title">SLH Premium Black Gold Mao Shan Wang Durian</h2>
+                      <p>400g</p>
+                      <b class="price">$49.45</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-15%</span>
+              </div>
+              <div class="box">
+                <img src="images/fruits/grapes.jpg" class ="product-img" height="300" alt="">
                 <span>Fruits</span>
-                    <h2 class="product-title">Fresh Pineapple </h2>
-                    <p>1 per pack</p>
-                    <b class="price">$1.95</b>
-                    <div class="stars">
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star-half' ></i>
-                    </div>
+                    <h2 class="product-title">Global Seasons Green Seedless Grape 500GM</h2>
+                    <p>500g</p>
+                    <b class="price">$5.55</b>
                     <div class="addcart">
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                      </div>
                         <i class='bx bx-cart-alt'></i>
                     </div>
                     <i class='bx bx-heart'></i>
                     <span class="discount">-10%</span>
-              </div>
-              <div class="box">
-                <img src="images/fruits/watermelon1.png" class ="product-img" height="300" alt="">
-                <span>Fruits</span>
-                    <h2 class="product-title">Urban Fresh Red Seedless Watermelon </h2>
-                    <p>4kg</p>
-                    <b class="price">$9.50</b>
-                    <div class="stars">
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star-half' ></i>
+                </div>
+                <div class="box">
+                  <img src="images/fruits/guava.webp" class ="product-img" height="300" alt="">
+                  <span>Fruits</span>
+                      <h2 class="product-title">Pasar Malaysia Seedless Guava</h2>
+                      <p>600g</p>
+                      <b class="price">$2.95</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
                       </div>
-                    <div class="addcart">
-                        <i class='bx bx-cart-alt'></i>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-5%</span>
+                </div>
+                <div class="box">
+                  <img src="images/fruits/lemon.jpg" class ="product-img" height="300" alt="">
+                  <span>Fruits</span>
+                      <h2 class="product-title">Orgo Fresh Large Yellow Lemon </h2>
+                      <p>300g</p>
+                      <b class="price">$2.19</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-15%</span>
+                </div>
+                <div class="box">
+                  <img src="images/fruits/mango.jpg" class ="product-img" height="300" alt="">
+                  <span>Fruits</span>
+                      <h2 class="product-title">Australia R2E2 Mango</h2>
+                      <p>150g</p>
+                      <b class="price">$3.95</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-15%</span>
+                </div>
+                <div class="box">
+                  <img src="images/fruits/oranges1.png" class ="product-img" height="300" alt="">
+                  <span>Fruits</span>
+                      <h2 class="product-title">SLH South Africa Orange</h2>
+                      <p>5pc $0.80/pc</p>
+                      <b class="price">$3.98</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                      </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-15%</span>
+                </div>
+                <div class="box">
+                  <img src="images/fruits/pear1.png" class ="product-img" height="300" alt="">
+                  <span>Fruits</span>
+                      <h2 class="product-title">YayaPapaya Pear Packham</h2>
+                      <p>4pc $0.88/pc</p>
+                      <b class="price">$3.50</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                      </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-5%</span>
+                </div>
+                <div class="box">
+                  <img src="images/fruits/pineapple.jpg" class ="product-img" height="300" alt="">
+                  <span>Fruits</span>
+                      <h2 class="product-title">Fresh Pineapple </h2>
+                      <p>1 per pack</p>
+                      <b class="price">$1.95</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                      </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-10%</span>
+                </div>
+                <div class="box">
+                  <img src="images/fruits/watermelon1.png" class ="product-img" height="300" alt="">
+                  <span>Fruits</span>
+                      <h2 class="product-title">Urban Fresh Red Seedless Watermelon </h2>
+                      <p>4kg</p>
+                      <b class="price">$9.50</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-15%</span>
+                </div>
+                <div class="box">
+                  <img src="images/fruits/coconut.png" class ="product-img" height="300" alt="">
+                  <span>Fruits</span>
+                      <h2 class="product-title">SiamCoco SiamThai Coconut</h2>
+                      <p>1x600g</p>
+                      <b class="price">$3.53</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-10%</span>
+                </div>
+                <div class="box">
+                  <img src="images/fruits/apples.png" class ="product-img" height="300" alt="">
+                  <span>Fruits</span>
+                      <h2 class="product-title">Global Seasons Premium Fuji Apple</h2>
+                      <p>4pc $1.32</p>
+                      <b class="price">$5.29</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-15%</span>
+                </div>
+                <div class="box">
+                  <img src="images/fruits/papaya.png" class ="product-img" height="300" alt="">
+                  <span>Fruits</span>
+                      <h2 class="product-title">SLH Dole Philippines Papaya </h2>
+                      <p>650g</p>
+                      <b class="price">$4.84</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                      </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-10%</span>
+                </div>
+          </div>
+        </div>
+    </div>
+    <div id="Frozen" class="tabcontent products">
+      <!----Featured products ----->
+        <h2 style="text-align:center;" class="title">Frozen</h2>
+        <div class="product-box">
+          <div class="products-container">
+              <div class="box">
+              <img src="images/frozen/beefribeye.png" class ="product-img"alt=" height="300">
+              <span>Frozen</span>
+                  <h2 class="product-title">Australia Chilled Beef Ribeye Steak</h2>
+                  <p>1x200g</p>
+                  <b class="price">$11.60</b>
+                  <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star-half' ></i>
                     </div>
-                    <i class='bx bx-heart'></i>
-                    <span class="discount">-15%</span>
+                  <div class="addcart">
+                      <i class='bx bx-cart-alt' ></i>
+                  </div>
+                  <i class='bx bx-heart' ></i>
+                  <span class="discount">-15%</span>
               </div>
               <div class="box">
-                <img src="images/fruits/coconut.png" class ="product-img" height="300" alt="">
-                <span>Fruits</span>
-                    <h2 class="product-title">SiamCoco SiamThai Coconut</h2>
-                    <p>1x600g</p>
-                    <b class="price">$3.53</b>
-                    <div class="stars">
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star-half' ></i>
+                  <img src="images/frozen/chickengyoza.png" class ="product-img" height="300" alt="">
+                  <span>Frozen</span>
+                      <h2 class="product-title">CP Chicken Gyoza</h2>
+                      <p>400g</p>
+                      <b class="price">$6.56</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
                       </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt' ></i>
+                      </div>
+                      <i class='bx bx-heart' ></i>
+                      <span class="discount">-10%</span>
+              </div>
+              <div class="box">
+                  <img src="images/frozen/dumplings.png" class ="product-img" height="275" alt="">
+                  <span>Frozen</span>
+                      <h2 class="product-title">CJ Bibigo Dumplings - Pork & Vegetables</h2>
+                      <p>500g</p>
+                      <b class="price">$5.50</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt' ></i>
+                      </div>
+                      <i class='bx bx-heart' ></i>
+                      <span class="discount">-5%</span>
+              </div>
+              <div class="box">
+                  <img src="images/frozen/fries.png" class ="product-img" height="300" alt="">
+                  <span>Frozen</span>
+                      <h2 class="product-title">Farmland Frozen Premium Fries - Shoestring</h2>
+                      <p>1kg</p>
+                      <b class="price">$3.95</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-15%</span>
+              </div>
+              <div class="box">
+                <img src="images/frozen/frozenpizza.png" class ="product-img" height="300" alt="">
+                <span>Frozen</span>
+                    <h2 class="product-title">Dr Oetker Ristorante Pizza - Hawaii</h2>
+                    <p>355g</p>
+                    <b class="price">$7.95</b>
                     <div class="addcart">
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        </div>
                         <i class='bx bx-cart-alt'></i>
                     </div>
                     <i class='bx bx-heart'></i>
                     <span class="discount">-10%</span>
-              </div>
-              <div class="box">
-                <img src="images/fruits/apples.png" class ="product-img" height="300" alt="">
-                <span>Fruits</span>
-                    <h2 class="product-title">Global Seasons Premium Fuji Apple</h2>
-                    <p>4pc $1.32</p>
-                    <b class="price">$5.29</b>
-                    <div class="stars">
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star-half' ></i>
+                </div>
+                <div class="box">
+                  <img src="images/frozen/hashbrown.png" class ="product-img" height="300" alt="">
+                  <span>Frozen</span>
+                      <h2 class="product-title">Fair Isle Frozen Hash Browns Patties</h2>
+                      <p>600g</p>
+                      <b class="price">$7.62</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
                       </div>
-                    <div class="addcart">
-                        <i class='bx bx-cart-alt'></i>
-                    </div>
-                    <i class='bx bx-heart'></i>
-                    <span class="discount">-15%</span>
-              </div>
-              <div class="box">
-                <img src="images/fruits/papaya.png" class ="product-img" height="300" alt="">
-                <span>Fruits</span>
-                    <h2 class="product-title">SLH Dole Philippines Papaya </h2>
-                    <p>650g</p>
-                    <b class="price">$4.84</b>
-                    <div class="stars">
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star' ></i>
-                      <i class='bx bxs-star-half' ></i>
-                    </div>
-                    <div class="addcart">
-                        <i class='bx bx-cart-alt'></i>
-                    </div>
-                    <i class='bx bx-heart'></i>
-                    <span class="discount">-10%</span>
-              </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-5%</span>
+                </div>
+                <div class="box">
+                  <img src="images/frozen/nuggets.png" class ="product-img" height="300" alt="">
+                  <span>Frozen</span>
+                      <h2 class="product-title">Freezepak Crispy Chicken Nuggets </h2>
+                      <p>1kg</p>
+                      <b class="price">$8.40</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                     </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-15%</span>
+                </div>
+                <div class="box">
+                  <img src="images/frozen/rotiprata.png" class ="product-img" height="300" alt="">
+                  <span>Frozen</span>
+                      <h2 class="product-title">Spring Home Roti Paratha - Plain</h2>
+                      <p>1.3kg(20 per pack)</p>
+                      <b class="price">$6.95</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                      </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-5%</span>
+                </div>
+                <div class="box">
+                  <img src="images/frozen/paksatay.png" class ="product-img" height="300" alt="">
+                  <span>Frozen</span>
+                      <h2 class="product-title">FairPrice Frozen Pak Satay with Gravy</h2>
+                      <p>500g</p>
+                      <b class="price">$8.55</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-o' ></i>
+                        </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-15%</span>
+                </div>
+                <div class="box">
+                  <img src="images/frozen/popcornchicken.png" class ="product-img" height="300" alt="">
+                  <span>Frozen</span>
+                      <h2 class="product-title">FairPrice Frozen Popcorn Chicken</h2>
+                      <p>500g</p>
+                      <b class="price">$6.35</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-5%</span>
+                </div>
+                <div class="box">
+                  <img src="images/frozen/porkbelly.png" class ="product-img" height="300" alt="">
+                  <span>Frozen</span>
+                      <h2 class="product-title"> Premium Frozen Iberico Belly Slice </h2>
+                      <p>250g</p>
+                      <b class="price">$12.01</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-10%</span>
+                </div>
+                <div class="box">
+                  <img src="images/frozen/prawnroll.png" class ="product-img" height="300" alt="">
+                  <span>Frozen</span>
+                      <h2 class="product-title">Mr Joy's Fried Prawn Roll King</h2>
+                      <p>400g</p>
+                      <b class="price">$9.99</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-15%</span>
+                </div>
+                <div class="box">
+                  <img src="images/frozen/chickenfranks.png" class ="product-img" height="300" alt="">
+                  <span>Frozen</span>
+                      <h2 class="product-title">Valley Chef Frozen Chicken Franks</h2>
+                      <p>340.2g</p>
+                      <b class="price">$3.10</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-15%</span>
+                </div>
+                <div class="box">
+                  <img src="images/frozen/crabsticks.png" class ="product-img" height="300" alt="">
+                  <span>Frozen</span>
+                      <h2 class="product-title">FairPrice Frozen Crab Sticks</h2>
+                      <p>250g</p>
+                      <b class="price">$1.87</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                      </div>
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-10%</span>
+                </div>
+                <div class="box">
+                  <img src="images/frozen/wings.png" class ="product-img" height="300" alt="">
+                  <span>Frozen</span>
+                      <h2 class="product-title">Farmpride Frozen Buffalo Wings </h2>
+                      <p>450g</p>
+                      <b class="price">$6.80</b>
+                      <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        </div>
+                  
+                      <div class="addcart">
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-15%</span>
+                </div>
+          </div>
         </div>
       </div>
-      <br>
-      <br>        
-    <script src="javascript/cart.js"></script>
+      <div id="Household" class="tabcontent products">
+        <!----Featured products ----->
+          <h2 style="text-align:center;" class="title">Household</h2>
+          <div class="product-box">
+            <div class="products-container">
+                <div class="box">
+                <img src="images/household/laundry .png" class ="product-img"alt="" height="300">
+                <span>Household</span>
+                    <h2 class="product-title">FairPrice Pre-Wash Laundry Stain Remover</h2>
+                    <p>500ml</p>
+                    <b class="price">$4.85</b>
+                    <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                    <div class="addcart">
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                    <i class='bx bx-heart' ></i>
+                    <span class="discount">-10%</span>
+                </div>
+                <div class="box">
+                    <img src="images/household/dishwashingliquid.png" class ="product-img" height="300" alt="">
+                    <span>Household</span>
+                        <h2 class="product-title">FairPrice Dishwashing Liquid + Refill - Lemon</h2>
+                        <p>2L</p>
+                        <b class="price">$4.89</b>
+                        <div class="stars">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <div class="addcart">
+                            <i class='bx bx-cart-alt' ></i>
+                        </div>
+                        <i class='bx bx-heart' ></i>
+                        <span class="discount">-15%</span>
+                </div>
+                <div class="box">
+                    <img src="images/household/air fryer.png" class ="product-img" height="275" alt="">
+                    <span>Household</span>
+                        <h2 class="product-title">Cornell Air Fryer Oven</h2>
+                        <p>25L</p>
+                        <b class="price">$199.00</b>
+                        <div class="stars">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <div class="addcart">
+                            <i class='bx bx-cart-alt' ></i>
+                        </div>
+                        <i class='bx bx-heart' ></i>
+                        <span class="discount">-10%</span>
+                </div>
+                <div class="box">
+                    <img src="images/household/trolley.png" class ="product-img" height="300" alt="">
+                    <span>Household</span>
+                        <h2 class="product-title">GIMI Shopping Trolley Argo (Black)</h2>
+                        <p>1pc</p>
+                        <b class="price">$50.35</b>
+                        <div class="stars">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <div class="addcart">
+                            <i class='bx bx-cart-alt'></i>
+                        </div>
+                        <i class='bx bx-heart'></i>
+                        <span class="discount">-15%</span>
+                </div>
+                <div class="box">
+                  <img src="images/household/transparentbox.png" class ="product-img" height="300" alt="">
+                  <span>Household</span>
+                      <h2 class="product-title">Prosperplast NUF Low Transparent Box</h2>
+                      <p>1pc</p>
+                      <b class="price">$25.70</b>
+                      <div class="addcart">
+                        <div class="stars">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                          <i class='bx bx-cart-alt'></i>
+                      </div>
+                      <i class='bx bx-heart'></i>
+                      <span class="discount">-10%</span>
+                  </div>
+                  <div class="box">
+                    <img src="images/household/slimrack.png" class ="product-img" height="300" alt="">
+                    <span>Household</span>
+                        <h2 class="product-title">Houze RALF 4 Tier Slim Rack - 800mm </h2>
+                        <p>1pc</p>
+                        <b class="price">$47.12</b>
+                        <div class="stars">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <div class="addcart">
+                            <i class='bx bx-cart-alt'></i>
+                        </div>
+                        <i class='bx bx-heart'></i>
+                        <span class="discount">-15%</span>
+                  </div>
+                  <div class="box">
+                    <img src="images/household/potandfrypan.png" class ="product-img" height="300" alt="">
+                    <span>Household</span>
+                        <h2 class="product-title">Skater WinnieThePooh Pot&Fry pan </h2>
+                        <p>4pc</p>
+                        <b class="price">$120.31</b>
+                        <div class="stars">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <div class="addcart">
+                            <i class='bx bx-cart-alt'></i>
+                        </div>
+                        <i class='bx bx-heart'></i>
+                        <span class="discount">-15%</span>
+                  </div>
+                  <div class="box">
+                    <img src="images/household/kitchenwipes1.png" class ="product-img" height="300" alt="">
+                    <span>Household</span>
+                        <h2 class="product-title">Zappy Antibacterial Household & Kitchen Wipes</h2>
+                        <p>18x365</p>
+                        <b class="price">$71.76</b>
+                        <div class="stars">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <div class="addcart">
+                            <i class='bx bx-cart-alt'></i>
+                        </div>
+                        <i class='bx bx-heart'></i>
+                        <span class="discount">-5%</span>
+                  </div>
+                  <div class="box">
+                    <img src="images/household/ironingboard1.png" class ="product-img" height="300" alt="">
+                    <span>Household</span>
+                        <h2 class="product-title"> Premium Hi-Heat Resistant Ironing Board </h2>
+                        <p>1pc</p>
+                        <b class="price">$38.00</b>
+                        <div class="stars">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <div class="addcart">
+                            <i class='bx bx-cart-alt'></i>
+                        </div>
+                        <i class='bx bx-heart'></i>
+                        <span class="discount">-15%</span>
+                  </div>
+                  <div class="box">
+                    <img src="images/household/hanger.png" class ="product-img" height="300" alt="">
+                    <span>Household</span>
+                        <h2 class="product-title">HOUZE Multi Hook Hanger</h2>
+                        <p>1pc</p>
+                        <b class="price">$3.12</b>
+                        <div class="stars">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <div class="addcart">
+                            <i class='bx bx-cart-alt'></i>
+                        </div>
+                        <i class='bx bx-heart'></i>
+                        <span class="discount">-5%</span>
+                  </div>
+                  <div class="box">
+                    <img src="images/household/gloves.png" class ="product-img" height="300" alt="">
+                    <span>Household</span>
+                        <h2 class="product-title"> HomeProud Latex Household Gloves </h2>
+                        <p>1 per pack</p>
+                        <b class="price">$2.53</b>
+                        <div class="stars">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <div class="addcart">
+                            <i class='bx bx-cart-alt'></i>
+                        </div>
+                        <i class='bx bx-heart'></i>
+                        <span class="discount">-10%</span>
+                  </div>
+                  <div class="box">
+                    <img src="images/household/fibercarpet.png" class ="product-img" height="300" alt="">
+                    <span>Household</span>
+                        <h2 class="product-title">Anti-slip Polyester Fiber Carpet</h2>
+                        <p>1pc</p>
+                        <b class="price">$9.52</b>
+                        <div class="stars">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <div class="addcart">
+                            <i class='bx bx-cart-alt'></i>
+                        </div>
+                        <i class='bx bx-heart'></i>
+                        <span class="discount">-10%</span>
+                  </div>
+                  <div class="box">
+                    <img src="images/household/disinfectantliquid1.png" class ="product-img" height="300" alt="">
+                    <span>Household</span>
+                        <h2 class="product-title">Domestos Multi-Purpose DISINFECTANT Liquid</h2>
+                        <p>100ml</p>
+                        <b class="price">$9.99</b>
+                        <div class="stars">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <div class="addcart">
+                            <i class='bx bx-cart-alt'></i>
+                        </div>
+                        <i class='bx bx-heart'></i>
+                        <span class="discount">-15%</span>
+                  </div>
+                  <div class="box">
+                    <img src="images/household/cabledrop.png" class ="product-img" height="300" alt="">
+                    <span>Household</span>
+                        <h2 class="product-title">Bluelounge CableDrop Multi - White</h2>
+                        <p>1pc</p>
+                        <b class="price">$19.90</b>
+                        <div class="stars">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <div class="addcart">
+                            <i class='bx bx-cart-alt'></i>
+                        </div>
+                        <i class='bx bx-heart'></i>
+                        <span class="discount">-10%</span>
+                  </div>
+                  <div class="box">
+                    <img src="images/household/cabinet.png" class ="product-img" height="300" alt="">
+                    <span>Household</span>
+                        <h2 class="product-title">HOUZE LIFE 5 Tier Knock Down Cabinet</h2>
+                        <p>1pc</p>
+                        <b class="price">$87.20</b>
+                        <div class="stars">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <div class="addcart">
+                            <i class='bx bx-cart-alt'></i>
+                        </div>
+                        <i class='bx bx-heart'></i>
+                        <span class="discount">-10%</span>
+                  </div>
+            </div>
+          </div>
+      </div>
+    <div id="id01" class="modal">
+      <div class="form-container animate">
+        <form>
+            <h3>Billing Address</h3>
+              <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="email" name="email" placeholder="john@example.com">
+              <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+              <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+        </form>
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <table>
+          <tr>
+            <td>Subtotal</td>
+            <td><strong>$0</strong></td>
+          </tr>
+          <tr>
+            <td>Delivery Fee</td>
+            <td><strong>$5</strong></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div class="slidecontainer">
+                <input type="range" min="0" max="30" value="0" class="slider" id="myRange">
+                
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center;"><p>Redeem points: <span id="demo"></span></p></td>
+          </tr>
+          <tr>
+            <td colspan="2"><hr></td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td><strong>$0</strong></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+<script src="javascript/cart.js"></script>
     <script src="javascript/main1.js"></script>
+    <script src="javascript/products.js"></script>
+<script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    var balance=document.getElementById("demo1");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+</script>
+
 </body>
 </html>

@@ -13,7 +13,6 @@
       <link rel="stylesheet" href="style/login1.css">
       <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-      
   </head>
   <body>
     <br><br><br><br><br>
@@ -28,9 +27,9 @@
           <div class="bx bx-menu" id="menu-icon"></div>
           <ul class="navbar">
             <li><a href="index.html" class="home-active"><i class="fa-sharp fa-solid fa-house"></i><span>&nbsp;Home</span></a></li>
-            <li><a href="products1.html"><i class="fa-solid fa-magnifying-glass"></i><span>&nbsp;Products</span></a></li>
-            <li><a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><span>&nbsp;Cart</span>
-              <p id="cartno">0</p><i class="fa fa-square"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i><span>&nbsp;Products</span></a></li>
+            <li><a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><span>&nbsp;Cart</span></a></li>
+            <p id="cartno">0</p><i class="fa fa-square"></i>
             <li><a href="game.html"><i class="fa-solid fa-gamepad"></i><span>&nbsp;Games</span></a></li>
         </ul>
         <div class="profile">
@@ -1232,14 +1231,32 @@
     <div id="id01" class="modal">
       <div class="form-container animate">
         <form>
-            <h3>Billing Address</h3>
               <label for="fname"><i class="fa fa-user"></i> Full Name</label>
               <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
               <label for="email"><i class="fa fa-envelope"></i> Email</label>
               <input type="text" id="email" name="email" placeholder="john@example.com">
-              <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+              <label for="adr"><i class="fa-solid fa-address-card"></i> Address</label>
               <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+              <label><i class="fa-solid fa-credit-card"></i> Payment By</label>
+              <div class="icon-container">
+                <label for="visa" class="radio">
+                  <input type="radio" id="visa" name="payment" value="visa" checked><i class="fa-brands fa-cc-visa" style="color:navy;"></i>
+                </label>
+                <label for="master" class="radio">
+                  <input type="radio" id="master" name="payment" value="master"><i class="fa-brands fa-cc-mastercard" style="color:red;"></i>
+                </label>
+                <label for="paynow" class="radio">
+                  <input type="radio" id="paynow" name="payment" value="paynow"><img src="images/home/paynow-logo-2.png" alt="">
+                </label>
+              </div>
+              <label for="adr"><i class="fa-solid fa-truck"></i> Delivery Date <span id="today"></span></label>
+              <input type="date" id="delivery" name="date" value="2023-02-8">
+              
+              <!-- <i class="fa-brands fa-cc-visa" style="color:navy;"></i>
+              <i class="fa-brands fa-cc-mastercard" style="color:red;"></i>
+              <img src="images/home/paynow-logo-2.png" alt=""> -->
         </form>
+        
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
         <table>
           <tr>
@@ -1268,12 +1285,16 @@
             <td>Total</td>
             <td><strong>$0</strong></td>
           </tr>
+          <tr>
+            <td><button onclick="myFunction()">Try it</button></td>
+          </tr>
         </table>
       </div>
     </div>
 <script src="javascript/cart.js"></script>
     <script src="javascript/main1.js"></script>
     <script src="javascript/products.js"></script>
+    
 <script>
     // Get the modal
     var modal = document.getElementById('id01');
@@ -1292,7 +1313,33 @@
     slider.oninput = function() {
       output.innerHTML = this.value;
     }
+    var x=document.getElementsByName("payment");
+    function myFunction(){
+      for(var i = 0; i < x.length; i++){
+         if(x[i].checked)
+        {
+          console.log(x[i].value);
+        }
+      }
+    }
+    const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+    let m=month[today.getMonth()];
+    
+    if (dd < 10) {
+      dd = '0' + dd;
+    }
 
+    if (mm < 10) {
+      mm = '0' + mm;
+    } 
+        
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("delivery").setAttribute("min", today);
+    document.getElementById("today").innerHTML="Today's date is "+dd+" "+m+" "+yyyy;
 </script>
 
 </body>
