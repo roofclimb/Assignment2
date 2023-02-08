@@ -125,7 +125,7 @@ body{
 .total-price{
     margin-left:5px;;
 }
-.btn-buy{
+.btn-buy,.btn-checkout{
     display:flex;
     margin:1.5rem auto 0 auto;
     padding: 12px 20px;

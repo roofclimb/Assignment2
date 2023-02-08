@@ -115,6 +115,7 @@ function addProductToCart(title,price,productImg){
 } 
 
 
+
 /* var cartBoxContent =`<img src="images/snacks/haribo.png" alt="haribo" height="200"  class="cart-img">
                     <div class="detail-box">
                         <div class="cart-product-title">Haribo</div>
@@ -145,12 +146,79 @@ function updatetotal(){
         total = total + (price * quantity);
         // If price Contain some cents value
         total =Math.round(total * 100)/100;
-
-        
-
     }
-    document.getElementsByClassName('total-price')[0].innerText= "$" + total;
+    document.getElementsByClassName('total-price')[0].innerText= "$" + total.toFixed(2);
+    document.getElementById("subtotal").innerHTML="$" +total.toFixed(2);
+    var deliverycharge=0;
+    if(total<=50){
+        deliverycharge=5;
+    }
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    document.getElementById("deliverycharge").innerHTML="$"+deliverycharge;
+    slider.oninput = function() {
+        var userpoints=this.value;
+        output.innerHTML = userpoints;
+        final=total+deliverycharge-Number(userpoints);
+        final=Math.round(final * 100)/100;
+        document.getElementById("total").innerHTML="$" +final.toFixed(2);
+    }
+    var final=total+deliverycharge-Number(slider.value);
+    /* final=Math.round(final * 100)/100; */
+    
+    
+    document.getElementById("total").innerHTML="$" +final.toFixed(2);
     var cartItems = document.getElementsByClassName('cart-content')[0];
     var cartItemsNames = cartItems.getElementsByClassName('cart-box');
     document.getElementById("cartno").innerHTML=cartItemsNames.length;
 }
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+var x=document.getElementsByName("payment");
+function myFunction(){
+  for(var i = 0; i < x.length; i++){
+     if(x[i].checked)
+    {
+      console.log(x[i].value);
+    }
+  }
+}
+
+Date.prototype.addDays = function(days) {
+var date = new Date(this.valueOf());
+date.setDate(date.getDate() + days);
+return date;
+}
+const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+var today = new Date();
+var delivery = today.addDays(3);
+var day = delivery.getDate();
+var mmmm = delivery.getMonth() + 1; //January is 0!
+var year = delivery.getFullYear();
+var dd = today.getDate();
+var mm = today.getMonth() + 1; //January is 0!
+var yyyy = today.getFullYear();
+let m=month[today.getMonth()];
+
+if (day < 10) {
+  day = '0' + day;
+}
+
+if (mmmm < 10) {
+  mmmm = '0' + mmmm;
+} 
+    
+today = yyyy + '-' + mmmm + '-' + day;
+console.log(today);
+document.getElementById("delivery").setAttribute("min", today);
+document.getElementById("delivery").setAttribute("value", today);
+document.getElementById("today").innerHTML="3 days from today ("+dd+" "+m+" "+yyyy+")";
