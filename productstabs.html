@@ -29,8 +29,7 @@
           <ul class="navbar">
             <li><a href="index.html" class="home-active"><i class="fa-sharp fa-solid fa-house"></i><span>&nbsp;Home</span></a></li>
             <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i><span>&nbsp;Products</span></a></li>
-            <li><a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><span>&nbsp;Cart</span></a></li>
-            <p id="cartno">0</p><i class="fa fa-square"></i>
+            <li><a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><span>&nbsp;Cart <span id="cartno">(0)</span></span></a></li>
             <li><a href="game.html"><i class="fa-solid fa-gamepad"></i><span>&nbsp;Games</span></a></li>
         </ul>
         <div class="profile">
@@ -1268,15 +1267,14 @@
             <td class="heading1">Delivery Fee</td>
             <td><strong><span id="deliverycharge">$5</span></strong></td>
           </tr>
-          <tr>
+          <tr id="slide">
             <td colspan="2">
               <div class="slidecontainer">
                 <input type="range" min="0" max="30" value="0" class="slider" id="myRange">
-                
               </div>
             </td>
           </tr>
-          <tr>
+          <tr id="pointscount">
             <td colspan="2" style="text-align: center;"><p>Redeem points: <span id="demo"></span></p></td>
           </tr>
           <tr class="hr">
@@ -1290,9 +1288,11 @@
         <button onclick="myFunction()" class="btn-checkout">Checkout</button>
       </div>
     </div>
-<script src="javascript/cart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascript/cart.js"></script>
     <script src="javascript/main1.js"></script>
     <script src="javascript/products.js"></script>
+    <script src="javascript/scroll.js"></script>
     
 
 </body>

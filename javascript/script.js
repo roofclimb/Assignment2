@@ -137,9 +137,9 @@ $(document).ready(function () {
           //we want to add on previous content at the same time
           content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
           <td>${response[i].email}</td>
-          <td>${response[i].loyalty}</td>
+          <td>${response[i].password}</td>
           <td><a href='#' class='delete' data-id='${response[i]._id}'>Del</a></td><td>
-          <a href='#update-contact-container' class='update' data-id='${response[i]._id}' data-msg='${response[i].loyalty}' data-name='${response[i].name}' data-email='${response[i].email}'>Update</a></td></tr>`;
+          <a href='#update-contact-container' class='update' data-id='${response[i]._id}' data-password='${response[i].password}' data-name='${response[i].name}' data-email='${response[i].email}' data-loyalty='${response[i].loyalty}'>Update</a></td></tr>`;
           console.log(response[i]._id)
         }
   
@@ -157,41 +157,28 @@ $(document).ready(function () {
     //here we tap onto our previous table when we click on update
     //this is a delegation feature of jquery
     //because our content is dynamic in nature, we listen in on the main container which is "#contact-list". For each row we have a class .update to help us
-    $("#contact-list").on("click", ".update", function (e) {
+    /* $("#contact-list").on("click", ".update", function (e) {
       e.preventDefault();
-      //update our update form values
       let contactName = $(this).data("name");
       let contactEmail = $(this).data("email");
       let contactPassword = $(this).data("password");
       let contactId = $(this).data("id");
       console.log($(this).data("password"));
-  
-      //[STEP 11]: Load in our data from the selected row and add it to our update contact form 
       $("#update-contact-name").val(contactName);
       $("#update-contact-email").val(contactEmail);
       $("#update-contact-password").val(contactPassword);
       $("#update-contact-id").val(contactId);
       $("#update-contact-container").show();
       console.log(contactId);
-    });//end contact-list listener for update function
-  
-    //[STEP 12]: Here we load in our contact form data
-    //Update form listener
+    }); */
+  /* 
     $("#update-contact-submit").on("click", function (e) {
       e.preventDefault();
-      //retrieve all my update form values
-      /* let contactName = $("#update-contact-name").val();
-      let contactEmail = $("#update-contact-email").val();
-      let contactPassword = $("#update-contact-msg").val();
-      let contactId = $("#update-contact-id").val();
-  
-      console.log($("#update-contact-msg").val());
-      console.log(contactMsg); */
       let loyalty = loyalty+5;
       let contactId = "63d6759aaa86075000023450";
-      //[STEP 12a]: We call our update form function which makes an AJAX call to our RESTDB to update the selected information
+      
       updateForm(contactId, loyalty);
-    });//end updatecontactform listener
+    });
     
     $("#contact-list").on("click", ".delete", function (e) {
       e.preventDefault();
@@ -200,7 +187,7 @@ $(document).ready(function () {
   
       deleteRecord(contactId)
   
-    });
+    }); */
 
     //[STEP 13]: function that makes an AJAX call and process it 
     //UPDATE Based on the ID chosen
@@ -261,7 +248,17 @@ $(document).ready(function () {
       });
     }//end updateform function
   
-
+    
+    function myFunction() {
+      let text;
+      let admin = prompt("Please enter admin password:");
+      if(admin=="password"){
+        setTimeout(document.location.href = 'admin.html', 0);
+      }else{
+        text="No unauthorized access"
+      }
+      document.getElementById('wrong').innerHTML=text;
+    }
 
    $("#login-submit").on("click", function (e)  {
     let hide=document.getElementById('loginlottie');
@@ -304,14 +301,16 @@ $(document).ready(function () {
                       localStorage.setItem("name",response[i].name);
                       localStorage.setItem("id",response[i]._id);
                       localStorage.setItem("loyalty",response[i].loyalty);
+                      localStorage.setItem("email",response[i].email);
                     }else{
                       sessionStorage.setItem("name",response[i].name);
                       sessionStorage.setItem("id",response[i]._id);
                       sessionStorage.setItem("loyalty",response[i].loyalty);
+                      sessionStorage.setItem("email",response[i].email);
                     }
                     
                     if (confirm("Welcome "+response[i].name+". \nYou have "+response[i].loyalty+" points. \nHappy shopping.\nRedirecting to home page.")){
-                        setTimeout(document.location.href = '/index.html', 5000);
+                        setTimeout(document.location.href = 'index.html', 5000);
                     }
                     break;
                 }
@@ -321,6 +320,17 @@ $(document).ready(function () {
                     document.getElementById('wrong').innerHTML="Wrong password entered.";
                     break;
                 }
+            }
+            else if(loginEmail=="admin"){
+              if (loginPassword=="password"){
+                hide.classList.add('hide');
+                myFunction();
+                break;
+              }
+              else{
+                hide.classList.add('hide');
+                document.getElementById('wrong').innerHTML="Wrong password entered.";
+              }
             }
             else{
                 hide.classList.add('hide');

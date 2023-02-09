@@ -45,6 +45,7 @@ function ready(){
 
 function buyButtonClicked(){
     alert('Your Order is placed')
+    modal.style.display = "none";
     var cartContent=document.getElementsByClassName('cart-content')[0]
     while(cartContent.hasChildNodes()){
         cartContent.removeChild(cartContent.firstChild);
@@ -166,11 +167,16 @@ function updatetotal(){
     var final=total+deliverycharge-Number(slider.value);
     /* final=Math.round(final * 100)/100; */
     
+    var maxpoints=sessionStorage.getItem("loyalty")
+    if(maxpoints>=final){
+        maxpoints=Math.floor(final);
+    }
+    document.getElementById("myRange").setAttribute("max", maxpoints);
     
     document.getElementById("total").innerHTML="$" +final.toFixed(2);
     var cartItems = document.getElementsByClassName('cart-content')[0];
     var cartItemsNames = cartItems.getElementsByClassName('cart-box');
-    document.getElementById("cartno").innerHTML=cartItemsNames.length;
+    document.getElementById("cartno").innerHTML="("+cartItemsNames.length+")";
 }
 
 // Get the modal
@@ -222,3 +228,23 @@ console.log(today);
 document.getElementById("delivery").setAttribute("min", today);
 document.getElementById("delivery").setAttribute("value", today);
 document.getElementById("today").innerHTML="3 days from today ("+dd+" "+m+" "+yyyy+")";
+
+
+
+
+if (sessionStorage.getItem("name")!=null){
+    let contactName = sessionStorage.getItem("name");
+    let contactEmail = sessionStorage.getItem("email");
+    $("#fname").val(contactName);
+      $("#email").val(contactEmail);
+}else if(localStorage.getItem("name")!=null){
+    console.log(localStorage.getItem("name"));
+    let contactName = localStorage.getItem("name");
+    let contactEmail = localStorage.getItem("email");
+    $("#fname").val(contactName);
+    $("#email").val(contactEmail);
+}
+else{
+    document.getElementById('slide').classList.add('hide');
+    document.getElementById('pointscount').classList.add('hide');
+}
