@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/codingnepal -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">  
-    <title>Memory Card Game in JavaScript | CodingNepal</title>
+    <title>Memory Card Game in JavaScript</title>
     <link rel="stylesheet" href="game.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
   </head>
   <body>
     <div class="wrapper">
+      <h2>Finish the game to win 3 loyalty points</h2>
       <ul class="cards">
         <li class="card">
           <div class="view front-view">
@@ -140,7 +142,10 @@
         </li>
       </ul>
     </div>
-
+    <div id="progress">
+      <a href="/game.html" id="progress-value"><i class='bx bx-left-arrow-alt'></i></a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="game.js"></script>
 
   </body>

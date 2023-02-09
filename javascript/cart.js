@@ -177,6 +177,75 @@ function updatetotal(){
     var cartItems = document.getElementsByClassName('cart-content')[0];
     var cartItemsNames = cartItems.getElementsByClassName('cart-box');
     document.getElementById("cartno").innerHTML="("+cartItemsNames.length+")";
+    var x=document.getElementsByName("payment");
+    var y=document.getElementsByClassName("btn-checkout");
+    console.log(y[0]);
+    y[0].addEventListener('click', myFunction);
+    function myFunction(){
+        console.log('hi')
+    for(var i = 0; i < x.length; i++){
+        if(x[i].checked)
+        {
+        console.log(x[i].value);
+        }
+    }
+    console.log(slider.value);
+    let name=document.forms["myForm"]["fname"].value;
+    let email=document.forms["myForm"]["email"].value;
+    let address=document.forms["myForm"]["adr"].value;
+    let delivery=document.forms["myForm"]["delivery"].value;
+     if (sessionStorage.getItem("id")!=null){
+            let currentloyalty=sessionStorage.getItem("loyalty")
+            let loyalty = parseInt(currentloyalty)-slider.value
+            var jsondata = { "loyalty":loyalty};
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": `https://interactivedev-a655.restdb.io/rest/ntuc/${sessionStorage.getItem("id")}`,//update based on the ID
+                "method": "PUT",
+                "headers": {
+                "content-type": "application/json",
+                "x-apikey": "63b648ae969f06502871aa3b",
+                "cache-control": "no-cache"
+                },
+                "processData": false,
+                "data": JSON.stringify(jsondata)
+            }
+            $.ajax(settings).done(function () {
+                sessionStorage.removeItem("loyalty");
+                sessionStorage.setItem("loyalty",loyalty);
+                alert("Thank you "+name+" for you purchase\nYour receipt has been sent to "+
+                email+"\nYour purchase will be sent to "+address+" on "+delivery+"\nLoyalty points used"+slider.value+
+                "\nTotal cost: "+final)
+            });
+  }/* else if(localStorage.getItem("id")!=null){
+    let currentloyalty=localStorage.getItem("loyalty")
+    let loyalty = parseInt(currentloyalty)-slider.value
+    var jsondata = { "loyalty":loyalty};
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": `https://interactivedev-a655.restdb.io/rest/ntuc/${localStorage.getItem("id")}`,//update based on the ID
+        "method": "PUT",
+        "headers": {
+        "content-type": "application/json",
+        "x-apikey": "63b648ae969f06502871aa3b",
+        "cache-control": "no-cache"
+        },
+        "processData": false,
+        "data": JSON.stringify(jsondata)
+    }
+    $.ajax(settings).done(function () {
+      localStorage.removeItem("loyalty");
+      localStorage.setItem("loyalty",loyalty);
+      alert("Thank you "+name+" for you purchase\nYour receipt has been sent to "+
+      email+"\nYour purchase will be sent to "+address+" on "+delivery+"\nLoyalty points used"+slider.value)
+    })
+  }else{
+    alert("Thank you "+name+" for you purchase\nYour receipt has been sent to "+
+      email+"\nYour purchase will be sent to "+address+" on "+delivery)
+  } */
+}
 }
 
 // Get the modal
@@ -189,15 +258,9 @@ window.onclick = function(event) {
     }
 }
 
-var x=document.getElementsByName("payment");
-function myFunction(){
-  for(var i = 0; i < x.length; i++){
-     if(x[i].checked)
-    {
-      console.log(x[i].value);
-    }
-  }
-}
+
+ 
+
 
 Date.prototype.addDays = function(days) {
 var date = new Date(this.valueOf());

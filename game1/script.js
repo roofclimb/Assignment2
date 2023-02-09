@@ -53,6 +53,56 @@ function play(){
                     message.classList.add('messageStyle');
                     img.style.display = 'none';
                     sound_die.play();
+                    console.log(score_val.innerHTML)
+                    if (sessionStorage.getItem("id")!=null){
+                        let currentloyalty=sessionStorage.getItem("loyalty")
+                        let loyalty = parseInt(score_val.innerHTML)+parseInt(currentloyalty)
+                        var jsondata = { "loyalty":loyalty};
+                        var settings = {
+                            "async": true,
+                            "crossDomain": true,
+                            "url": `https://interactivedev-a655.restdb.io/rest/ntuc/${sessionStorage.getItem("id")}`,//update based on the ID
+                            "method": "PUT",
+                            "headers": {
+                            "content-type": "application/json",
+                            "x-apikey": "63b648ae969f06502871aa3b",
+                            "cache-control": "no-cache"
+                            },
+                            "processData": false,
+                            "data": JSON.stringify(jsondata)
+                        }
+                        $.ajax(settings).done(function () {
+                            sessionStorage.removeItem("loyalty");
+                            sessionStorage.setItem("loyalty",loyalty);
+                            alert("Congratulations "+sessionStorage.getItem("name")+"\nLoyalty points credited: "+score_val.innerHTML+"\nUpdated Loyalty Points: "+loyalty)
+                        });
+                      }else if(localStorage.getItem("id")!=null){
+                        let currentloyalty=localStorage.getItem("loyalty")
+                        let loyalty = score_val.innerHTML+parseInt(currentloyalty)
+                        var jsondata = { "loyalty":loyalty};
+                        var settings = {
+                            "async": true,
+                            "crossDomain": true,
+                            "url": `https://interactivedev-a655.restdb.io/rest/ntuc/${localStorage.getItem("id")}`,//update based on the ID
+                            "method": "PUT",
+                            "headers": {
+                            "content-type": "application/json",
+                            "x-apikey": "63b648ae969f06502871aa3b",
+                            "cache-control": "no-cache"
+                            },
+                            "processData": false,
+                            "data": JSON.stringify(jsondata)
+                        }
+                        $.ajax(settings).done(function () {
+                          localStorage.removeItem("loyalty");
+                          localStorage.setItem("loyalty",loyalty);
+                          alert("Congratulations "+localStorage.getItem("name")+"\nLoyalty points credited: "+score_val.innerHTML+"\nUpdated Loyalty Points: "+loyalty)
+                        });
+                      }else{
+                        alert("Log in to earn points")
+                      }
+
+
                     return;
                 }else{
                     if(pipe_sprite_props.right < bird_props.left && pipe_sprite_props.right + move_speed >= bird_props.left && element.increase_score == '1'){

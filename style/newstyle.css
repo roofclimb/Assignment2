@@ -344,7 +344,7 @@ header i{
     margin-top: 2rem;
 }
 
-.categories-container .box{
+.categories-container .boxy{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -353,24 +353,24 @@ header i{
     border-radius: 0.5rem;
 }
 
-.categories-container .box img{
+.categories-container .boxy img{
     width:100%;
     height:100px;
     object-fit: contain;
     object-position: center;
 }
 
-.categories-container .box h2{
+.categories-container .boxy h2{
     font-size: 1rem;
     font-weight: 600;
 }
-.categories-container .box span{
+.categories-container .boxy span{
     font-size: 0.8rem;
     font-weight: 400;
     margin-bottom: 1rem;
 }
 
-.categories-container .box a .bx{
+.categories-container .boxy a .bx{
     padding:10px;
     background: var(--green-color);
     color:var(--bg-color);
@@ -382,12 +382,12 @@ header i{
     display: none;
 }
 
-.categories-container .box a .bx:hover{
+.categories-container .boxy a .bx:hover{
     background: var(--light-orange-color);
     transition: 0.2s all linear;
 }
 
-.categories-container .box:hover a .bx{
+.categories-container .boxy:hover a .bx{
     display: block;
     transition: 0.2s all linear;
 }
@@ -532,29 +532,29 @@ header i{
     margin-top: 2rem;
 }
 
-.customers-container .box{
+.customers-container .boxo{
     padding: 20px;
     box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
     border-radius: 0.5rem;
     border-bottom: 7px solid var(--green-color);
 }
 
-.customers-container .box:hover{
+.customers-container .boxo:hover{
     transform: translateY(10px);
     transition: 0.2s all linear;
 }
 
-.customers-container .box .bx{
+.customers-container .boxo .bx{
     font-size: 24px;
     color:var(--green-color);
 }
 
-.customers-container .box .stars .bx{
+.customers-container .boxo .stars .bx{
     font-size: 1rem;
     color:var(--light-orange-color);
 }
 
-.customers-container .box p{
+.customers-container .boxo p{
     font-size: 0.938rem;
 }
 
