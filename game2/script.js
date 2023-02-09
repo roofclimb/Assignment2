@@ -38,6 +38,8 @@ let chosenWord = "";
 //Display option buttons
 const displayOptions = () => {
   optionsContainer.innerHTML += `<h3>Please Select An Option</h3>`;
+  optionsContainer.innerHTML += `<p>Win +3</p>`;
+  optionsContainer.innerHTML += `<p>Lose +1</p>`;
   let buttonCon = document.createElement("div");
   for (let value in options) {
     buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')">${value}</button>`;
@@ -122,6 +124,54 @@ const initializer = () => {
             //if winCount equals word lenfth
             if (winCount == charArray.length) {
               resultText.innerHTML = `<h2 class='win-msg'>You Win!!</h2><p>The word was <span>${chosenWord}</span></p>`;
+              if (sessionStorage.getItem("id")!=null){
+                let currentloyalty=sessionStorage.getItem("loyalty")
+                let loyalty = 3+parseInt(currentloyalty)
+                var jsondata = { "loyalty":loyalty};
+                var settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": `https://interactivedev-a655.restdb.io/rest/ntuc/${sessionStorage.getItem("id")}`,//update based on the ID
+                    "method": "PUT",
+                    "headers": {
+                    "content-type": "application/json",
+                    "x-apikey": "63b648ae969f06502871aa3b",
+                    "cache-control": "no-cache"
+                    },
+                    "processData": false,
+                    "data": JSON.stringify(jsondata)
+                }
+                $.ajax(settings).done(function () {
+                    sessionStorage.removeItem("loyalty");
+                    sessionStorage.setItem("loyalty",loyalty);
+                    alert("Congratulations "+sessionStorage.getItem("name")+"\nLoyalty points credited: 3"+"\nUpdated Loyalty Points: "+loyalty)
+                });
+              }else if(localStorage.getItem("id")!=null){
+                let currentloyalty=localStorage.getItem("loyalty")
+                let loyalty = 1+parseInt(currentloyalty)
+                var jsondata = { "loyalty":loyalty};
+                var settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": `https://interactivedev-a655.restdb.io/rest/ntuc/${localStorage.getItem("id")}`,//update based on the ID
+                    "method": "PUT",
+                    "headers": {
+                    "content-type": "application/json",
+                    "x-apikey": "63b648ae969f06502871aa3b",
+                    "cache-control": "no-cache"
+                    },
+                    "processData": false,
+                    "data": JSON.stringify(jsondata)
+                }
+                $.ajax(settings).done(function () {
+                  sessionStorage.removeItem("loyalty");
+                  sessionStorage.setItem("loyalty",loyalty);
+                  alert("Congratulations "+sessionStorage.getItem("name")+"\nLoyalty points credited: 1"+"\nUpdated Loyalty Points: "+loyalty)
+                });
+              }else{
+                alert("Log in to earn points")
+              }
+              
               //block all buttons
               blocker();
             }

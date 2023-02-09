@@ -4,11 +4,11 @@ function getContacts(limit = 10, all = true) {
     let settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://interactivedev-e0f0.restdb.io/rest/ntuc",
+      "url": "https://interactivedev-a655.restdb.io/rest/ntuc",
       "method": "GET", //[cher] we will use GET to retrieve info
       "headers": {
         "content-type": "application/json",
-        "x-apikey": "63e4d268478852088da67f27",
+        "x-apikey": "63b648ae969f06502871aa3b",
         "cache-control": "no-cache"
       },
     }

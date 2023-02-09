@@ -16,6 +16,9 @@
   </head>
   <body>
     <p id="space"></p>
+    <div id="progress">
+      <span id="progress-value"><i class="fa fa-arrow-up"></i></span>
+    </div>
     <!-- <br><br><br><br><br> -->
     <button class="tablink" onclick="openPage('Snacks', this, 'green')" id="defaultOpen">Snacks</button>
       <button class="tablink" onclick="openPage('Fruits', this, 'blue')">Fruits</button>
@@ -27,7 +30,7 @@
           <ul class="navbar">
             <li><a href="index.html" class="home-active"><i class="fa-sharp fa-solid fa-house"></i><span>&nbsp;Home</span></a></li>
             <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i><span>&nbsp;Products</span></a></li>
-            <li><a href="wish.html"><i class='bx bxs-heart'></i><span>&nbsp;Wishlist</span></a></li>
+            <li><a href="wish.html" id="wishlist"><i class='bx bxs-heart'></i><span>&nbsp;Wishlist</span></a></li>
             <li><a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><span>&nbsp;Cart <span id="cartno">(0)</span></span></a></li>
             <li><a href="game.html"><i class="fa-solid fa-gamepad"></i><span>&nbsp;Games</span></a></li>
         </ul>
@@ -1409,6 +1412,11 @@
             </div>
           </div>
       </div>
+      <div w3-include-html="footer.html"></div>
+    <script src="javascript/include.js"></script>
+    <script>
+        includeHTML();
+    </script>
     <div id="id01" class="modal">
       <div class="form-container animate">
         <form>
@@ -1472,8 +1480,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="javascript/cart.js"></script>
     <script src="javascript/products.js"></script>
-    <script src="javascript/scroll.js"></script>
     <script src="javascript/wishlist.js"></script>
-
+    <script src="javascript/user.js"></script>
+    <script src="javascript/scroll.js"></script>
 </body>
 </html>

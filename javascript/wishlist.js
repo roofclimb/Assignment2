@@ -10,7 +10,7 @@ $(document).ready(function () {
     }
 
       function addwishlist(event){
-        const APIKEY = "63e4d268478852088da67f27";
+        const APIKEY = "63b648ae969f06502871aa3b";
         var button = event.target;
         var shopProducts = button.parentElement;
         var hi=shopProducts.parentElement;
@@ -19,43 +19,76 @@ $(document).ready(function () {
         var price = hi.getElementsByClassName("price")[0].innerText;//
         var productImg = hi.getElementsByClassName("product-img")[0].src;//
         console.log(title,price,productImg);
-        var userid;
-        if(sessionStorage.getItem("id")!=null){
-            userid=sessionStorage.getItem("id")
-        }else{
-            userid=localStorage.getItem("id")
-        }
-        let jsondata = {
-          "img": productImg,
-          "desc": title,
-          "price": price,
-          "userid": userid
-        };
-        let settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": "https://interactivedev-e0f0.restdb.io/rest/wish",
-            "method": "POST", //[cher] we will use post to send info
-            "headers": {
-              "content-type": "application/json",
-              "x-apikey": APIKEY,
-              "cache-control": "no-cache"
-            },
-            "processData": false,
-            "data": JSON.stringify(jsondata),
-            "beforeSend": function(){
-              //@TODO use loading bar instead
-              //disable our button or show loading bar
-              $("#contact-submit").prop( "disabled", true);
-              //clear our form using the form id and triggering it's reset feature
-              $("#add-contact-form").trigger("reset");
+        console.log(sessionStorage.getItem("id"));
+        if (sessionStorage.getItem("id")!=null){
+          let jsondata = {
+            "img": productImg,
+            "desc": title,
+            "price": price,
+            "userid": sessionStorage.getItem("id")
+          };
+          let settings = {
+              "async": true,
+              "crossDomain": true,
+              "url": "https://interactivedev-a655.restdb.io/rest/wish",
+              "method": "POST", //[cher] we will use post to send info
+              "headers": {
+                "content-type": "application/json",
+                "x-apikey": APIKEY,
+                "cache-control": "no-cache"
+              },
+              "processData": false,
+              "data": JSON.stringify(jsondata),
+              "beforeSend": function(){
+                //@TODO use loading bar instead
+                //disable our button or show loading bar
+                $("#contact-submit").prop( "disabled", true);
+                //clear our form using the form id and triggering it's reset feature
+                $("#add-contact-form").trigger("reset");
+              }
             }
+        
+            //[STEP 5]: Send our ajax request over to the DB and print response of the RESTDB storage to console.
+            $.ajax(settings).done(function (response) {
+              console.log(response);
+              getContacts();
+            });
+        }else if(localStorage.getItem("id")!=null){
+          let jsondata = {
+            "img": productImg,
+            "desc": title,
+            "price": price,
+            "userid": localStorage.getItem("id")
+          };
+          let settings = {
+              "async": true,
+              "crossDomain": true,
+              "url": "https://interactivedev-a655.restdb.io/rest/wish",
+              "method": "POST", //[cher] we will use post to send info
+              "headers": {
+                "content-type": "application/json",
+                "x-apikey": APIKEY,
+                "cache-control": "no-cache"
+              },
+              "processData": false,
+              "data": JSON.stringify(jsondata),
+              "beforeSend": function(){
+                //@TODO use loading bar instead
+                //disable our button or show loading bar
+                $("#contact-submit").prop( "disabled", true);
+                //clear our form using the form id and triggering it's reset feature
+                $("#add-contact-form").trigger("reset");
+              }
+            }
+        
+            //[STEP 5]: Send our ajax request over to the DB and print response of the RESTDB storage to console.
+            $.ajax(settings).done(function (response) {
+              console.log(response);
+              getContacts();
+            });
+          }else{
+            alert("Please log in first");
           }
-      
-          //[STEP 5]: Send our ajax request over to the DB and print response of the RESTDB storage to console.
-          $.ajax(settings).done(function (response) {
-            console.log(response);
-          });
     }
     function getContacts(limit = 10, all = true) {
 
@@ -63,11 +96,11 @@ $(document).ready(function () {
       let settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://interactivedev-e0f0.restdb.io/rest/wish",
+        "url": "https://interactivedev-a655.restdb.io/rest/wish",
         "method": "GET", //[cher] we will use GET to retrieve info
         "headers": {
           "content-type": "application/json",
-          "x-apikey": "63e4d268478852088da67f27",
+          "x-apikey": "63b648ae969f06502871aa3b",
           "cache-control": "no-cache"
         },
       }

@@ -11,10 +11,14 @@
 }
 /* login button  */
 .ctn{
-    padding: 8px 15px;
+    padding: 15px 30px;
     background: #fc036b;
     border-radius: 30px;
     color:whitesmoke;
+}
+
+.rewards-content a{
+    font-size: 25px;
 }
 body, html {
     overflow-x: hidden;
@@ -81,13 +85,16 @@ p{
 .rewards-content{
     width:60%;
     padding: 50px;
+    position:absolute;
+    top:170px;
+    left:325px;
     color:black;
     display:flex;
     align-items: center ;
     flex-direction: column;
 }
 .rewards-content h1{
-    font-size:25px;
+    font-size:30px;
     text-align: center;
     right: 300px
 }
@@ -125,6 +132,14 @@ p{
     top:890px;
     width: 300px;
     height: 300px;
+}
+
+.lottie2{
+    position: relative;
+    top:45px;
+    width: 100%;
+    height: 80vh;
+    z-index: -5;
 }
 @media only screen and (max-width:850px){
     .row1{
