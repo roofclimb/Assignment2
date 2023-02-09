@@ -135,6 +135,8 @@ function selectAnswer(e){
                 alert("Congratulations "+localStorage.getItem("name")+"\nLoyalty points credited: "+score+"\nUpdated Loyalty Points: "+loyalty)
                 score=0
             });
+          }else{
+            alert("Log in to earn points")
           }
         
         /* if (sessionStorage.getItem("id")!=null){

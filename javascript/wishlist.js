@@ -124,7 +124,7 @@ $(document).ready(function () {
             
             for (var n = 0; n <  listing.length; n++){
                 var cartItems = listing[n].getElementsByClassName('product-title')
-                /* console.log(response[i].desc) */
+                console.log(listing[n])
                 
                 
                 if(cartItems[0].innerText==response[i].desc){
