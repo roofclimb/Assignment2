@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Products</title>  
+      <link rel="icon" type="image/x-icon" href="images/home/icon.png">
+      <link rel="stylesheet" href="style/normalize.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+      <link rel="stylesheet" href="style/cart.css">
+      <link rel="stylesheet" href="style/newstyle.css">
+      <link rel="stylesheet" href="style/login1.css">
+      <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  </head>
+  <body>
+    <p id="space"></p>
+    <!-- <br><br><br><br><br> -->
+    <!-- 
+    <img src="images/home/product_wallpaper.jpg" alt=""> -->
+      <header>
+          <a href="" class="logo"><img src="images/home/fairpricelogo.png" alt=""></a>
+          <div class="bx bx-menu" id="menu-icon"></div>
+          <ul class="navbar">
+            <li><a href="index.html" class="home-active"><i class="fa-sharp fa-solid fa-house"></i><span>&nbsp;Home</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i><span>&nbsp;Products</span></a></li>
+            <li><a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><span>&nbsp;Cart <span id="cartno">(0)</span></span></a></li>
+            <li><a href="game.html"><i class="fa-solid fa-gamepad"></i><span>&nbsp;Games</span></a></li>
+        </ul>
+        <div class="profile">
+            <a href="login.html" id="logout"><i class="fa-solid fa-user"></i><span id="username">Guest</span></a>
+        </div>
+      </header>
+      <div class="cart">
+          <h2 class="cart-title">Your Cart</h2>
+      <!-- content -->
+          <div class="cart-content">
+  
+          </div>          
+          <!-- Total  -->
+          <div class="total">
+              <div class="total-title">Total</div>
+              <div class="total-price">$0</div>
+          </div>
+          <!-- Buy button -->
+          <button type="button" class="btn-buy" onclick="document.getElementById('id01').style.display='block'">Buy Now</button>
+          <!-- cart close -->
+          <i class='bx bx-x' id ="close-cart"></i>
+    
+    </div>
+    <div class="products">
+        <h2 style="text-align:center;" class="title">Wishlist</h2>
+        <div class="product-box">
+          <div class="products-container">
+
+          </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascript/wishlistdraft.js"></script>
+    <script src="javascript/scroll.js"></script>
+</body>
+</html>

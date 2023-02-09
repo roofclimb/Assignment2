@@ -23,8 +23,8 @@
 
         <ul class="navbar">
             <li><a href="index.html" class="home-active"><i class="fa-sharp fa-solid fa-house"></i><span>&nbsp;Home</span></a></li>
-            <li><a href="productstabs.html"><i class="fa-solid fa-magnifying-glass"></i><span>&nbsp;Products</span></a></li>
-            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i><span>&nbsp;Cart</span></a></li>
+            <li><a href="wishlist.html"><i class="fa-solid fa-magnifying-glass"></i><span>&nbsp;Products</span></a></li>
+            <li><a href="wish.html"><i class='bx bxs-heart'></i><span>&nbsp;Cart</span></a></li>
             <li><a href="game.html"><i class="fa-solid fa-gamepad"></i><span>&nbsp;Games</span></a></li>
         </ul>
         <div class="profile">
@@ -103,24 +103,27 @@
         </div>
         <div class="products-container">
             <div class="box">
-                <img src="images/fruits/banana.jpg" alt="">
-                <span>Fruits</span>
-                <h2>Sumifru Sweet Mountain Bananas </h2>
-                <p>820g</p>
-                <h3 class="price">$3.95</h3>
-                <div class="addcart">
+                <img src="images/snacks/haribo.png" class ="product-img"alt="" height="300">
+                <span>Snacks</span>
+                    <h2 class="product-title">Haribo Gummy Candies</h2>
+                    <p>160g Halal</p>
+                    <b class="price">$2.95</b>
                     <div class="stars">
-                    <i class='bx bxs-star' ></i>
-                    <i class='bx bxs-star' ></i>
-                    <i class='bx bxs-star' ></i>
-                    <i class='bx bxs-star' ></i>
-                    <i class='bx bxs-star' ></i>
+                      <i class='bx bxs-star' ></i>
+                      <i class='bx bxs-star' ></i>
+                      <i class='bx bxs-star' ></i>
+                      <i class='bx bxs-star' ></i>
+                      <i class='bx bxs-star-half' ></i>
+                  </div>
+                    <div class="addcart">
+                        <i class='bx bx-cart-alt' ></i>
                     </div>
-                        <i class='bx bx-cart-alt'></i>
+                    <div class="wish">
+                      <i class='bx bx-heart' id="heart"></i>
+                      <i class='bx bxs-heart' style="display: none;"></i>
                     </div>
-                <i class='bx bx-heart' ></i>
-                <span class="discount">-25%</span>
-            </div> 
+                    <span class="discount">-25%</span>
+                </div>
             <div class="box">
                 <img src="images/snacks/doritos.png" alt="">
                 <span>Snacks</span>
@@ -135,10 +138,10 @@
                     <i class='bx bxs-star' ></i>
                     <i class='bx bxs-star-half' ></i>
                     </div>
-                        <i class='bx bx-cart-alt'></i>
-                    </div>
                 <i class='bx bx-heart' ></i>
                 <span class="discount">-25%</span>
+                </div>
+                
             </div> 
             <div class="box">
                 <img src="images/household/dishwashingliquid.png" alt="">
@@ -154,11 +157,10 @@
                     <i class='bx bxs-star' ></i>
                     <i class='bx bxs-star-half' ></i>
                     </div>
-                        <i class='bx bx-cart-alt'></i>
-                    </div>
                 <i class='bx bx-heart' ></i>
                 <span class="discount">-25%</span>
-            </div> 
+                </div> 
+            </div>
             <div class="box">
                 <img src="images/frozen/fries.png" alt="">
                 <span>Frozen</span>
@@ -173,10 +175,9 @@
                     <i class='bx bxs-star' ></i>
                     <i class='bx bxs-star-half' ></i>
                     </div>
-                        <i class='bx bx-cart-alt'></i>
-                    </div>
                 <i class='bx bx-heart' ></i>
                 <span class="discount">-25%</span>
+                </div>
             </div> 
             <div class="box">
                 <img src="images/snacks/lays.png" class ="product-img" height="300" alt="">
@@ -191,11 +192,10 @@
                     <i class='bx bxs-star' ></i>
                     <i class='bx bxs-star' ></i>
                     <i class='bx bxs-star-half' ></i>
-                    </div>
-                        <i class='bx bx-cart-alt'></i>
-                    </div>
                     <i class='bx bx-heart'></i>
+                    </div>
                     <span class="discount">-15%</span>
+                </div>
                 </div>
                 <div class="box">
                     <img src="images/fruits/durian1.png" class ="product-img" height="300" alt="">
@@ -203,6 +203,7 @@
                         <h2 class="product-title">SLH Premium Black Gold Mao Shan Wang Durian</h2>
                         <p>400g</p>
                         <b class="price">$49.45</b>
+                        <div class="addcart">
                         <div class="stars">
                             <i class='bx bxs-star' ></i>
                             <i class='bx bxs-star' ></i>
@@ -210,11 +211,9 @@
                             <i class='bx bxs-star' ></i>
                             <i class='bx bxs-star-half' ></i>
                         </div>
-                        <div class="addcart">
-                            <i class='bx bx-cart-alt'></i>
-                        </div>
                         <i class='bx bx-heart'></i>
                         <span class="discount">-15%</span>
+                    </div>
                 </div>
         </div>
     </section>
@@ -301,9 +300,6 @@
         </div>
     </section>
     <div w3-include-html="footer.html"></div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="javascript/main.js"></script>
-    <script src="javascript/main1.js"></script>
     <script src="javascript/scroll.js"></script>
     <script>
         const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -315,7 +311,9 @@
         
     </script>
     <script src="javascript/include.js"></script>
-    <script src="javascript/scroll.js"></script><!-- 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascript/wishlist.js"></script>
+    <!-- 
     <script src="javascript/header.js"></script> -->
     <script>
         includeHTML();

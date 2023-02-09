@@ -4,11 +4,11 @@ function getContacts(limit = 10, all = true) {
     let settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://interactivedev-e51d.restdb.io/rest/ntuc",
+      "url": "https://interactivedev-e0f0.restdb.io/rest/ntuc",
       "method": "GET", //[cher] we will use GET to retrieve info
       "headers": {
         "content-type": "application/json",
-        "x-apikey": "63b648b9969f06502871aa3d",
+        "x-apikey": "63e4d268478852088da67f27",
         "cache-control": "no-cache"
       },
     }
@@ -112,11 +112,11 @@ $("#update-contact-submit").on("click", function (e) {
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": `https://interactivedev-e51d.restdb.io/rest/ntuc/${id}`,//update based on the ID
+      "url": `https://interactivedev-e0f0.restdb.io/rest/ntuc/${id}`,//update based on the ID
       "method": "PUT",
       "headers": {
         "content-type": "application/json",
-        "x-apikey": "63b648b9969f06502871aa3d",
+        "x-apikey": "63e4d268478852088da67f27",
         "cache-control": "no-cache"
       },
       "processData": false,
@@ -146,11 +146,11 @@ $("#update-contact-submit").on("click", function (e) {
     var settings = {
       async: true,
       crossDomain: true,
-      url: `https://interactivedev-e51d.restdb.io/rest/ntuc/${id}`,
+      url: `https://interactivedev-e0f0.restdb.io/rest/ntuc/${id}`,
       method: "DELETE",
       headers: {
         "content-type": "application/json",
-        "x-apikey": "63b648b9969f06502871aa3d",
+        "x-apikey": "63e4d268478852088da67f27",
         "cache-control": "no-cache"
       },
     };

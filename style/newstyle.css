@@ -460,7 +460,7 @@ header i{
     color:var(--text-color);
 }
 
-.products-container .box .bx-cart-alt{
+.products-container .box .bx-cart-alt,.products-container .box .bxs-trash{
     position: absolute;
     right:0;
     bottom: 0;
@@ -471,12 +471,12 @@ header i{
     border-radius: 0.5rem 0 0.5rem 0;
 }
 
-.products-container .box .bx-cart-alt:hover{
+.products-container .box .bx-cart-alt:hover,.products-container .box .bxs-trash:hover{
     background: var(--orange-color);
     transition: 0.2s all linear;
 }
 
-.products-container .box .bx-heart{
+.products-container .box .bx-heart,.products-container .box .bxs-heart{
     position: absolute;
     top:1rem;
     right:1rem;
@@ -718,6 +718,10 @@ table img{
     } */
     #space{
         padding:43px;
+    }
+
+    .hide{
+        display: none;
     }
 @media(max-width:1080px){
     header{
