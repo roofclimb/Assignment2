@@ -93,6 +93,14 @@ $("#update-contact-submit").on("click", function (e) {
     //[STEP 12a]: We call our update form function which makes an AJAX call to our RESTDB to update the selected information
     updateForm(contactId, contactName, contactEmail, contactMsg,loyalty);
   });//end updatecontactform listener
+  $("#contact-list").on("click", ".delete", function (e) {
+    e.preventDefault();
+    let contactId = $(this).data("id");
+    console.log($(this).data("msg"));
+
+    deleteRecord(contactId)
+
+  });
   
 
   //[STEP 13]: function that makes an AJAX call and process it 
@@ -121,6 +129,34 @@ $("#update-contact-submit").on("click", function (e) {
       
       $("#update-contact-container").fadeOut(5000);
       //update our contacts table
+      getContacts();
+    });
+  }//end updateform function
+  $("#contact-list").on("click", ".delete",function (e) {
+    e.preventDefault();
+    console.log("delete")
+    let id = $(this).data("id");
+    $("#delete-student-msg").show().fadeOut(3000);
+    $("#delete-contact-container").fadeOut(5000);
+  });//end updatecontactform listener
+
+  //[STEP 13]: function that makes an AJAX call and process it 
+  //UPDATE Based on the ID chosen
+  function deleteRecord(id) {
+    var settings = {
+      async: true,
+      crossDomain: true,
+      url: `https://interactivedev-e51d.restdb.io/rest/ntuc/${id}`,
+      method: "DELETE",
+      headers: {
+        "content-type": "application/json",
+        "x-apikey": "63b648b9969f06502871aa3d",
+        "cache-control": "no-cache"
+      },
+    };
+    
+    $.ajax(settings).done(function (response) {
+      console.log(response);
       getContacts();
     });
   }//end updateform function
