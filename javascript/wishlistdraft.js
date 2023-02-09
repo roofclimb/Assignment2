@@ -73,15 +73,7 @@ $.ajax(settings).done(function (response) {
       content = `${content}<div class="box">
   <img src=${response[i].img} class ="product-img"alt="" height="300">
       <h2 class="product-title">${response[i].desc}</h2>
-      <p>160g Halal</p>
       <b class="price">${response[i].price}</b>
-      <div class="stars">
-        <i class='bx bxs-star' ></i>
-        <i class='bx bxs-star' ></i>
-        <i class='bx bxs-star' ></i>
-        <i class='bx bxs-star' ></i>
-        <i class='bx bxs-star-half' ></i>
-    </div>
       <div class="delete">
         <i class='bx bxs-trash' data-id='${response[i]._id}' data-desc='${response[i].desc}' ></i>
       </div>
