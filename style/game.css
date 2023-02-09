@@ -121,7 +121,7 @@ p{
 .lottie{
     position: absolute;
     right: 250px;
-    top:890px;
+    top:670px;
     width: 300px;
     height: 300px;
 
@@ -129,7 +129,7 @@ p{
 .lottie1{
     position: absolute;
     left: 250px;
-    top:890px;
+    top:670px;
     width: 300px;
     height: 300px;
 }
@@ -160,14 +160,13 @@ p{
         width: 150px;
         height: 150px;
         right:0px;
-        top:1050px;
-    
+        top:290px;
     }
     .lottie1{
         width: 150px;
         height: 150px;
         left: 0px;
-        top:1150px;
+        top:420px;
     }
 }
 
