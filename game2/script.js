@@ -17,7 +17,7 @@ let options = {
     "Pomegranate",
     "Watermelon",
   ],
-  household: ["Detergent", "Carpet", "Cabinet", "Kitchen wipes", "Shopping Trolley", "Ironing Board"],
+  household: ["Detergent", "Carpet", "Cabinet", "Gloves", "Trolley", "Oven"],
   snacks: [
     "Skittles",
     "Doritos",
