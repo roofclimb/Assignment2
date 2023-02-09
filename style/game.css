@@ -66,7 +66,7 @@ h4{
 }
 p{
     color: #484872;
-    padding:0px 40px;
+    padding:0px;
 }
 .games .ctn{
     margin-top: 30px;
@@ -141,7 +141,7 @@ p{
     height: 80vh;
     z-index: -5;
 }
-@media only screen and (max-width:850px){
+@media(max-width:850px){
     .row1{
         flex-direction: column;
     }
@@ -153,9 +153,6 @@ p{
     }
     .title h1{
         font-size: 7vmin; 
-    }
-    .reward-content{
-        width: 100%;
     }
     .footer{
         padding: 10px;
@@ -171,5 +168,50 @@ p{
         height: 150px;
         left: 0px;
         top:890px;
+    }
+}
+
+@media(max-width:500px){
+    .ctn{
+        padding: 9px 10px;
+    }
+    .rewards-content a{
+        font-size: 15px;
+    }
+    .rewards-content{
+        padding: 0;
+        position: relative;
+        top:100px;
+        left:70px;
+        font-size: 5px;
+        z-index: 1000;
+    }
+    .rewards-content p{
+        font-size: 15px;
+        position: relative;
+        top:-10px;
+        right:0;
+    }
+    .rewards-content h1{
+        font-size:20px;
+    }
+    .lottie2{
+        position: absolute;
+        left:0;
+        top: -140px;
+        width: 100%;
+        height: 80vh;
+        z-index: -5;
+    }
+    .title1 .line{
+        right:-40px;
+    }
+    .line{
+        position: relative;
+        bottom:15px;
+        right:0px;
+        width: 200px;
+        height: 4px;
+        margin: 10px 0 10px;
     }
 }

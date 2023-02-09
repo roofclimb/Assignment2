@@ -12,7 +12,6 @@
     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="style/game.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 <body>
     <div id="progress">
@@ -25,13 +24,12 @@
         <ul class="navbar">
             <li><a href="index.html" class="home-active"><i class="fa-sharp fa-solid fa-house"></i><span>&nbsp;Home</span></a></li>
             <li><a href="products.html"><i class="fa-solid fa-magnifying-glass"></i><span>&nbsp;Products</span></a></li>
-            <li><a href="wish.html" id="wishlist"><i class='bx bxs-heart'></i><span>&nbsp;Wishlist</span></a></li>
+            <li><a href="#" id="wishlist" onclick="wish()"><i class='bx bxs-heart'></i><span>&nbsp;Wishlist</span></a></li>
             <li><a href="game.html"><i class="fa-solid fa-gamepad"></i><span>&nbsp;Games</span></a></li>
         </ul>
         <div class="profile">
             <a href="login.html" id="logout"><i class="fa-solid fa-user"></i><span id="username">Guest</span></a>
         </div>
-        
     </header>
     <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_bq485nmk.json"  background="transparent"  speed="1" class="lottie2" loop  autoplay></lottie-player>
         <div class="rewards-content">
@@ -81,10 +79,8 @@
         </div>
     </section>
     <div w3-include-html="footer.html"></div>
-    <script src="javascript/sessionstorage.js"></script>
     <script src="javascript/include.js"></script>
     <script src="javascript/scroll.js"></script>
-    <script src="javascript/header.js"></script>
     <script src="javascript/user.js"></script>
     <script>
         includeHTML();
