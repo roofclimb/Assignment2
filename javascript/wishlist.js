@@ -1,3 +1,26 @@
+var addCart = document.getElementsByClassName('addcart')
+for (var i = 0; i < addCart.length; i++){
+    var button = addCart[i];
+    button.addEventListener('click', addwishlist);
+}
+
+
+function addwishlist(event){
+    var button = event.target;
+    var shopProducts = button.parentElement;
+    var hi=shopProducts.parentElement;
+    console.log(hi);
+    var title = hi.getElementsByClassName("product-title")[0].innerText;
+    var price = hi.getElementsByClassName("price")[0].innerText;//
+    var productImg = hi.getElementsByClassName("product-img")[0].src;//
+    console.log(title,price,productImg);
+    addProductToCart(title,price,productImg);
+    updatetotal();
+}
+
+
+
+
 //[STEP 0]: Make sure our document is A-OK
 $(document).ready(function () {
     //what kind of interface we want at the start 
@@ -17,79 +40,50 @@ $(document).ready(function () {
       let contactName = $("#contact-name").val();
       let contactEmail = $("#contact-email").val();
       let contactPassword = $("#contact-password").val();
-      let confirmPassword = $("#confirm-password").val();
       let loyalty=0;
-      console.log(contactEmail.search("@"))
-      if(contactName==""||contactEmail==""||contactPassword==""){
-        document.getElementById('nomatch').innerHTML="Please fill up all fields";
-      }
-      else if(contactEmail.search("@")==-1){
-        document.getElementById('nomatch').innerHTML="Email must contain @";
-      }
-      else if (contactEmail.search(".com")==-1){
-        document.getElementById('nomatch').innerHTML="Email must contain .com";
-      }
-      else{
-        if(contactPassword==confirmPassword){
-          let jsondata = {
-              "name": contactName,
-              "email": contactEmail,
-              "password": contactPassword,
-              "loyalty": loyalty
-            };
-        
-            //[STEP 4]: Create our AJAX settings. Take note of API key
-            let settings = {
-              "async": true,
-              "crossDomain": true,
-              "url": "https://interactivedev-e51d.restdb.io/rest/ntuc",
-              "method": "POST", //[cher] we will use post to send info
-              "headers": {
-                "content-type": "application/json",
-                "x-apikey": APIKEY,
-                "cache-control": "no-cache"
-              },
-              "processData": false,
-              "data": JSON.stringify(jsondata),
-              "beforeSend": function(){
-                //@TODO use loading bar instead
-                //disable our button or show loading bar
-                $("#contact-submit").prop( "disabled", true);
-                //clear our form using the form id and triggering it's reset feature
-                $("#add-contact-form").trigger("reset");
-              }
-              
+      let jsondata = {
+        "img": contactName,
+        "desc": contactEmail,
+        "price": contactPassword,
+        "loyalty": loyalty
+      };
   
-          }
-          
-        //[STEP 5]: Send our ajax request over to the DB and print response of the RESTDB storage to console.
-          $.ajax(settings).done(function (response) {
-              console.log(response);
-              
-              $("#contact-submit").prop( "disabled", false);
-              
-              //@TODO update frontend UI 
-              $("#add-update-msg").show().fadeOut(3000);
-      
-              //update our table 
-              getContacts();
-          });
-          
-          document.getElementById('nomatch').innerHTML="Registration successful\nProceed to log in";
-          let hide=document.getElementById('registerlottie');
-          hide.classList.remove('hide');
-        //[STEP 3]: get form values when user clicks on send
-        //Adapted from restdb api
-        
+      //[STEP 4]: Create our AJAX settings. Take note of API key
+      let settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://interactivedev-e51d.restdb.io/rest/wishlist",
+        "method": "POST", //[cher] we will use post to send info
+        "headers": {
+          "content-type": "application/json",
+          "x-apikey": APIKEY,
+          "cache-control": "no-cache"
+        },
+        "processData": false,
+        "data": JSON.stringify(jsondata),
+        "beforeSend": function(){
+          //@TODO use loading bar instead
+          //disable our button or show loading bar
+          $("#contact-submit").prop( "disabled", true);
+          //clear our form using the form id and triggering it's reset feature
+          $("#add-contact-form").trigger("reset");
         }
-        else{
-          console.log("Password");
-          console.log(document.getElementById('nomatch'));
-          document.getElementById('nomatch').innerHTML="Passwords do not match";
-      }
-      }
+        
 
-  
+    }
+    
+    //[STEP 5]: Send our ajax request over to the DB and print response of the RESTDB storage to console.
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            
+            $("#contact-submit").prop( "disabled", false);
+            
+            //@TODO update frontend UI 
+            $("#add-update-msg").show().fadeOut(3000);
+
+            //update our table 
+            getContacts();
+        });
     });//end click 
   
   
@@ -376,96 +370,3 @@ $(document).ready(function () {
   });
 })
 
-
-
-var LoginForm = document.getElementById("LoginForm")
-var RegForm = document.getElementById("RegForm")
-var Indicator=document.getElementById("Indicator")
-
-function register(){
-    RegForm.style.transform="translateX(0px)";
-    LoginForm.style.transform="translateX(0px)";
-    Indicator.style.transform="translateX(100px)";
-}
-
-
-function login(){
-    RegForm.style.transform="translateX(300px)";
-    LoginForm.style.transform="translateX(300px)";
-    Indicator.style.transform="translateX(0px)";
-}
-
-if (sessionStorage.getItem("name")!=null){
-  document.getElementById("data").innerHTML="Name: "+sessionStorage.getItem("name");
-  document.getElementById("points").innerHTML="Loyalty points: "+sessionStorage.getItem("loyalty");
-}else if(localStorage.getItem("name")!=null){
-  console.log(localStorage.getItem("name"));
-  document.getElementById("data").innerHTML="Name: "+localStorage.getItem("name");
-  document.getElementById("points").innerHTML="Loyalty points: "+localStorage.getItem("loyalty");
-}
-
-
-function logout(){
-  if (sessionStorage.getItem("name")!=null){
-    if (confirm("Thank you "+sessionStorage.getItem("name")+" You have successfully logged out.")){
-      setTimeout(document.location.href = '/index.html', 5000);
-      sessionStorage.clear();
-    }
-  }else if(localStorage.getItem("name")!=null){
-    if (confirm("Thank you "+localStorage.getItem("name")+" You have successfully logged out.")){
-      setTimeout(document.location.href = '/index.html', 5000);
-      localStorage.clear();
-    }
-  }
-  
-  
-}
-
-
-function myFunction(){
-  var x=document.getElementById("check-password");
-  var y=document.getElementById("hide1");
-  var z=document.getElementById("hide2");
-  if(x.type=='password'){
-      x.type="text";
-      y.classList.add("hide");
-      z.classList.remove("hide");
-  }
-  else{
-      x.type="password";
-      y.classList.remove("hide");
-      z.classList.add("hide");
-  }
-}
-
-function myFunction1(){
-  var x=document.getElementById("contact-password");
-  var y=document.getElementById("hide3");
-  var z=document.getElementById("hide4");
-  if(x.type=='password'){
-      x.type="text";
-      y.classList.add("hide");
-      z.classList.remove("hide");
-  }
-  else{
-      x.type="password";
-      y.classList.remove("hide");
-      z.classList.add("hide");
-  }
-}
-
-function myFunction2(){
-  var x=document.getElementById("confirm-password");
-  var y=document.getElementById("hide5");
-  var z=document.getElementById("hide6");
-  if(x.type=='password'){
-      x.type="text";
-      y.classList.add("hide");
-      z.classList.remove("hide");
-  }
-  else{
-      x.type="password";
-      y.classList.remove("hide");
-      z.classList.add("hide");
-  }
-}

@@ -13,24 +13,23 @@
       <link rel="stylesheet" href="style/login1.css">
       <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-      
   </head>
   <body>
-    <br><br><br><br><br>
+    <p id="space"></p>
+    <!-- <br><br><br><br><br> -->
     <!-- 
     <img src="images/home/product_wallpaper.jpg" alt=""> -->
     <button class="tablink" onclick="openPage('Snacks', this, 'green')">Snacks</button>
       <button class="tablink" onclick="openPage('Fruits', this, 'blue')" id="defaultOpen">Fruits</button>
-      <button class="tablink" onclick="openPage('Frozen', this, 'orange')" >Frozen</button>
-      <button class="tablink" onclick="openPage('Household', this, 'red')" >Household</button>
+      <button class="tablink" onclick="openPage('Frozen', this, 'orange')">Frozen</button>
+      <button class="tablink" onclick="openPage('Household', this, 'red')">Household</button>
       <header>
           <a href="" class="logo"><img src="images/home/fairpricelogo.png" alt=""></a>
           <div class="bx bx-menu" id="menu-icon"></div>
           <ul class="navbar">
             <li><a href="index.html" class="home-active"><i class="fa-sharp fa-solid fa-house"></i><span>&nbsp;Home</span></a></li>
-            <li><a href="products1.html"><i class="fa-solid fa-magnifying-glass"></i><span>&nbsp;Products</span></a></li>
-            <li><a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><span>&nbsp;Cart</span>
-              <p id="cartno">0</p><i class="fa fa-square"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i><span>&nbsp;Products</span></a></li>
+            <li><a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i><span>&nbsp;Cart <span id="cartno">(0)</span></span></a></li>
             <li><a href="game.html"><i class="fa-solid fa-gamepad"></i><span>&nbsp;Games</span></a></li>
         </ul>
         <div class="profile">
@@ -1232,68 +1231,69 @@
     <div id="id01" class="modal">
       <div class="form-container animate">
         <form>
-            <h3>Billing Address</h3>
               <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+              <input type="text" id="fname" name="firstname" placeholder="Elluru Victoria">
               <label for="email"><i class="fa fa-envelope"></i> Email</label>
               <input type="text" id="email" name="email" placeholder="john@example.com">
-              <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-              <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+              <label for="adr"><i class="fa-solid fa-address-card"></i> Address</label>
+              <input type="text" id="adr" name="address" placeholder="535 Clementi Rd, Singapore 599489">
+              <label><i class="fa-solid fa-credit-card"></i> Payment By</label>
+              <div class="icon-container">
+                <label for="visa" class="radio">
+                  <input type="radio" id="visa" name="payment" value="visa" checked><i class="fa-brands fa-cc-visa" style="color:navy;"></i>
+                </label>
+                <label for="master" class="radio">
+                  <input type="radio" id="master" name="payment" value="master"><i class="fa-brands fa-cc-mastercard" style="color:red;"></i>
+                </label>
+                <label for="paynow" class="radio">
+                  <input type="radio" id="paynow" name="payment" value="paynow"><img src="images/home/paynow-logo-2.png" alt="">
+                </label>
+              </div>
+              <label for="adr"><i class="fa-solid fa-truck"></i> Delivery Date <span id="today"></span></label>
+              <input type="date" id="delivery" name="date">
+              
+              <!-- <i class="fa-brands fa-cc-visa" style="color:navy;"></i>
+              <i class="fa-brands fa-cc-mastercard" style="color:red;"></i>
+              <img src="images/home/paynow-logo-2.png" alt=""> -->
         </form>
+        
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <table>
+        <table class="table1">
           <tr>
-            <td>Subtotal</td>
-            <td><strong>$0</strong></td>
+            <td class="heading1">Subtotal</td>
+            <td><strong><span id="subtotal">$0</span></strong></td>
           </tr>
           <tr>
-            <td>Delivery Fee</td>
-            <td><strong>$5</strong></td>
+            <td class="heading1">Delivery Fee</td>
+            <td><strong><span id="deliverycharge">$5</span></strong></td>
           </tr>
-          <tr>
+          <tr id="slide">
             <td colspan="2">
               <div class="slidecontainer">
                 <input type="range" min="0" max="30" value="0" class="slider" id="myRange">
-                
               </div>
             </td>
           </tr>
-          <tr>
+          <tr id="pointscount">
             <td colspan="2" style="text-align: center;"><p>Redeem points: <span id="demo"></span></p></td>
           </tr>
-          <tr>
+          <tr class="hr">
             <td colspan="2"><hr></td>
           </tr>
           <tr>
-            <td>Total</td>
-            <td><strong>$0</strong></td>
+            <td class="heading1">Total</td>
+            <td><strong><span id="total">$0</span></strong></td>
           </tr>
         </table>
+        <button onclick="myFunction()" class="btn-checkout">Checkout</button>
       </div>
     </div>
-<script src="javascript/cart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascript/cart.js"></script>
     <script src="javascript/main1.js"></script>
     <script src="javascript/products.js"></script>
-<script>
-    // Get the modal
-    var modal = document.getElementById('id01');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
-    var balance=document.getElementById("demo1");
-    output.innerHTML = slider.value;
-
-    slider.oninput = function() {
-      output.innerHTML = this.value;
-    }
-
-</script>
+    <script src="javascript/scroll.js"></script>
+    
 
 </body>
 </html>
