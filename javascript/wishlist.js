@@ -10,7 +10,7 @@ $(document).ready(function () {
     }
 
       function addwishlist(event){
-        const APIKEY = "63b648ae969f06502871aa3b";
+        const APIKEY = "63b648b9969f06502871aa3d";
         var button = event.target;
         var shopProducts = button.parentElement;
         var hi=shopProducts.parentElement;
@@ -30,7 +30,7 @@ $(document).ready(function () {
           let settings = {
               "async": true,
               "crossDomain": true,
-              "url": "https://interactivedev-a655.restdb.io/rest/wish",
+              "url": "https://interactivedev-e51d.restdb.io/rest/wishlist",
               "method": "POST", //[cher] we will use post to send info
               "headers": {
                 "content-type": "application/json",
@@ -63,7 +63,7 @@ $(document).ready(function () {
           let settings = {
               "async": true,
               "crossDomain": true,
-              "url": "https://interactivedev-a655.restdb.io/rest/wish",
+              "url": "https://interactivedev-e51d.restdb.io/rest/wishlist",
               "method": "POST", //[cher] we will use post to send info
               "headers": {
                 "content-type": "application/json",
@@ -96,11 +96,11 @@ $(document).ready(function () {
       let settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://interactivedev-a655.restdb.io/rest/wish",
+        "url": "https://interactivedev-e51d.restdb.io/rest/wishlist",
         "method": "GET", //[cher] we will use GET to retrieve info
         "headers": {
           "content-type": "application/json",
-          "x-apikey": "63b648ae969f06502871aa3b",
+          "x-apikey": "63b648b9969f06502871aa3d",
           "cache-control": "no-cache"
         },
       }
@@ -124,7 +124,6 @@ $(document).ready(function () {
             
             for (var n = 0; n <  listing.length; n++){
                 var cartItems = listing[n].getElementsByClassName('product-title')
-                console.log(listing[n])
                 
                 
                 if(cartItems[0].innerText==response[i].desc){

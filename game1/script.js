@@ -61,11 +61,11 @@ function play(){
                         var settings = {
                             "async": true,
                             "crossDomain": true,
-                            "url": `https://interactivedev-a655.restdb.io/rest/ntuc/${sessionStorage.getItem("id")}`,//update based on the ID
+                            "url": `https://interactivedev-e51d.restdb.io/rest/ntuc/${sessionStorage.getItem("id")}`,//update based on the ID
                             "method": "PUT",
                             "headers": {
                             "content-type": "application/json",
-                            "x-apikey": "63b648ae969f06502871aa3b",
+                            "x-apikey": "63b648b9969f06502871aa3d",
                             "cache-control": "no-cache"
                             },
                             "processData": false,
@@ -83,11 +83,11 @@ function play(){
                         var settings = {
                             "async": true,
                             "crossDomain": true,
-                            "url": `https://interactivedev-a655.restdb.io/rest/ntuc/${localStorage.getItem("id")}`,//update based on the ID
+                            "url": `https://interactivedev-e51d.restdb.io/rest/ntuc/${localStorage.getItem("id")}`,//update based on the ID
                             "method": "PUT",
                             "headers": {
                             "content-type": "application/json",
-                            "x-apikey": "63b648ae969f06502871aa3b",
+                            "x-apikey": "63b648b9969f06502871aa3d",
                             "cache-control": "no-cache"
                             },
                             "processData": false,

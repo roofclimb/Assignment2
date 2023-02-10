@@ -43,15 +43,13 @@ function ready(){
         .addEventListener('click',buyButtonClicked);
 }
 
-function buyButtonClicked(){
-    alert('Your Order is placed')
-    modal.style.display = "none";
+/* function buyButtonClicked(){
     var cartContent=document.getElementsByClassName('cart-content')[0]
     while(cartContent.hasChildNodes()){
         cartContent.removeChild(cartContent.firstChild);
     }
     updatetotal();
-}
+} */
 
 
 //Remove Items from cart
@@ -115,7 +113,22 @@ function addProductToCart(title,price,productImg){
     /* document.getElementById("cartno").innerHTML=cartItemsNames.length; */
 } 
 
-
+if (sessionStorage.getItem("name")!=null){
+    let contactName = sessionStorage.getItem("name");
+    let contactEmail = sessionStorage.getItem("email");
+    $("#fname").val(contactName);
+      $("#email").val(contactEmail);
+}else if(localStorage.getItem("name")!=null){
+    console.log(localStorage.getItem("name"));
+    let contactName = localStorage.getItem("name");
+    let contactEmail = localStorage.getItem("email");
+    $("#fname").val(contactName);
+    $("#email").val(contactEmail);
+}
+else{
+    document.getElementById('slide').classList.add('hide');
+    document.getElementById('pointscount').classList.add('hide');
+}
 
 /* var cartBoxContent =`<img src="images/snacks/haribo.png" alt="haribo" height="200"  class="cart-img">
                     <div class="detail-box">
@@ -177,75 +190,99 @@ function updatetotal(){
     var cartItems = document.getElementsByClassName('cart-content')[0];
     var cartItemsNames = cartItems.getElementsByClassName('cart-box');
     document.getElementById("cartno").innerHTML="("+cartItemsNames.length+")";
-    var x=document.getElementsByName("payment");
-    var y=document.getElementsByClassName("btn-checkout");
-    console.log(y[0]);
-    y[0].addEventListener('click', myFunction);
-    function myFunction(){
-        console.log('hi')
-    for(var i = 0; i < x.length; i++){
-        if(x[i].checked)
-        {
-        console.log(x[i].value);
-        }
-    }
-    console.log(slider.value);
-    let name=document.forms["myForm"]["fname"].value;
-    let email=document.forms["myForm"]["email"].value;
-    let address=document.forms["myForm"]["adr"].value;
-    let delivery=document.forms["myForm"]["delivery"].value;
-     if (sessionStorage.getItem("id")!=null){
-            let currentloyalty=sessionStorage.getItem("loyalty")
-            let loyalty = parseInt(currentloyalty)-slider.value
-            var jsondata = { "loyalty":loyalty};
-            var settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": `https://interactivedev-a655.restdb.io/rest/ntuc/${sessionStorage.getItem("id")}`,//update based on the ID
-                "method": "PUT",
-                "headers": {
-                "content-type": "application/json",
-                "x-apikey": "63b648ae969f06502871aa3b",
-                "cache-control": "no-cache"
-                },
-                "processData": false,
-                "data": JSON.stringify(jsondata)
-            }
-            $.ajax(settings).done(function () {
-                sessionStorage.removeItem("loyalty");
-                sessionStorage.setItem("loyalty",loyalty);
-                alert("Thank you "+name+" for you purchase\nYour receipt has been sent to "+
-                email+"\nYour purchase will be sent to "+address+" on "+delivery+"\nLoyalty points used"+slider.value+
-                "\nTotal cost: "+final)
-            });
-  }/* else if(localStorage.getItem("id")!=null){
-    let currentloyalty=localStorage.getItem("loyalty")
-    let loyalty = parseInt(currentloyalty)-slider.value
-    var jsondata = { "loyalty":loyalty};
-    var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": `https://interactivedev-a655.restdb.io/rest/ntuc/${localStorage.getItem("id")}`,//update based on the ID
-        "method": "PUT",
-        "headers": {
-        "content-type": "application/json",
-        "x-apikey": "63b648ae969f06502871aa3b",
-        "cache-control": "no-cache"
-        },
-        "processData": false,
-        "data": JSON.stringify(jsondata)
-    }
-    $.ajax(settings).done(function () {
-      localStorage.removeItem("loyalty");
-      localStorage.setItem("loyalty",loyalty);
-      alert("Thank you "+name+" for you purchase\nYour receipt has been sent to "+
-      email+"\nYour purchase will be sent to "+address+" on "+delivery+"\nLoyalty points used"+slider.value)
-    })
-  }else{
-    alert("Thank you "+name+" for you purchase\nYour receipt has been sent to "+
-      email+"\nYour purchase will be sent to "+address+" on "+delivery)
-  } */
+    
 }
+
+var x=document.getElementsByName("payment");
+/* var y=document.getElementsByClassName("form-container");
+
+var z=document.getElementById('checkout')
+console.log(z)
+y.addEventListener('click', clickcheckout()); */
+
+function clickcheckout(){
+    var modal = document.getElementById('id01');
+    modal.style.display = "none";
+    console.log(document.getElementById("myRange").value)
+for(var i = 0; i < x.length; i++){
+    if(x[i].checked)
+    {
+    console.log(x[i].value);
+    }
+}
+let slider1=document.getElementById("myRange").value;
+let final=document.getElementById("total").innerText;
+let name=document.forms["myForm"]["fname"].value;
+let email=document.forms["myForm"]["email"].value;
+let address=document.forms["myForm"]["adr"].value;
+let delivery=document.forms["myForm"]["delivery"].value;
+console.log(address)
+if(name==null||email==null||address==""||delivery==null){
+    alert("Please fill in all fields")
+}else{
+    if (sessionStorage.getItem("id")!=null){
+        let currentloyalty=sessionStorage.getItem("loyalty")
+        let cost = parseInt(final.slice(1))
+        let loyalty = parseInt(currentloyalty)-parseInt(slider1)+parseInt(final.slice(1))
+        console.log(loyalty)
+        var jsondata = { "loyalty":loyalty};
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": `https://interactivedev-e51d.restdb.io/rest/ntuc/${sessionStorage.getItem("id")}`,//update based on the ID
+            "method": "PUT",
+            "headers": {
+            "content-type": "application/json",
+            "x-apikey": "63b648b9969f06502871aa3d",
+            "cache-control": "no-cache"
+            },
+            "processData": false,
+            "data": JSON.stringify(jsondata)
+        }
+        $.ajax(settings).done(function () {
+            sessionStorage.removeItem("loyalty");
+            sessionStorage.setItem("loyalty",loyalty);
+            var cartContent=document.getElementsByClassName('cart-content')[0]
+            while(cartContent.hasChildNodes()){
+                cartContent.removeChild(cartContent.firstChild);
+            }
+            updatetotal();
+            alert("Thank you "+name+" for you purchase\n"+"Total cost: "+final+"Your receipt has been sent to "+
+            email+"\nYour purchase will be sent to "+address+" on "+delivery+"\nCurrent loyalty points: "+currentloyalty+
+            "\nLoyalty points used: "+slider1+
+            "\nLoyalty points earned: "+cost+"\nUpdated loyalty points: "+loyalty
+            )
+        });
+}/* else if(localStorage.getItem("id")!=null){
+let currentloyalty=localStorage.getItem("loyalty")
+let loyalty = parseInt(currentloyalty)-slider.value
+var jsondata = { "loyalty":loyalty};
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": `https://interactivedev-a655.restdb.io/rest/ntuc/${localStorage.getItem("id")}`,//update based on the ID
+    "method": "PUT",
+    "headers": {
+    "content-type": "application/json",
+    "x-apikey": "63b648ae969f06502871aa3b",
+    "cache-control": "no-cache"
+    },
+    "processData": false,
+    "data": JSON.stringify(jsondata)
+}
+$.ajax(settings).done(function () {
+    localStorage.removeItem("loyalty");
+    localStorage.setItem("loyalty",loyalty);
+    alert("Thank you "+name+" for you purchase\nYour receipt has been sent to "+
+    email+"\nYour purchase will be sent to "+address+" on "+delivery+"\nLoyalty points used"+slider.value)
+})
+}else{
+alert("Thank you "+name+" for you purchase\nYour receipt has been sent to "+
+    email+"\nYour purchase will be sent to "+address+" on "+delivery)
+} */
+}
+
+    
 }
 
 // Get the modal
@@ -292,22 +329,6 @@ document.getElementById("delivery").setAttribute("min", today);
 document.getElementById("delivery").setAttribute("value", today);
 document.getElementById("today").innerHTML="3 days from today ("+dd+" "+m+" "+yyyy+")";
 
+console.log(sessionStorage.getItem("name"))
 
 
-
-if (sessionStorage.getItem("name")!=null){
-    let contactName = sessionStorage.getItem("name");
-    let contactEmail = sessionStorage.getItem("email");
-    $("#fname").val(contactName);
-      $("#email").val(contactEmail);
-}else if(localStorage.getItem("name")!=null){
-    console.log(localStorage.getItem("name"));
-    let contactName = localStorage.getItem("name");
-    let contactEmail = localStorage.getItem("email");
-    $("#fname").val(contactName);
-    $("#email").val(contactEmail);
-}
-else{
-    document.getElementById('slide').classList.add('hide');
-    document.getElementById('pointscount').classList.add('hide');
-}
