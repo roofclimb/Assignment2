@@ -38,9 +38,6 @@ function ready(){
         var button = addCart[i];
         button.addEventListener('click', addCartClicked);
     }
-    document
-        .getElementsByClassName('btn-checkout')[0]
-        .addEventListener('click',buyButtonClicked);
 }
 
 /* function buyButtonClicked(){
@@ -179,13 +176,16 @@ function updatetotal(){
     }
     var final=total+deliverycharge-Number(slider.value);
     /* final=Math.round(final * 100)/100; */
-    
-    var maxpoints=sessionStorage.getItem("loyalty")
+    if (sessionStorage.getItem("id")!=null){
+        var maxpoints=sessionStorage.getItem("loyalty")
+        
+    }else if(localStorage.getItem("id")!=null){
+        var maxpoints=localStorage.getItem("loyalty")
+    }
     if(maxpoints>=final){
         maxpoints=Math.floor(final);
     }
     document.getElementById("myRange").setAttribute("max", maxpoints);
-    
     document.getElementById("total").innerHTML="$" +final.toFixed(2);
     var cartItems = document.getElementsByClassName('cart-content')[0];
     var cartItemsNames = cartItems.getElementsByClassName('cart-box');
@@ -201,13 +201,14 @@ console.log(z)
 y.addEventListener('click', clickcheckout()); */
 
 function clickcheckout(){
+    let payment;
     var modal = document.getElementById('id01');
     modal.style.display = "none";
     console.log(document.getElementById("myRange").value)
 for(var i = 0; i < x.length; i++){
     if(x[i].checked)
     {
-    console.log(x[i].value);
+    payment=x[i].value;
     }
 }
 let slider1=document.getElementById("myRange").value;
@@ -247,39 +248,55 @@ if(name==null||email==null||address==""||delivery==null){
                 cartContent.removeChild(cartContent.firstChild);
             }
             updatetotal();
-            alert("Thank you "+name+" for you purchase\n"+"Total cost: "+final+"Your receipt has been sent to "+
-            email+"\nYour purchase will be sent to "+address+" on "+delivery+"\nCurrent loyalty points: "+currentloyalty+
+            alert("Thank you "+name+" for you purchase\n"+"Total cost: "+final+"\nYour receipt has been sent to "+
+            email+"\nYour purchase will be sent to "+address+" on "+delivery+"\nPayment By: "+payment+
+            "\nCurrent loyalty points: "+currentloyalty+
             "\nLoyalty points used: "+slider1+
             "\nLoyalty points earned: "+cost+"\nUpdated loyalty points: "+loyalty
             )
         });
-}/* else if(localStorage.getItem("id")!=null){
-let currentloyalty=localStorage.getItem("loyalty")
-let loyalty = parseInt(currentloyalty)-slider.value
-var jsondata = { "loyalty":loyalty};
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": `https://interactivedev-a655.restdb.io/rest/ntuc/${localStorage.getItem("id")}`,//update based on the ID
-    "method": "PUT",
-    "headers": {
-    "content-type": "application/json",
-    "x-apikey": "63b648ae969f06502871aa3b",
-    "cache-control": "no-cache"
-    },
-    "processData": false,
-    "data": JSON.stringify(jsondata)
-}
-$.ajax(settings).done(function () {
-    localStorage.removeItem("loyalty");
-    localStorage.setItem("loyalty",loyalty);
-    alert("Thank you "+name+" for you purchase\nYour receipt has been sent to "+
-    email+"\nYour purchase will be sent to "+address+" on "+delivery+"\nLoyalty points used"+slider.value)
-})
+}else if(localStorage.getItem("id")!=null){
+    let currentloyalty=localStorage.getItem("loyalty")
+    let cost = parseInt(final.slice(1))
+    let loyalty = parseInt(currentloyalty)-parseInt(slider1)+parseInt(final.slice(1))
+    console.log(loyalty)
+    var jsondata = { "loyalty":loyalty};
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": `https://interactivedev-e51d.restdb.io/rest/ntuc/${localStorage.getItem("id")}`,//update based on the ID
+        "method": "PUT",
+        "headers": {
+        "content-type": "application/json",
+        "x-apikey": "63b648b9969f06502871aa3d",
+        "cache-control": "no-cache"
+        },
+        "processData": false,
+        "data": JSON.stringify(jsondata)
+    }
+    $.ajax(settings).done(function () {
+        localStorage.removeItem("loyalty");
+        localStorage.setItem("loyalty",loyalty);
+        var cartContent=document.getElementsByClassName('cart-content')[0]
+        while(cartContent.hasChildNodes()){
+            cartContent.removeChild(cartContent.firstChild);
+        }
+        updatetotal();
+        alert("Thank you "+name+" for you purchase\n"+"Total cost: "+final+"\nYour receipt has been sent to "+
+        email+"\nYour purchase will be sent to "+address+" on "+delivery+"\nPayment By: "+payment+"\nCurrent loyalty points: "+currentloyalty+
+        "\nLoyalty points used: "+slider1+
+        "\nLoyalty points earned: "+cost+"\nUpdated loyalty points: "+loyalty
+        )
+    });
 }else{
-alert("Thank you "+name+" for you purchase\nYour receipt has been sent to "+
-    email+"\nYour purchase will be sent to "+address+" on "+delivery)
-} */
+    var cartContent=document.getElementsByClassName('cart-content')[0]
+            while(cartContent.hasChildNodes()){
+                cartContent.removeChild(cartContent.firstChild);
+            }
+            updatetotal();
+    alert("Thank you "+name+" for you purchase\nYour receipt has been sent to "+
+    email+"\nYour purchase will be sent to "+address+" on "+delivery+"\nPayment By: "+payment)
+}
 }
 
     
