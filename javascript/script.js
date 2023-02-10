@@ -1,7 +1,7 @@
 //[STEP 0]: Make sure our document is A-OK
 $(document).ready(function () {
     //what kind of interface we want at the start 
-    const APIKEY = "63b648b9969f06502871aa3d";
+    const APIKEY = "63e5e23c478852088da67fd7";
     getContacts();
     $("#update-contact-container").hide();
     $("#add-update-msg").hide();
@@ -43,7 +43,7 @@ $(document).ready(function () {
             let settings = {
               "async": true,
               "crossDomain": true,
-              "url": "https://interactivedev-e51d.restdb.io/rest/ntuc",
+              "url": "https://interactivedev-5050.restdb.io/rest/ntuc",
               "method": "POST", //[cher] we will use post to send info
               "headers": {
                 "content-type": "application/json",
@@ -103,7 +103,7 @@ $(document).ready(function () {
       let settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://interactivedev-e51d.restdb.io/rest/ntuc",
+        "url": "https://interactivedev-5050.restdb.io/rest/ntuc",
         "method": "GET", //[cher] we will use GET to retrieve info
         "headers": {
           "content-type": "application/json",
@@ -199,7 +199,7 @@ $(document).ready(function () {
       var settings = {
         "async": true,
         "crossDomain": true,
-        "url": `https://interactivedev-e51d.restdb.io/rest/ntuc/${id}`,//update based on the ID
+        "url": `https://interactivedev-5050.restdb.io/rest/ntuc/${id}`,//update based on the ID
         "method": "PUT",
         "headers": {
           "content-type": "application/json",
@@ -233,7 +233,7 @@ $(document).ready(function () {
       var settings = {
         async: true,
         crossDomain: true,
-        url: `https://interactivedev-e51d.restdb.io/rest/ntuc/${id}`,
+        url: `https://interactivedev-5050.restdb.io/rest/ntuc/${id}`,
         method: "DELETE",
         headers: {
           "content-type": "application/json",
@@ -273,7 +273,7 @@ $(document).ready(function () {
     let settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://interactivedev-e51d.restdb.io/rest/ntuc",
+        "url": "https://interactivedev-5050.restdb.io/rest/ntuc",
         "method": "GET", //[cher] we will use GET to retrieve info
         "headers": {
           "content-type": "application/json",

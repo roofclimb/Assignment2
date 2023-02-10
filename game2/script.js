@@ -131,11 +131,11 @@ const initializer = () => {
                 var settings = {
                     "async": true,
                     "crossDomain": true,
-                    "url": `https://interactivedev-e51d.restdb.io/rest/ntuc/${sessionStorage.getItem("id")}`,//update based on the ID
+                    "url": `https://interactivedev-5050.restdb.io/rest/ntuc/${sessionStorage.getItem("id")}`,//update based on the ID
                     "method": "PUT",
                     "headers": {
                     "content-type": "application/json",
-                    "x-apikey": "63b648b9969f06502871aa3d",
+                    "x-apikey": "63e5e23c478852088da67fd7",
                     "cache-control": "no-cache"
                     },
                     "processData": false,
@@ -153,11 +153,11 @@ const initializer = () => {
                 var settings = {
                     "async": true,
                     "crossDomain": true,
-                    "url": `https://interactivedev-e51d.restdb.io/rest/ntuc/${localStorage.getItem("id")}`,//update based on the ID
+                    "url": `https://interactivedev-5050.restdb.io/rest/ntuc/${localStorage.getItem("id")}`,//update based on the ID
                     "method": "PUT",
                     "headers": {
                     "content-type": "application/json",
-                    "x-apikey": "63b648b9969f06502871aa3d",
+                    "x-apikey": "63e5e23c478852088da67fd7",
                     "cache-control": "no-cache"
                     },
                     "processData": false,
@@ -192,11 +192,11 @@ const initializer = () => {
             var settings = {
                 "async": true,
                 "crossDomain": true,
-                "url": `https://interactivedev-e51d.restdb.io/rest/ntuc/${sessionStorage.getItem("id")}`,//update based on the ID
+                "url": `https://interactivedev-5050.restdb.io/rest/ntuc/${sessionStorage.getItem("id")}`,//update based on the ID
                 "method": "PUT",
                 "headers": {
                 "content-type": "application/json",
-                "x-apikey": "63b648b9969f06502871aa3d",
+                "x-apikey": "63e5e23c478852088da67fd7",
                 "cache-control": "no-cache"
                 },
                 "processData": false,
@@ -214,11 +214,11 @@ const initializer = () => {
             var settings = {
                 "async": true,
                 "crossDomain": true,
-                "url": `https://interactivedev-e51d.restdb.io/rest/ntuc/${localStorage.getItem("id")}`,//update based on the ID
+                "url": `https://interactivedev-5050.restdb.io/rest/ntuc/${localStorage.getItem("id")}`,//update based on the ID
                 "method": "PUT",
                 "headers": {
                 "content-type": "application/json",
-                "x-apikey": "63b648b9969f06502871aa3d",
+                "x-apikey": "63e5e23c478852088da67fd7",
                 "cache-control": "no-cache"
                 },
                 "processData": false,

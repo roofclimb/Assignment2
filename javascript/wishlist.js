@@ -10,7 +10,7 @@ $(document).ready(function () {
     }
 
       function addwishlist(event){
-        const APIKEY = "63b648b9969f06502871aa3d";
+        const APIKEY = "63e5e23c478852088da67fd7";
         var button = event.target;
         var shopProducts = button.parentElement;
         var hi=shopProducts.parentElement;
@@ -30,7 +30,7 @@ $(document).ready(function () {
           let settings = {
               "async": true,
               "crossDomain": true,
-              "url": "https://interactivedev-e51d.restdb.io/rest/wishlist",
+              "url": "https://interactivedev-5050.restdb.io/rest/wish",
               "method": "POST", //[cher] we will use post to send info
               "headers": {
                 "content-type": "application/json",
@@ -63,7 +63,7 @@ $(document).ready(function () {
           let settings = {
               "async": true,
               "crossDomain": true,
-              "url": "https://interactivedev-e51d.restdb.io/rest/wishlist",
+              "url": "https://interactivedev-5050.restdb.io/rest/wish",
               "method": "POST", //[cher] we will use post to send info
               "headers": {
                 "content-type": "application/json",
@@ -96,11 +96,11 @@ $(document).ready(function () {
       let settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://interactivedev-e51d.restdb.io/rest/wishlist",
+        "url": "https://interactivedev-5050.restdb.io/rest/wish",
         "method": "GET", //[cher] we will use GET to retrieve info
         "headers": {
           "content-type": "application/json",
-          "x-apikey": "63b648b9969f06502871aa3d",
+          "x-apikey": "63e5e23c478852088da67fd7",
           "cache-control": "no-cache"
         },
       }

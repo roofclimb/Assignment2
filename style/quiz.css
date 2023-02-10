@@ -31,7 +31,7 @@ body.wrong{
     --hue: var(--hue-wrong);
 }
 
-.container{
+.container1{
     width: 100%;
     background-color: white;
     border-radius:5px;

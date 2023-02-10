@@ -47,11 +47,11 @@ function getContacts(limit = 10, all = true) {
 let settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://interactivedev-e51d.restdb.io/rest/wishlist",
+  "url": "https://interactivedev-5050.restdb.io/rest/wish",
   "method": "GET", //[cher] we will use GET to retrieve info
   "headers": {
     "content-type": "application/json",
-    "x-apikey": "63b648b9969f06502871aa3d",
+    "x-apikey": "63e5e23c478852088da67fd7",
     "cache-control": "no-cache"
   },
 }
@@ -106,11 +106,11 @@ $.ajax(settings).done(function (response) {
     var settings = {
       async: true,
       crossDomain: true,
-      url: `https://interactivedev-e51d.restdb.io/rest/wishlist/${id}`,
+      url: `https://interactivedev-5050.restdb.io/rest/wish/${id}`,
       method: "DELETE",
       headers: {
         "content-type": "application/json",
-        "x-apikey": "63b648b9969f06502871aa3d",
+        "x-apikey": "63e5e23c478852088da67fd7",
         "cache-control": "no-cache"
       },
     };
