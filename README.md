@@ -33,6 +33,7 @@ Some customer feedbacks:
     - Cart button to add items into the cart
     - Delete function
     - validation so that users would not add the same item again in the cart
+    - Scrollable
   - Checkout page to calculate total cost
   - You can also use the loyalty points to get reasonable discounts
   - Login/Sign Up
