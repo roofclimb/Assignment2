@@ -292,7 +292,7 @@ header i{
 }
 
 .swiper-button-next{
-    background: url(images/home/rightarrow.png);
+    background: url(/images/home/rightarrow.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
@@ -305,7 +305,7 @@ header i{
 
 
 .swiper-button-prev{
-    background: url(images/home/leftarrow.png);
+    background: url(/images/home/leftarrow.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
