@@ -79,6 +79,7 @@ Some customer feedbacks:
 - Login form:
   - Form validation
   - After login successful, prompt shown to show user's information and loyalty points.
+  - Remember me will set login information to local storage
 - Registration form:
   - Form validation
   - When a user register for the first time they get 5 loyalty points
