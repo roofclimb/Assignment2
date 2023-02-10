@@ -18,7 +18,8 @@ $(document).ready(function () {
       let contactEmail = $("#contact-email").val();
       let contactPassword = $("#contact-password").val();
       let confirmPassword = $("#confirm-password").val();
-      let loyalty=0;
+      //set loyalty to 5 when user registers
+      let loyalty=5;
       console.log(contactEmail.search("@"))
       if(contactName==""||contactEmail==""||contactPassword==""){
         document.getElementById('nomatch').innerHTML="Please fill up all fields";
